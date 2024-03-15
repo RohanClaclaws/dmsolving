@@ -9,6 +9,17 @@ The page.tsx will contain only one component which will have its own folder in t
 Inside the folder, you can add components related to that page only.
 
 ***
+
+## Pushing your work/changes
+
+1. checkout out to your own branch or a new branch<br>
+2. Add your changes using git add<br>
+3. Commit and add a description<br>
+4. Pull the latest main/master branch<br>
+5. Resolve any conflict and Push  
+
+***
+
 First, run the development server:
 
 ```bash
