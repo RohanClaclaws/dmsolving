@@ -4,8 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ***
 # Instructions on how to create the website
 
-In src your page will have its own folder and there will only be one file called page.tsx. \n
-The page.tsx will contain only one component which will have its own folder in the components section (i.e. home/Home.tsx) \n
+In src your page will have its own folder and there will only be one file called page.tsx. <br>
+The page.tsx will contain only one component which will have its own folder in the components section (i.e. home/Home.tsx) <br>
 Inside the folder, you can add components related to that page only.
 
 ***
