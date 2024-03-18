@@ -16,8 +16,15 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens:{
-        'layout-sm':'425px'
-        
+        'layout-sm':'425px',
+        'input-collapse-contact':'678px',
+        'xs':'460px',
+        'arrows-services':'780px',
+        'service-image-left-right-calc':'1447px',
+        'md':'768px',
+        'lg':'1024px',
+        'xl':'1280px',
+        '2xs':'340px'
       },
       fontFamily: {
         dmsans: ["DM Sans", 'sans'],
