@@ -1,7 +1,11 @@
 
 const Portfolio = () => {
   return (
-    <h1>Portfolio</h1>
+    <div className="">
+      <div className="tw-flex tw-justify-between">
+
+      </div>
+    </div>
   )
 }
 
