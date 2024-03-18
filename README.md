@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ***
 # Instructions on how to create the website
 
+DM SOLVING FIGMA : [https://](https://www.figma.com/file/jJSLCdZZ8xWLzQ67bxsAwk/Dmsolving-website?type=design&node-id=0%3A1&mode=design&t=xbuSsPlgaQ4VCUHq-1)
+
 In src your page will have its own folder and there will only be one file called page.tsx. <br>
 The page.tsx will contain only one component which will have its own folder in the components section (i.e. home/Home.tsx) <br>
 Inside the folder, you can add components related to that page only.
