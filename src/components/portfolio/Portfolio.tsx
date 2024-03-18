@@ -1,7 +1,9 @@
 
 const Portfolio = () => {
   return (
-    <h1>Portfolio</h1>
+    <div className="bg-[#10182D]">
+      
+    </div>
   )
 }
 

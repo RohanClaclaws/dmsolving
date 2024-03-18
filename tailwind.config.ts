@@ -1,4 +1,6 @@
+import { Syne } from "next/font/google";
 import type { Config } from "tailwindcss";
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   content: [
@@ -16,6 +18,10 @@ const config: Config = {
       screens:{
         'layout-sm':'425px'
         
+      },
+      fontFamily: {
+        dmsans: ["DM Sans", 'sans'],
+        syne:["Syne","sans-serif"]
       }
 
     },
