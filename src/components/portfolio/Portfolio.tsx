@@ -1,10 +1,8 @@
 
 const Portfolio = () => {
   return (
-    <div className="">
-      <div className="tw-flex tw-justify-between">
-
-      </div>
+    <div className="bg-[#10182D]">
+      
     </div>
   )
 }
