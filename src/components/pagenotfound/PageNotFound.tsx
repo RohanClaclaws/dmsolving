@@ -44,7 +44,7 @@ const PageNotFound = () => {
 
                 </div>
                 <div className="flex flex-col gap-y-5 px-[25px] py-7">
-                    <h1 className="text-[#CfDDE8] font-syne font-[700] text-[21px] 2xs:text-[24px] xs:text-[32px] md:text-[42px]">Sorry ! The page isn't found here</h1>
+                    <h1 className="text-[#CfDDE8] font-syne font-[700] text-[21px] 2xs:text-[24px] xs:text-[32px] md:text-[42px]">Sorry ! The page isn{"'"}t found here</h1>
                     <p className="max-w-[768px] font-dmsans font-[400] text-[14px] xs:text-[16px] text-[#8DA8BD]">
                         Our error is a HTTP status code indicating that the requested resource could not be found on the server. It is commonly displayed as a webpage with the message. This can occur when a user attempts to access a URL that no longer exists or has been moved, or when a URL is typed incorrectly.
                     </p>
