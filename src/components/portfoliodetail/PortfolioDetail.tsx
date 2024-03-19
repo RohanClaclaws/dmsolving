@@ -36,10 +36,10 @@ const PortfolioDetail = () => {
 
                     <div className="bg-red pb-[90px]">
                         <div className=" max-w-[1004px] min-h-[400px mx-auto  ">
-                            <img src={'/images/Placeholder1.png'} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[62px]" />
+                            <img src={`/images/Placeholder1.png`} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[62px]" alt="image-1" />
 
                             <p className="px-3 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[18px] sm:text-[20px]">
-                                This portfolio encapsulates a website we crafted for a VR game project. Our paramount objective was to immerse users in the game's universe and highlight its distinctive features. Through a blend of captivating design elements and user-friendly navigation, our aim was to captivate users and draw them into exploring the game's allure.
+                                This portfolio encapsulates a website we crafted for a VR game project. Our paramount objective was to immerse users in the game&apos;s universe and highlight its distinctive features. Through a blend of captivating design elements and user-friendly navigation, our aim was to captivate users and draw them into exploring the game&apos;s allure.
                             </p>
                         </div>
                     </div>
@@ -48,27 +48,27 @@ const PortfolioDetail = () => {
                         <div className=" max-w-[1004px] min-h-[400px mx-auto  ">
                             <h1 className="font-syne font-[600] text-[21px] 2xs:text-[26px] text-[#ffffff] pb-[30px] pl-[10px]">Structuring the site</h1>
                             <p className="px-4 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[17px] sm:text-[20px] pb-[80px]">
-                                The website's architecture was meticulously designed to ensure seamless navigation and optimal user engagement. The homepage served as a gateway, featuring prominent displays of the game's key features and providing an overview of its immersive world. Sections such as 'About Us' delved into the background story of the game's development team, while 'Game Overview' categorically listed various aspects of gameplay, mechanics, and storyline. Additionally, the 'Media Center' showcased an array of screenshots, videos, and other media assets to offer users a comprehensive glimpse into the game's visual appeal. Finally, the 'Contact Us' section provided users with convenient channels to reach out and provide feedback.
+                                The website&apos;s architecture was meticulously designed to ensure seamless navigation and optimal user engagement. The homepage served as a gateway, featuring prominent displays of the game&apos;s key features and providing an overview of its immersive world. Sections such as &apos;About Us&apos; delved into the background story of the game&apos;s development team, while &apos;Game Overview&apos; categorically listed various aspects of gameplay, mechanics, and storyline. Additionally, the &apos;Media Center&apos; showcased an array of screenshots, videos, and other media assets to offer users a comprehensive glimpse into the game&apos;s visual appeal. Finally, the &apos;Contact Us&apos; section provided users with convenient channels to reach out and provide feedback.
                             </p>
 
-                            <img src={'/images/Placeholder3.png'} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" />
+                            <img src={`/images/Placeholder3.png`} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" alt="image-2" />
                             <h1 className="font-syne font-[600] text-[21px] 2xs:text-[26px] text-[#ffffff] pb-[30px] pl-[10px]">Design System</h1>
                             <p className="px-4 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[17px] sm:text-[20px] pb-[70px]">
-                                Our design system was meticulously crafted to harmonize with the game's aesthetics and enhance the overall user experience. Colors were chosen from the game's thematic palette to maintain visual consistency and evoke the game's ambiance. Fonts were carefully selected for clarity and legibility, ensuring seamless readability across various devices. Layouts were kept clean and intuitive, facilitating effortless navigation and enabling users to find information with ease.
+                                Our design system was meticulously crafted to harmonize with the game&apos;s aesthetics and enhance the overall user experience. Colors were chosen from the game&apos;s thematic palette to maintain visual consistency and evoke the game&apos;s ambiance. Fonts were carefully selected for clarity and legibility, ensuring seamless readability across various devices. Layouts were kept clean and intuitive, facilitating effortless navigation and enabling users to find information with ease.
                             </p>
                             <h1 className="font-syne font-[600] text-[21px] 2xs:text-[26px] text-[#ffffff] pb-[30px] pl-[10px]">Iconography</h1>
                             <p className="px-4 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[17px] sm:text-[20px] pb-[80px]">
-                                Iconography within the website was meticulously curated to align seamlessly with the game's visual identity. Each icon was chosen with precision to represent different functionalities and features within the VR game. From navigation elements to interactive buttons, every icon was designed to be intuitive and easily recognizable, enhancing user experience and facilitating smooth interaction with the website.
+                                Iconography within the website was meticulously curated to align seamlessly with the game&apos;s visual identity. Each icon was chosen with precision to represent different functionalities and features within the VR game. From navigation elements to interactive buttons, every icon was designed to be intuitive and easily recognizable, enhancing user experience and facilitating smooth interaction with the website.
                             </p>
                         </div>
                     </div>
 
                     <div className="bg-red pb-[90px]">
                         <div className=" max-w-[1004px] min-h-[400px mx-auto  ">
-                            <img src={'/images/Placeholder2.png'} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" />
+                            <img src={`/images/Placeholder2.png`} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" alt="image3" />
                             <h1 className="font-syne font-[600] text-[21px] 2xs:text-[26px] text-[#ffffff] pb-[30px] pl-[10px]">UI components</h1>
                             <p className="px-3 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[17px] sm:text-[20px]">
-                                UI components formed the backbone of the website's user interface, providing users with intuitive tools to navigate and interact with the content. From sleek navigation menus to interactive buttons and forms, each component was meticulously designed to prioritize functionality without sacrificing aesthetics. The UI elements were crafted to complement the overall design language of the website and ensure a seamless and engaging user experience across all devices.
+                                UI components formed the backbone of the website&apos;s user interface, providing users with intuitive tools to navigate and interact with the content. From sleek navigation menus to interactive buttons and forms, each component was meticulously designed to prioritize functionality without sacrificing aesthetics. The UI elements were crafted to complement the overall design language of the website and ensure a seamless and engaging user experience across all devices.
                             </p>
                         </div>
                     </div>
