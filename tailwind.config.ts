@@ -33,6 +33,8 @@ const config: Config = {
 
     },
     screens: {
+      'home-md': {'max': '768px'},
+      'home-sm': {'max': '425px'},
       'home-lg': '1268px',
       'sm': '640px',
       'md': '768px',
