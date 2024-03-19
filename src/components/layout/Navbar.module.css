@@ -1,8 +1,6 @@
 .headerArea {
-    position: absolute;
     left: 0;
     top: 0;
-    background-color: black;
     width: 100%;
     z-index: 5;
 }
@@ -28,7 +26,7 @@
 .navbar .logoArea .phoneNumber {
     text-wrap: nowrap;
     font-size: 14px;
-    color: #00EBFF
+    color: white;
 }
 
 .navbar .linksArea {
