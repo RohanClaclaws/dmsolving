@@ -1,12 +1,16 @@
 .headerArea {
+    position: absolute;
+    left: 0;
+    top: 0;
     background-color: black;
+    width: 100%;
+    z-index: 5;
 }
 
 .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     height: 80px;
 }
 
@@ -70,4 +74,16 @@
 
 .navbar .linksArea .links .link:not(:hover)::before {
     transform-origin: left;
+}
+
+@media (max-width: 1200px) {
+    .phoneNumber {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .navbar .linksArea {
+        display: none;
+    }
 }
