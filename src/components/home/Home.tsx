@@ -37,6 +37,18 @@ const draw: Variants = {
   }
 }
 
+const draw2: Variants = {
+  hidden: { pathLength: 0 },
+  visible: (i) => {
+    const delay = 1 + i * 0.5;
+    return {
+      pathLength: 1,
+      transition: {
+        pathLength: { delay, duration: 2, repeat: Infinity, repeatType: 'mirror', repeatDelay: 1 }
+      }
+    }
+  }
+}
 const Home = () => {
   SwiperCore.use([Navigation]);
 
@@ -84,7 +96,7 @@ const Home = () => {
   return (
     <>
       <div className="bg-no-repeat bg-cover bg-black bg-center">
-        <video muted loop autoPlay className="absolute right-0">
+        <video muted loop autoPlay className="absolute right-0  [border-image:linear-gradient(180deg,#3CA921_0%,#3CA921_44.27%)_1] border-b-[10px] border-solid w-full object-cover h-full">
           <source src="/images/home/hero.mp4" type="video/mp4" />
         </video>
         <div className="layout">
@@ -98,7 +110,9 @@ const Home = () => {
             </div>
             <div className="flex items-end">
               <div className="flex items-center gap-10">
-                <Image src="/images/home/a.png" width={40} height={40} alt="arrow down" className="w-[40px] h-[40px]" />
+                <a href="#what-is-dmsolving">
+                  <Image src="/images/home/a.png" width={40} height={40} alt="arrow down" className="w-[40px] h-[40px] animate-bounce" />
+                </a>
                 <div className="font-[400] text-[19px] leading-[30px] text-[#FFFFFF99] font-syne hover:text-white">
                   <span>Delivering tailored Digital Solutions</span><br />
                   <span>seamlessly To your Business to serve</span><br />
@@ -107,7 +121,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <section className="flex flex-col justify-end mt-20">
+          <section className="flex flex-col justify-end mt-20" id="what-is-dmsolving">
             <span className="font-[500] text-[34px] leading-[43.2px] text-white my-10 font-syne">What is DMSolving?</span>
           </section>
         </div>
@@ -181,7 +195,7 @@ const Home = () => {
                   </g>
                 </g>
                 <g clipPath="url(#clip1_378_2157)">
-                  <motion.path d="M655.5 122.701C655.5 182.188 607.27 230.417 547.783 230.417C480.436 230.417 413.128 176.579 359.25 122.701C305.372 68.8229 238.064 14.9844 170.716 14.9844C111.23 14.9844 63 63.2139 63 122.701C63 182.188 111.23 230.417 170.716 230.417C238.064 230.417 305.372 176.579 359.25 122.701C413.128 68.8229 480.436 14.9844 547.783 14.9844C607.27 14.9844 655.5 63.2139 655.5 122.701Z" stroke="white" strokeMiterlimit="10" strokeLinecap="square" variants={draw} custom={1} />
+                  <motion.path d="M655.5 122.701C655.5 182.188 607.27 230.417 547.783 230.417C480.436 230.417 413.128 176.579 359.25 122.701C305.372 68.8229 238.064 14.9844 170.716 14.9844C111.23 14.9844 63 63.2139 63 122.701C63 182.188 111.23 230.417 170.716 230.417C238.064 230.417 305.372 176.579 359.25 122.701C413.128 68.8229 480.436 14.9844 547.783 14.9844C607.27 14.9844 655.5 63.2139 655.5 122.701Z" stroke="white" strokeMiterlimit="10" strokeLinecap="square" variants={draw2} custom={1} />
                 </g>
                 <defs>
                   <linearGradient id="paint0_linear_378_2157" x1="140" y1="129.984" x2="606" y2="123.984" gradientUnits="userSpaceOnUse">
@@ -282,8 +296,8 @@ const Home = () => {
             {/** SVG */}
             <div className=" py-20">
               <motion.svg width="1440" height="588" viewBox="0 0 1440 588" fill="none" xmlns="http://www.w3.org/2000/svg" initial="hidden" animate="visible" preserveAspectRatio="xMidYMid meet" className="max-w-full">
-                <g clip-path="url(#clip0_378_2260)">
-                  <g clip-path="url(#clip1_378_2260)">
+                <g clipPath="url(#clip0_378_2260)">
+                  <g clipPath="url(#clip1_378_2260)">
                     <path d="M199.593 95.1123H0.429688V294.275H199.593V95.1123Z" stroke="#353535" strokeWidth="0.833319" />
                     <path d="M799.583 294.275H600.42V493.439H799.583V294.275Z" stroke="#353535" strokeWidth="0.833319" />
                     <path d="M999.579 94.2793H800.416V293.442H999.579V94.2793Z" stroke="#353535" strokeWidth="0.833319" />
@@ -297,17 +311,17 @@ const Home = () => {
                     <path d="M1200.72 293.442L1316.18 94.7959L1399.36 293.442H1200.72Z" stroke="#353535" strokeWidth="0.833319" />
                     <path d="M1599.57 94.2793H1400.4V293.442H1599.57V94.2793Z" stroke="#353535" strokeWidth="0.833319" />
                   </g>
-                  <g clip-path="url(#clip2_378_2260)">
+                  <g clipPath="url(#clip2_378_2260)">
                     {/** White Lines */}
-                    <motion.path d="M-2.5 293.781H400" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" stroke-linecap="round" stroke-dasharray="575 575" variants={draw} custom={1} />
-                    <motion.path d="M400.834 492.948H800.001" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" stroke-linecap="round" stroke-dasharray="575 575" variants={draw} custom={2} />
-                    <motion.path d="M800 292.114H1200" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" stroke-linecap="round" stroke-dasharray="575 575" variants={draw} />
-                    <motion.path d="M400.416 293.364V493.364" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" stroke-linecap="round" stroke-dasharray="575 575" variants={draw} custom={3} />
-                    <motion.path d="M800.416 292.531V493.365" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" stroke-linecap="round" stroke-dasharray="575 575" variants={draw} custom={4} />
-                    <motion.path d="M1400.42 92.5312V292.531" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" stroke-linecap="round" stroke-dasharray="575 575" variants={draw} custom={5} />
-                    <motion.path d="M1600 92.9482H1400" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" stroke-linecap="round" stroke-dasharray="575 575" variants={draw} custom={6} />
-                    <motion.path d="M1199.64 291.955L1315.47 91.3262" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" stroke-linecap="round" stroke-dasharray="575 575" variants={draw} custom={7} />
-                    <motion.path d="M1399.94 292.349L1315.45 91.0264" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" stroke-linecap="round" stroke-dasharray="575 575" variants={draw} custom={8} />
+                    <motion.path d="M-2.5 293.781H400" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={1} />
+                    <motion.path d="M400.834 492.948H800.001" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={2} />
+                    <motion.path d="M800 292.114H1200" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} />
+                    <motion.path d="M400.416 293.364V493.364" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={3} />
+                    <motion.path d="M800.416 292.531V493.365" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={4} />
+                    <motion.path d="M1400.42 92.5312V292.531" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={5} />
+                    <motion.path d="M1600 92.9482H1400" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={6} />
+                    <motion.path d="M1199.64 291.955L1315.47 91.3262" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={7} />
+                    <motion.path d="M1399.94 292.349L1315.45 91.0264" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={8} />
                     {/** White lines END */}
                   </g>
                 </g>
@@ -333,9 +347,9 @@ const Home = () => {
               </div>
               <div className="flex home-lg:justify-between home-lg:flex-row flex-col justify-between items-center home-lg:gap-0 gap-10 home-lg:text-start text-center">
                 <div className="flex flex-col justify-between">
-                  <span className="text-[36px] leading-[54px] text-white">&bull;Product clarity</span>
-                  <span className="font-[400] text-[35px] leading-[54px] text-[#FFFFFF99]">UX/UI design</span>
-                  <span className="font-[400] text-[35px] leading-[54px] text-[#FFFFFF99]">Maintain process</span>
+                  <span className="text-[36px] leading-[54px] text-white cursor-pointer">&bull;Product clarity</span>
+                  <span className="font-[400] text-[35px] leading-[54px] text-[#FFFFFF99] hover:text-white cursor-pointer">UX/UI design</span>
+                  <span className="font-[400] text-[35px] leading-[54px] text-[#FFFFFF99] hover:text-white cursor-pointer">Maintain process</span>
                 </div>
                 <Image src="/images/home/help.png" width={317.88} height={221.5} alt="help me" className="w-[317.88px] h-[221.5px]" />
                 <div className="max-w-[397.88px] w-full">
@@ -351,14 +365,28 @@ const Home = () => {
               </div>
             </section>
             <div className="py-20">
-              <div className="flex gap-10">
+              <div className="flex gap-20 justify-center">
+                {/** Left */}
                 <Image src="/images/home/about01.jpg.png" width={230.39} height={344.77} alt="About 1" className="w-[230.39px] h-[344.77px]" />
-                <div className="flex flex-col">
+                {/** Left END */}
+                {/** Middle */}
+                <div className="flex flex-col gap-10 max-w-[618.87px] w-full">
                   <span className="font-[600] text-[115px] leading-[144px] text-white font-syne">About</span>
-                  <span className="font-[400] text-[26px] leading-[36px] text-[#FFFFFF99]">
+                  <span className="font-[400] text-[26px] leading-[36px] text-[#FFFFFF99] break-words whitespace-break-spaces">
                     Team of product and brand designers that are really passionate about digital marketing and good design. We are not just UI freaks! We advocate users for better product experience and common sense.
                   </span>
+                  <div className="flex gap-3 items-center">
+                    <span className="text-white font-[400] text-[26px] leading-[39px]">More about us</span>
+                    <Image src="/images/home/arrow_right.png" width={39} height={40} alt="right arrow" className="w-[39px] h-[40px]" />
+                  </div>
+                  <Image src="/images/home/about02.jpg.png" width={288} height={191.56} alt="Lets go" className="w-[288px] h-[191.56px]" />
                 </div>
+                {/** Middle end */}
+                {/** Right */}
+                <div className="flex items-end">
+                  <Image src="/images/home/about03.jpg.png" width={230.39} height={343.16} alt="hand in hand" className="w-[230.39px] h-[343.16px]" />
+                </div>
+                {/** Right END */}
               </div>
             </div>
           </div>
