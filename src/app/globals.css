@@ -8,6 +8,16 @@
     .layout{
         @apply  px-5 layout-sm:w-10/12 mx-auto
     }
+   
+}
+
+.number{
+        /* background-color: rebeccapurple; */
+        font-size: 5rem;
+        padding: 0 5px;
+        -webkit-text-stroke: 0.5px #00EbFF ;
+        -webkit-text-fill-color: transparent;
+        
 }
 
 html {
