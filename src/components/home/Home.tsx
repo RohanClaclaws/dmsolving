@@ -365,14 +365,16 @@ const Home = () => {
                 <span>How can we</span>
                 <span>help you grow</span>
               </motion.div>
-              <div className="flex justify-center flex-row items-start gap-10 flex-wrap">
-                <div className="flex flex-col justify-between">
+              <div className="flex home-lg:justify-between justify-center flex-row items-start gap-10 flex-wrap">
+                <motion.div className="flex flex-col justify-between" initial={{opacity: 0, x: -200}} whileInView={{opacity: 1, x: 0}} transition={{ease: 'easeIn', duration: 0.5}}>
                   <span className="text-[36px] leading-[54px] text-white cursor-pointer">&bull;Product clarity</span>
                   <span className="font-[400] text-[35px] leading-[54px] text-[#FFFFFF99] hover:text-white cursor-pointer">UX/UI design</span>
                   <span className="font-[400] text-[35px] leading-[54px] text-[#FFFFFF99] hover:text-white cursor-pointer">Maintain process</span>
-                </div>
-                <Image src="/images/home/help.png" width={317.88} height={221.5} alt="help me" className="md:w-[317.88px] md:h-[221.5px] w-[282.56px] h-[196.89px]" />
-                <div className="max-w-[397.88px] w-full">
+                </motion.div>
+                <motion.span initial={{opacity: 0, y: 200}} whileInView={{opacity: 1, y: 0}} transition={{ease: 'easeIn', duration: 0.5}}>
+                  <Image src="/images/home/help.png" width={317.88} height={221.5} alt="help me" className="md:w-[317.88px] md:h-[221.5px] w-[282.56px] h-[196.89px]" />
+                </motion.span>
+                <motion.div className="max-w-[397.88px] w-full" initial={{opacity: 0, x: 200}} whileInView={{opacity: 1, x: 0}} transition={{ease: 'easeIn', duration: 0.5}}>
                   <span className="md:text-[26px] text-[20px] leading-[32px] font-[400] text-white">
                     Are you at the idea stage? We will help you identify the critical MVP product scope.
                   </span>
@@ -381,7 +383,7 @@ const Home = () => {
                     <span>brand voice</span>
                     <span>product positioning</span>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </section>
             <div className="py-40">
@@ -393,10 +395,14 @@ const Home = () => {
                 {/** Left END */}
                 {/** Middle */}
                 <div className="flex flex-col gap-10 max-w-[618.87px] w-full z-[100]">
-                  <span className="font-[600] layout-sm:text-[115px] text-[48px] layout-sm:leading-[144px] text-white font-syne">About</span>
-                  <span className="font-[400] layout-sm:text-[26px] text-[16px] leading-[36px] text-white break-words whitespace-break-spaces">
+                  <motion.span className="font-[600] layout-sm:text-[115px] text-[48px] layout-sm:leading-[144px] text-white font-syne" initial={{opacity: 0, x: 200}} 
+                  whileInView={{opacity: 1, x: 0}} transition={{ease: 'easeIn', duration: 0.5}}>
+                    About
+                  </motion.span>
+                  <motion.span className="font-[400] layout-sm:text-[26px] text-[16px] leading-[36px] text-white break-words whitespace-break-spaces" 
+                  initial={{opacity: 0, x: -300}} whileInView={{opacity: 1, x: 0}} transition={{ease: 'easeIn', duration: 0.5}}>
                     Team of product and brand designers that are really passionate about digital marketing and good design. We are not just UI freaks! We advocate users for better product experience and common sense.
-                  </span>
+                  </motion.span>
                   <div className="flex gap-3 items-center">
                     <span className="text-white font-[400] text-[26px] leading-[39px]">More about us</span>
                     <Image src="/images/home/arrow_right.png" width={39} height={40} alt="right arrow" className="w-[39px] h-[40px]" />
