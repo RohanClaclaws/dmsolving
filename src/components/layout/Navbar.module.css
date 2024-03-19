@@ -47,6 +47,10 @@
     /* background-color: #00EBFF; */
 }
 
+.navbar .linksArea .links .active {
+    font-weight: 700;
+}
+
 .navbar .linksArea .links .link::before {
     content: '';
     position: absolute;

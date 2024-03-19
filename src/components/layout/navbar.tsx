@@ -1,8 +1,16 @@
+"use client"
 import Image from "next/image"
 import styles from "./Navbar.module.css"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
-const Navbar = () => {
+
+const Navbar = () => {    
+    const matchPath = usePathname().match(/\/([^\/]*)/)
+    let pathname:string | null = null
+    if(matchPath) {
+        pathname = matchPath[0]
+    }
     const links = [
         {
             label: "Home",
@@ -31,7 +39,7 @@ const Navbar = () => {
     ].map(({ label, href }) => (
         <li
             key={href}
-            className={styles.link}
+            className={`${styles.link} ${href === pathname && styles.active}`}
         >
             <Link
                 href={href}
