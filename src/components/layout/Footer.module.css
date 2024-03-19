@@ -1,0 +1,19 @@
+.footer {
+    position: relative;
+    width: 100%;
+    height: 554.39px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.footer .content {
+    color: #fff;    
+    /* background-color: burlywood; */
+}
+
+.footer .footerBackground {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 0;
+}
