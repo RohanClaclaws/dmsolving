@@ -1,25 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
-    .layout{
-        @apply  px-5 layout-sm:w-10/12 mx-auto
-    }
-   
+  .layout {
+    @apply px-5 layout-sm:w-10/12 mx-auto;
+  }
 }
 
-.number{
-        /* background-color: rebeccapurple; */
-        font-size: 5rem;
-        padding: 0 5px;
-        -webkit-text-stroke: 0.5px #00EbFF ;
-        -webkit-text-fill-color: transparent;
-        
+.number {
+  /* background-color: rebeccapurple; */
+  font-size: 5rem;
+  padding: 0 5px;
+  -webkit-text-stroke: 0.5px #00ebff;
+  -webkit-text-fill-color: transparent;
 }
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
+
+.vidWrapper::after {
+  position: absolute;
+  bottom: -500;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  content: "";
+  background: linear-gradient(to bottom, rgba(255,0,0,0), black);
+  color: black;
+  z-index: 0;
+}
