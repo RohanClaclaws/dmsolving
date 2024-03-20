@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import PortfolioCard from "./PortfolioCard";
+import BannerText from "../resuable/BannerText";
+import { motion } from 'framer-motion';
 
 const Portfolio = () => {
   const row1 = [
@@ -59,14 +61,14 @@ const Portfolio = () => {
     },
   ];
 
-  const [awardWinning, setAwardWinning] = useState({status: false, index: -1});
+  const [awardWinning, setAwardWinning] = useState({ status: false, index: -1 });
 
   return (
-    <div className="bg-black py-[12px]">
+    <div className="bg-black py-[50px] pt-[100px] overflow-hidden">
       <div className="layout">
         <div className="flex flex-col gap-20">
-          <div className="flex gap-10 justify-center">
-            <Image src="/images/portfolio/portfolio_head.png" width={660} height={490} alt="Portfolio" className="tw-w-[660px] tw-h-[490px]" />
+          <div className="flex gap-10 justify-center p-md:flex-row flex-col">
+            <Image src="/images/portfolio/portfolio_head.png" width={660} height={490} alt="Portfolio" className="-w-[660px] h-[490px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out" />
             <div className="flex flex-col justify-between">
               <div className="font-syne flex flex-col">
                 <span className="text-[#00EBFF] text-[26px] font-[600] leading-[31.2px]">Project CRM by brain</span>
@@ -84,51 +86,52 @@ const Portfolio = () => {
             </div>
           </div>
           {/** Row 1 */}
-          <div className="flex gap-5 justify-center">
+          <div className="flex md:gap-5 justify-center md:flex-row flex-col items-center gap-10">
             {
               row1.map((e, idx) => {
                 return (
-                  <span key={idx} className={`${idx === 1 ? "mt-10" : "mt-0"}`} onMouseEnter={() => setAwardWinning({ status: true, index: idx })} onMouseLeave={() => setAwardWinning({status: false, index: -1})}>
-                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={awardWinning.status && awardWinning.index === idx} />
-                  </span>
+                  <motion.span key={idx} className={`${idx === 1 ? "md:mt-10" : "mt-0"}`} onMouseEnter={() => setAwardWinning({ status: true, index: idx + 1 })} onMouseLeave={() => setAwardWinning({ status: false, index: -1 })} initial={{ opacity: 0, x: -200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: .75 }}>
+                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={awardWinning.status && awardWinning.index === idx + 1} />
+                  </motion.span>
                 )
               })
             }
           </div>
           {/** Row 1 end */}
           {/** Row 2 */}
-          <div className="flex gap-5 justify-center">
+          <div className="flex md:gap-5 justify-center md:flex-row flex-col items-center gap-10">
             {
               row2.map((e, idx) => {
                 return (
-                  <span key={idx} className={`${idx === 1 ? "mt-10" : "mt-0"}`} onMouseEnter={() => setAwardWinning({ status: true, index: idx })} onMouseLeave={() => setAwardWinning({status: false, index: -1})}>
-                    <PortfolioCard img={e.img} description={e.description} title={e.title} />
-                  </span>
+                  <motion.span key={idx} className={`${idx === 1 ? "md:mt-10" : "mt-0"}`} onMouseEnter={() => setAwardWinning({ status: true, index: idx + 100 })} onMouseLeave={() => setAwardWinning({ status: false, index: -1 })} initial={{ opacity: 0, x: 200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: .75 }}>
+                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={awardWinning.status && awardWinning.index === idx + 100} />
+                  </motion.span>
                 )
               })
             }
           </div>
           {/** Row 2 END */}
           {/** Row 3 */}
-          <div className="flex gap-5 justify-center">
+          <div className="flex md:gap-5 justify-center md:flex-row flex-col items-center gap-10">
             {
               row3.map((e, idx) => {
                 return (
-                  <span key={idx} className={`${idx === 1 ? "mt-10" : "mt-0"}`}>
-                    <PortfolioCard img={e.img} description={e.description} title={e.title} />
-                  </span>
+                  <motion.span key={idx} className={`${idx === 1 ? "md:mt-10" : "mt-0"}`} onMouseEnter={() => setAwardWinning({ status: true, index: idx + 200 })} onMouseLeave={() => setAwardWinning({ status: false, index: -1 })} initial={{ opacity: 0, x: -200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: .75 }}>
+                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={awardWinning.status && awardWinning.index === idx + 200} />
+                  </motion.span>
                 )
               })
             }
           </div>
           {/** Row 3 END */}
-          <div className="flex justify-center">
+          <div className="flex justify-center mb-20 animate-pulse">
             <div className="w-[165px] h-[165px] border-[1px] border-[#FFD55B] flex items-center justify-center rounded-[1000px] hover:scale-[1.1] cursor-pointer ease-in-out transition-all hover:bg-[#1C2F47]">
               <span className="font-[600] text-[18px] leading-[21.6px] font-syne text-[#CFDDE8]">Load More</span>
             </div>
           </div>
         </div>
       </div>
+      <BannerText />
     </div>
   )
 }

@@ -113,10 +113,10 @@ const Home = () => {
   return (
     <>
       <div className="bg-no-repeat bg-cover bg-black bg-center">
-        <video muted loop autoPlay className="absolute right-0 w-full object-cover h-full">
-          <source src="/images/home/hero.mp4" type="video/mp4" />
+        <video muted loop autoPlay className="absolute right-0 w-full object-cover h-full brightness-200">
+          <source src="/images/home/hero_2.mp4" type="video/mp4" />
         </video>
-        <div className="vidWrapper">
+        <div className="vidWrapper"> 
         </div>
         <div className="layout">
           <section className="h-[100dvh] justify-center flex flex-col relative py-10">
