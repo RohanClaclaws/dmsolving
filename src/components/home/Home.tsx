@@ -16,6 +16,8 @@ import { Navigation } from 'swiper/modules';
 import { useState } from "react";
 import Hoverable from "./Hoverable";
 import Modal from "./Modal";
+import Link from "next/link";
+import Blur from "../resuable/Blur";
 
 type PathProps = {
   stroke: string
@@ -120,15 +122,15 @@ const Home = () => {
           <section className="h-[100dvh] justify-center flex flex-col relative py-10">
             <div className="flex justify-center flex-1 items-center">
               <div className="flex flex-col items-center m-10 font-dmsans text-center md:gap-20 gap-0">
-                <motion.span className="font-[500] md:text-[150px] text-[50px] leading-[100px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeIn' }}>Grow your</motion.span>
-                <motion.span className="font-[500] md:text-[150px] text-[50px] leading-[100px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, ease: 'easeIn' }}>brand</motion.span>
-                <motion.span className="font-[500] md:text-[150px] text-[50px] leading-[100px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeIn' }}>with us</motion.span>
+                <motion.span className="font-[500] md:text-[150px] text-[50px] md:leading-[100px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeIn' }}>Grow{" "}your</motion.span>
+                <motion.span className="font-[500] md:text-[150px] text-[50px] md:leading-[100px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, ease: 'easeIn' }}>brand</motion.span>
+                <motion.span className="font-[500] md:text-[150px] text-[50px] md:leading-[100px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeIn' }}>with us</motion.span>
               </div>
             </div>
             <div className="flex items-end">
               <div className="flex items-center gap-10">
                 <a href="#what-is-dmsolving">
-                  <Image src="/images/home/a.png" width={40} height={40} alt="arrow down" className="w-[40px] h-[40px] animate-bounce border-[1px] bg-transparent" />
+                  <Image src="/images/home/a.png" width={40} height={40} alt="arrow down" className="w-[40px] h-[40px] animate-bounce border-[1px] bg-transparent rounded-[50%] p-1" />
                 </a>
                 <div className="font-[400] md:text-[19px] text-[14px] leading-[30px] text-[#FFFFFF99] font-syne hover:text-white">
                   <span>Delivering tailored Digital Solutions</span><br />
@@ -138,21 +140,21 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <section className="flex flex-col justify-end mt-20" id="what-is-dmsolving">
-            <motion.span className="font-[500] text-[34px] leading-[43.2px] text-white my-10 font-syne" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}>What is DMSolving?</motion.span>
-          </section>
         </div>
       </div>
       <div className="bg-black relative overflow-hidden">
         <div className="layout home-md:px-[16px] home-md:m-0 home-md:w-full">
           <section className="">
-            <div className="md:justify-between flex md:flex-row flex-col justify-center">
+            <div className="md:justify-evenly flex md:flex-row flex-col justify-center md:gap-0 gap-28">
               {/** Blur esque */}
-              <Image src="/images/home/blur.png" width={830} height={1009} alt="blur" className="w-[830px] h-[1009px] absolute right-[-500px] animate-pulse" />
+              <Blur />
               {/** Blur END */}
-              <motion.p className="max-w-[720px] w-full font-[400] text-[19px] leading-[30px] text-[#FFFFFF99]" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ ease: 'easeInOut' }}>
-                At DMSolving, our mission is to empower your business with innovative solutions that drive success. In today’s dynamic digital environment, creativity is the cornerstone of impactful marketing strategies, web design, and app development. Our passionate team of experts is dedicated to crafting solutions that not only captivate and engage your audience but also deliver tangible profits to your company.
-              </motion.p>
+              <div className="flex flex-col">
+                <motion.span className="font-[500] text-[34px] leading-[43.2px] text-white my-10 font-syne" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}>What is DMSolving?</motion.span>
+                <motion.p className="max-w-[720px] w-full font-[400] text-[19px] leading-[30px] text-[#FFFFFF99]" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ ease: 'easeInOut' }}>
+                  At DMSolving, our mission is to empower your business with innovative solutions that drive success. In today’s dynamic digital environment, creativity is the cornerstone of impactful marketing strategies, web design, and app development. Our passionate team of experts is dedicated to crafting solutions that not only captivate and engage your audience but also deliver tangible profits to your company.
+                </motion.p>
+              </div>
               <motion.span initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
                 <motion.svg width="720" height="247" viewBox="0 0 720 247" fill="none" xmlns="http://www.w3.org/2000/svg" className="max-w-full" preserveAspectRatio="xMidYMid meet" initial="hidden" animate="visible">
                   <g clipPath="url(#clip0_378_2157)">
@@ -213,7 +215,7 @@ const Home = () => {
                     </g>
                   </g>
                   <g clipPath="url(#clip1_378_2157)">
-                    <motion.path d="M655.5 122.701C655.5 182.188 607.27 230.417 547.783 230.417C480.436 230.417 413.128 176.579 359.25 122.701C305.372 68.8229 238.064 14.9844 170.716 14.9844C111.23 14.9844 63 63.2139 63 122.701C63 182.188 111.23 230.417 170.716 230.417C238.064 230.417 305.372 176.579 359.25 122.701C413.128 68.8229 480.436 14.9844 547.783 14.9844C607.27 14.9844 655.5 63.2139 655.5 122.701Z" stroke="white" strokeMiterlimit="10" strokeLinecap="square" variants={draw2} custom={1} />
+                    <motion.path d="M655.5 122.701C655.5 182.188 607.27 230.417 547.783 230.417C480.436 230.417 413.128 176.579 359.25 122.701C305.372 68.8229 238.064 14.9844 170.716 14.9844C111.23 14.9844 63 63.2139 63 122.701C63 182.188 111.23 230.417 170.716 230.417C238.064 230.417 305.372 176.579 359.25 122.701C413.128 68.8229 480.436 14.9844 547.783 14.9844C607.27 14.9844 655.5 63.2139 655.5 122.701Z" stroke="#96FF42" strokeMiterlimit="10" strokeLinecap="square" variants={draw2} custom={1} />
                   </g>
                   <defs>
                     <linearGradient id="paint0_linear_378_2157" x1="140" y1="129.984" x2="606" y2="123.984" gradientUnits="userSpaceOnUse">
@@ -230,17 +232,17 @@ const Home = () => {
                 </motion.svg>
               </motion.span>
             </div>
-            <div className="flex flex-col mt-40 px-[16px] gap-28">
-              <motion.span className="font-[500] text-[111px] leading-[144px] text-white" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: 'easeIn' }}>Projects</motion.span>
-              <div className="flex md:justify-between gap-3 md:flex-row flex-col justify-center ">
+            <div className="flex flex-col mt-40 px-[16px] md:gap-28 gap-10">
+              <motion.span className="font-[500] md:text-[111px] text-[36px] md:leading-[144px] text-white home-4k:pl-56" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: 'easeIn' }}>Projects</motion.span>
+              <div className="flex md:justify-evenly gap-3 md:flex-row flex-col justify-center ">
                 {/** Left side */}
                 <div className="flex flex-col gap-3">
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv1(true)} onMouseLeave={() => setHv1(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
-                    <Image src="/images/home/h1.png" width={668} height={430} alt="home" className="w-[668px] h-[429.89px]" />
+                    <Image src="/images/home/h1.png" width={668} height={430} alt="home" className="w-[668px] h-[429.89px] object-cover" />
                     {hv1 && <Hoverable title="Clash of the Claws" />}
                   </motion.div>
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv2(true)} onMouseLeave={() => setHv2(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
-                    <Image src="/images/home/h2.png" width={668} height={430} alt="home" className="w-[668px] h-[409.31px]" />
+                    <Image src="/images/home/h2.png" width={668} height={430} alt="home" className="w-[668px] h-[409.31px] object-cover" />
                     {hv2 && <Hoverable title="Atet Auto" />}
                   </motion.div>
                   <motion.div className="max-w-[668px] w-full p-9 flex flex-col gap-3 bg-[#191919]" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
@@ -256,11 +258,11 @@ const Home = () => {
                 {/** Right side */}
                 <div className="flex flex-col gap-3">
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv3(true)} onMouseLeave={() => setHv3(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
-                    <Image src="/images/home/h3.png" width={668} height={677.55} alt="home" className="w-[668px] h-[677.55px]" />
+                    <Image src="/images/home/h3.png" width={668} height={677.55} alt="home" className="w-[668px] h-[677.55px] object-cover" />
                     {hv3 && <Hoverable title="Centure AI" />}
                   </motion.div>
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv4(true)} onMouseLeave={() => setHv4(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
-                    <Image src="/images/home/h4.png" width={668} height={353} alt="home" className="w-[668px] h-[353px]" />
+                    <Image src="/images/home/h4.png" width={668} height={353} alt="home" className="w-[668px] h-[353px] object-cover" />
                     {hv4 && <Hoverable title="ClaClaws" />}
                   </motion.div>
                 </div>
@@ -270,18 +272,41 @@ const Home = () => {
           </section>
         </div>
         <section>
-          <div className="layout mt-64">
-            <motion.div className="text-white font-[500] text-[114px] leading-[144px] my-10" initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn' }}>Other projects</motion.div>
-            <Swiper slidesPerView={3} navigation={{ nextEl: '.next', prevEl: '.prev' }} onSlideChange={() => console.log("slide change")}
-              onSwiper={() => console.log('swiped')}>
+          <div className="layout md:mt-64 mt-20">
+            <motion.div className="text-white font-[500] md:text-[111px] text-[36px] md:leading-[144px] my-10" initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn' }}>Other projects</motion.div>
+            <Swiper slidesPerView={3} spaceBetween={0} navigation={{ nextEl: '.next', prevEl: '.prev' }} onSlideChange={() => console.log("slide change")}
+              onSwiper={() => console.log('swiped')} 
+              breakpoints={{
+                //1806px UP
+                '1900': {
+                  slidesPerView: 4,
+                  spaceBetween: 10
+                },
+                '1024': {
+                  slidesPerView: 3,
+                  spaceBetween: 50
+                },
+                '768': {
+                  slidesPerView: 2,
+                  spaceBetween: 50
+                },
+                '425': {
+                  slidesPerView: 1.5,
+                  spaceBetween: 0
+                },
+                '0': {
+                  slidesPerView: 1,
+
+                }
+              }}>
               {
                 swiperImage.map((e, idx) => {
                   return (
                     <SwiperSlide key={idx}>
-                      <div className="hover:bg-[#62666F] bg-[#292929] w-[464px] h-[347px] flex flex-col justify-center items-center cursor-pointer overflow-hidden"
-                        onClick={() => setOpenModal({ status: true, img: e.img })}>
+                      <motion.div className="hover:bg-[#62666F] bg-[#292929] w-[464px] h-[347px] flex flex-col justify-center items-center cursor-pointer overflow-hidden"
+                        onClick={() => setOpenModal({ status: true, img: e.img })} initial={{opacity: 0, y: 100}} whileInView={{opacity: 1, y: 0}} transition={{delay: idx < 4 ? idx * 0.1 : .25, ease: 'easeIn'}}>
                         <Image src={e.img} width={e.width} height={e.height} alt="swipers" className="w-[399px] h-[299px] hover:scale-[1.1] object-cover transition-all ease-in-out duration-[.3s]" />
-                      </div>
+                      </motion.div>
                     </SwiperSlide>
                   )
                 })
@@ -312,9 +337,9 @@ const Home = () => {
               </div>
               {/** Arrows End */}
             </div>
-            {/** SVG */}
-            <div className="">
-              <motion.svg width="1920" height="704" viewBox="0 0 1440 588" fill="none" xmlns="http://www.w3.org/2000/svg" initial="hidden" animate="visible" preserveAspectRatio="xMidYMid meet" className="md:max-w-full">
+            <div className="relative h-[586px]">
+              {/** SVG */}
+              <motion.svg width="1600" height="586" viewBox="0 0 1440 588" fill="none" xmlns="http://www.w3.org/2000/svg" initial="hidden" animate="visible" preserveAspectRatio="xMidYMin" className="absolute home-4k:w-full">
                 <g clipPath="url(#clip0_378_2260)">
                   <g clipPath="url(#clip1_378_2260)">
                     <path d="M199.593 95.1123H0.429688V294.275H199.593V95.1123Z" stroke="#353535" strokeWidth="0.833319" />
@@ -332,15 +357,15 @@ const Home = () => {
                   </g>
                   <g clipPath="url(#clip2_378_2260)">
                     {/** White Lines */}
-                    <motion.path d="M-2.5 293.781H400" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={1} />
-                    <motion.path d="M400.834 492.948H800.001" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={2} />
-                    <motion.path d="M800 292.114H1200" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} />
-                    <motion.path d="M400.416 293.364V493.364" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={3} />
-                    <motion.path d="M800.416 292.531V493.365" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={4} />
-                    <motion.path d="M1400.42 92.5312V292.531" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={5} />
-                    <motion.path d="M1600 92.9482H1400" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={6} />
-                    <motion.path d="M1199.64 291.955L1315.47 91.3262" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={7} />
-                    <motion.path d="M1399.94 292.349L1315.45 91.0264" stroke="white" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={8} />
+                    <motion.path d="M-2.5 293.781H400" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={1} />
+                    <motion.path d="M400.834 492.948H800.001" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={2} />
+                    <motion.path d="M800 292.114H1200" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} />
+                    <motion.path d="M400.416 293.364V493.364" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={3} />
+                    <motion.path d="M800.416 292.531V493.365" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={4} />
+                    <motion.path d="M1400.42 92.5312V292.531" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={5} />
+                    <motion.path d="M1600 92.9482H1400" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={6} />
+                    <motion.path d="M1199.64 291.955L1315.47 91.3262" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={7} />
+                    <motion.path d="M1399.94 292.349L1315.45 91.0264" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={8} />
                     {/** White lines END */}
                   </g>
                 </g>
@@ -356,29 +381,28 @@ const Home = () => {
                   </clipPath>
                 </defs>
               </motion.svg>
-
+              {/** SVG END */}
             </div>
-            {/** SVG END */}
-            <section className=" flex flex-col gap-32">
-              <motion.div className="flex flex-col items-start text-white font-syne font-[600] md:text-[114px] text-[80px] leading-[118px]"
+            <section className=" flex flex-col md:gap-32 gap-10">
+              <motion.div className="flex flex-col items-center text-white font-syne font-[600] md:text-[114px] home-sm:text-[36px] md:leading-[118px] text-[80px]"
                 initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn' }}>
-                <span>How can we</span>
-                <span>help you grow</span>
+                <span>How can we<br />help you grow</span>
+                {/* <span>help you grow</span> */}
               </motion.div>
-              <div className="flex home-lg:justify-between justify-center flex-row items-start gap-10 flex-wrap">
-                <motion.div className="flex flex-col justify-between" initial={{opacity: 0, x: -200}} whileInView={{opacity: 1, x: 0}} transition={{ease: 'easeIn', duration: 0.5}}>
+              <div className="flex home-lg:justify-evenly justify-center flex-row items-start gap-10 flex-wrap">
+                <motion.div className="flex flex-col justify-between" initial={{ opacity: 0, x: -200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
                   <span className="text-[36px] leading-[54px] text-white cursor-pointer">&bull;Product clarity</span>
                   <span className="font-[400] text-[35px] leading-[54px] text-[#FFFFFF99] hover:text-white cursor-pointer">UX/UI design</span>
                   <span className="font-[400] text-[35px] leading-[54px] text-[#FFFFFF99] hover:text-white cursor-pointer">Maintain process</span>
                 </motion.div>
-                <motion.span initial={{opacity: 0, y: 200}} whileInView={{opacity: 1, y: 0}} transition={{ease: 'easeIn', duration: 0.5}}>
+                <motion.span initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
                   <Image src="/images/home/help.png" width={317.88} height={221.5} alt="help me" className="md:w-[317.88px] md:h-[221.5px] w-[282.56px] h-[196.89px]" />
                 </motion.span>
-                <motion.div className="max-w-[397.88px] w-full" initial={{opacity: 0, x: 200}} whileInView={{opacity: 1, x: 0}} transition={{ease: 'easeIn', duration: 0.5}}>
+                <motion.div className="max-w-[397.88px] w-full" initial={{ opacity: 0, x: 200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
                   <span className="md:text-[26px] text-[20px] leading-[32px] font-[400] text-white">
                     Are you at the idea stage? We will help you identify the critical MVP product scope.
                   </span>
-                  <div className="flex flex-col font-[400] md:text-[26px] text-[20px] leading-[32px] text-[#FFFFFF99] md:p-5">
+                  <div className="flex flex-col font-[400] md:text-[26px] text-[20px] leading-[32px] text-[#FFFFFF99] md:p-5 py-5">
                     <span>product goal & vision</span>
                     <span>brand voice</span>
                     <span>product positioning</span>
@@ -386,27 +410,27 @@ const Home = () => {
                 </motion.div>
               </div>
             </section>
-            <div className="py-40">
-              <div className="flex gap-20 justify-center relative">
+            <div className="py-60">
+              <div className="flex gap-20 home-4k:justify-evenly justify-center relative">
                 {/** Left */}
-                <motion.span initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{ease: 'easeIn', duration: 0.5}}>
-                  <Image src="/images/home/about01.jpg.png" width={230.39} height={344.77} alt="About 1" className="lg:w-[230.39px] w-[122.875px] lg:h-[344.77px] h-[183.016px] absolute left-0 home-sm:hidden" />
+                <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: 'easeIn', duration: 0.5 }} className="home-sm:hidden">
+                  <Image src="/images/home/about01.jpg.png" width={230.39} height={344.77} alt="About 1" className="lg:w-[230.39px] w-[122.875px] lg:h-[344.77px] h-[183.016px] home-3k:absolute left-0" />
                 </motion.span>
                 {/** Left END */}
                 {/** Middle */}
-                <div className="flex flex-col gap-10 max-w-[618.87px] w-full z-[100]">
-                  <motion.span className="font-[600] layout-sm:text-[115px] text-[48px] layout-sm:leading-[144px] text-white font-syne" initial={{opacity: 0, x: 200}} 
-                  whileInView={{opacity: 1, x: 0}} transition={{ease: 'easeIn', duration: 0.5}}>
+                <div className="flex flex-col md:gap-10 gap-5 max-w-[618.87px] w-full z-[100]">
+                  <motion.span className="font-[600] layout-sm:text-[115px] text-[48px] layout-sm:leading-[144px] text-white font-syne" initial={{ opacity: 0, x: 200 }}
+                    whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
                     About
                   </motion.span>
-                  <motion.span className="font-[400] layout-sm:text-[26px] text-[16px] leading-[36px] text-white break-words whitespace-break-spaces" 
-                  initial={{opacity: 0, x: -300}} whileInView={{opacity: 1, x: 0}} transition={{ease: 'easeIn', duration: 0.5}}>
+                  <motion.span className="font-[400] layout-sm:text-[26px] text-[16px] leading-[36px] text-[#FFFFFF99] break-words whitespace-break-spaces"
+                    initial={{ opacity: 0, x: -300 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
                     Team of product and brand designers that are really passionate about digital marketing and good design. We are not just UI freaks! We advocate users for better product experience and common sense.
                   </motion.span>
-                  <div className="flex gap-3 items-center">
+                  <Link className="flex gap-3 items-center" href="/about-us">
                     <span className="text-white font-[400] text-[26px] leading-[39px]">More about us</span>
                     <Image src="/images/home/arrow_right.png" width={39} height={40} alt="right arrow" className="w-[39px] h-[40px]" />
-                  </div>
+                  </Link>
                   <Image src="/images/home/about02.jpg.png" width={288} height={191.56} alt="Lets go" className="md:w-[288px] md:h-[191.56px] w-[144px] h-[96px]" />
                 </div>
                 {/** Middle end */}
@@ -414,7 +438,9 @@ const Home = () => {
                 {/* <div className="flex items-end">
                   <Image src="/images/home/about03.jpg.png" width={230.39} height={343.16} alt="hand in hand" className="w-[230.39px] h-[343.16px]" />
                 </div> */}
-                <Image src="/images/home/about03.jpg.png" width={230.39} height={343.16} alt="hand in hand" className="md:w-[230.39px] w-[122.875px] md:h-[344.77px] h-[183.016px] absolute right-0 bottom-0 home-sm:hidden" />
+                <div className="flex items-end home-3k:absolute right-0 bottom-0 home-sm:hidden animate-[floating_3s_infinite]">
+                  <Image src="/images/home/about03.jpg.png" width={230.39} height={343.16} alt="hand in hand" className="md:w-[230.39px] w-[122.875px] md:h-[344.77px] h-[183.016px]" />
+                </div>
                 {/** Right END */}
               </div>
             </div>

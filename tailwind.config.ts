@@ -24,7 +24,9 @@ const config: Config = {
         'md':'768px',
         'lg':'1024px',
         'xl':'1280px',
-        '2xs':'340px'
+        '2xs':'340px',
+        'list-r-calc':'344px',
+        'text-r-calc':'510px'
       },
       fontFamily: {
         dmsans: ["DM Sans", 'sans'],
@@ -36,6 +38,8 @@ const config: Config = {
       'home-md': {'max': '768px'},
       'home-sm': {'max': '425px'},
       'home-lg': '1268px',
+      'home-4k': '1441px',
+      'home-3k': { 'max': '1440px'},
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
