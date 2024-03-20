@@ -2,7 +2,44 @@
 import Image from "next/image"
 import styles from "./Footer.module.css"
 import { motion } from "framer-motion"
+import Link from "next/link"
+const projects = [
+    {
+        label: "WingRiders",
+        href: "/wingriders"
+    },
+    {
+        label: "Trackee",
+        href: "/trackee"
+    },
+    {
+        label: "Worldcoin",
+        href: "/wordcoin"
+    },
+    {
+        label: "Audience+",
+        href: "/audience"
+    },
+]
 
+const follow = [
+    {
+        label: "Facebook",
+        href: "/facebook"
+    },
+    {
+        label: "Instagram",
+        href: "/instagram"
+    },
+    {
+        label: "Dribbble",
+        href: "/dribbble"
+    },
+    {
+        label: "Linkedin",
+        href: "/linkedin"
+    },
+]
 const Footer = () => {
     return (
         <footer className={styles.footer}>
@@ -12,18 +49,51 @@ const Footer = () => {
                         <h1>DMSolving product studio</h1>
                         <p>Feel free to reach out if you want to collaborate with us, or simply have a chat.</p>
                     </div>
-                    <div className={styles.link}>
-                        <h4>info@dmsolving.com</h4>
+                    <div>
+                        <Link href={"mailto:info@dmsolving.com"} className={styles.link}>
+                            <h4>info@dmsolving.com</h4>
+                            <Image src={"/images/footer/right-arrow.png"}
+                                alt={"right-arrow.png"}
+                                height={161}
+                                width={157}
+                                className={styles.rightArrow}
+                            />
+                        </Link>
                     </div>
                 </div>
                 <div className={styles.right}>
                     <div className={styles.projects}>
                         <h5>Our projects</h5>
+                        <ul>
+                            {
+                                projects && projects.map(({label, href}) => (
+                                    <li key={href}>
+                                        <Link href={href}
+                                            className={styles.item}
+                                        >
+                                            {label}
+                                        </Link>
+                                    </li>
+                                ))
+                            }
+                        </ul>
                     </div>
 
                     <div className={styles.follow}>
                         <h5>Follow us</h5>
-
+                        <ul>
+                            {
+                                follow && follow.map(({label, href}) => (
+                                    <li key={href}>
+                                        <Link href={href}
+                                            className={styles.item}
+                                        >
+                                            {label}
+                                        </Link>
+                                    </li>
+                                ))
+                            }
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -52,6 +122,24 @@ const Footer = () => {
                     height={499}
                 />
             </motion.div>
+
+            <div className={styles.backToTop}
+                onClick={() => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    })
+                }}
+            >
+                <Image 
+                    src={"/images/footer/top-arrow.png"} 
+                    alt={"top-arrow"} 
+                    height={157} 
+                    width={160}
+                    className={styles.topArrow}
+                />
+                <p>Back to top</p>
+            </div>
         </footer>
     )
 }

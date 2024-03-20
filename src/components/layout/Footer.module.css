@@ -7,14 +7,152 @@
 }
 
 .footer .content {
-    color: #fff;    
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: #fff;  
+    height: 100%;  
+    z-index: 10;
     /* background-color: burlywood; */
+}
+
+.footer .content .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.footer .content .left .description h1 {
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 57.6px;
+}
+
+.footer .content .left .description p {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 30px;
+    width: 426px;
+    opacity: 0.6;
+}
+
+.footer .content .left .link {
+    display: flex;
+    font-weight: 400;
+    font-size: 26px;
+    margin-top: 4rem;
+}
+
+.footer .content .left .link:hover .rightArrow {
+    transform: translateX(1rem);
+}
+
+.footer .content .left .link .rightArrow {
+    width: 38px;
+    margin-left: 1rem;
+    transition: transform linear 0.2s;
+}
+
+.footer .content .right {
+    display: flex;
+    margin-left: 15rem;
+    gap: 15rem;
+    /* background-color: pink; */
+}
+
+.footer .content .right h5 {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.footer .content .right .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer .content .right .item {
+    position: relative;
+    font-size: 19px;
+    line-height: 30px;
+    opacity: 0.6;
+}
+
+.footer .content .right .item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.footer .content .right .item:hover::before {
+    transform: scaleX(1);
+}
+
+.footer .content .right .item:not(:hover)::before {
+    transform-origin: left;
+}
+
+
+
+.footer .content .right ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer .content .right .follow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .footer .footerBackground {
     position: absolute;
     z-index: 1;
     left: 40%;
-    scale: 1.1;
+    scale: 3;
     bottom: 0;
+}
+
+.footer .backToTop {
+    position: absolute;
+    right: 3rem;
+    top: 45%;
+    font-size: 13px;
+    line-height: 30px;
+    color:#fff;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 50;
+    transition: all linear 0.1s;
+}
+
+.footer .backToTop p {
+    writing-mode: vertical-lr;
+}
+
+.footer .backToTop .topArrow {
+    width: 40px;
+    transform: translate(-5px, -0.5rem);
+    transition: all linear 0.2s;
+}
+
+.footer .backToTop:hover {
+    opacity: 1;
+    scale: 1.1;
+}
+
+.footer .backToTop:hover .topArrow{
+    transform: translate(-5px, -1.5rem);
 }
