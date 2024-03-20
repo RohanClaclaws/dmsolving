@@ -31,7 +31,7 @@ const Footer = () => {
             <motion.div
                 className={styles.footerBackground}
                 animate={{
-                    scale: [1, 1.2, 1],
+                    opacity: [0.8, 0.3, 0.8],
                     transition: {
                         duration: 5,
                         ease: "easeInOut",
