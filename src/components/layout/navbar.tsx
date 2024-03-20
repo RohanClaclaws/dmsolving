@@ -3,12 +3,30 @@ import Image from "next/image"
 import styles from "./Navbar.module.css"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react"
 
 
-const Navbar = () => {    
+const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false)
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setIsScrolled(true)
+            } else {
+                setIsScrolled(false)
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
+
     const matchPath = usePathname().match(/\/([^\/]*)/)
-    let pathname:string | null = null
-    if(matchPath) {
+    let pathname: string | null = null
+    if (matchPath) {
         pathname = matchPath[0]
     }
     const links = [
@@ -49,7 +67,12 @@ const Navbar = () => {
         </li>
     ))
     return (
-        <header className={styles.headerArea}>
+        <header className={styles.headerArea}
+            style={{
+                backgroundColor: isScrolled? `black`:`transparent`,
+                position: isScrolled? `fixed` : `absolute`,
+            }}
+        >
             <div className="layout">
                 <div className={styles.navbar}>
                     <div className={styles.logoArea}>
