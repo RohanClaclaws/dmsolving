@@ -16,6 +16,7 @@ import { Navigation } from 'swiper/modules';
 import { useState } from "react";
 import Hoverable from "./Hoverable";
 import Modal from "./Modal";
+import Link from "next/link";
 
 type PathProps = {
   stroke: string
@@ -425,10 +426,10 @@ const Home = () => {
                     initial={{ opacity: 0, x: -300 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
                     Team of product and brand designers that are really passionate about digital marketing and good design. We are not just UI freaks! We advocate users for better product experience and common sense.
                   </motion.span>
-                  <div className="flex gap-3 items-center">
+                  <Link className="flex gap-3 items-center" href="/about-us">
                     <span className="text-white font-[400] text-[26px] leading-[39px]">More about us</span>
                     <Image src="/images/home/arrow_right.png" width={39} height={40} alt="right arrow" className="w-[39px] h-[40px]" />
-                  </div>
+                  </Link>
                   <Image src="/images/home/about02.jpg.png" width={288} height={191.56} alt="Lets go" className="md:w-[288px] md:h-[191.56px] w-[144px] h-[96px]" />
                 </div>
                 {/** Middle end */}
