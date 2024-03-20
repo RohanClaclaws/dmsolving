@@ -1,5 +1,6 @@
+"use client"
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import PortfolioCard from "./PortfolioCard";
 
 const Portfolio = () => {
@@ -58,6 +59,8 @@ const Portfolio = () => {
     },
   ];
 
+  const [awardWinning, setAwardWinning] = useState({status: false, index: -1});
+
   return (
     <div className="bg-black py-[12px]">
       <div className="layout">
@@ -85,8 +88,8 @@ const Portfolio = () => {
             {
               row1.map((e, idx) => {
                 return (
-                  <span key={idx} className={`${idx === 1 ? "mt-10" : "mt-0"}`}>
-                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={e.award_winning} />
+                  <span key={idx} className={`${idx === 1 ? "mt-10" : "mt-0"}`} onMouseEnter={() => setAwardWinning({ status: true, index: idx })} onMouseLeave={() => setAwardWinning({status: false, index: -1})}>
+                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={awardWinning.status && awardWinning.index === idx} />
                   </span>
                 )
               })
@@ -98,7 +101,7 @@ const Portfolio = () => {
             {
               row2.map((e, idx) => {
                 return (
-                  <span key={idx} className={`${idx === 1 ? "mt-10" : "mt-0"}`}>
+                  <span key={idx} className={`${idx === 1 ? "mt-10" : "mt-0"}`} onMouseEnter={() => setAwardWinning({ status: true, index: idx })} onMouseLeave={() => setAwardWinning({status: false, index: -1})}>
                     <PortfolioCard img={e.img} description={e.description} title={e.title} />
                   </span>
                 )

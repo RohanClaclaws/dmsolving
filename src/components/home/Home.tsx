@@ -17,6 +17,7 @@ import { useState } from "react";
 import Hoverable from "./Hoverable";
 import Modal from "./Modal";
 import Link from "next/link";
+import Blur from "../resuable/Blur";
 
 type PathProps = {
   stroke: string
@@ -146,7 +147,7 @@ const Home = () => {
           <section className="">
             <div className="md:justify-evenly flex md:flex-row flex-col justify-center md:gap-0 gap-28">
               {/** Blur esque */}
-              <Image src="/images/home/blur.png" width={830} height={1009} alt="blur" className="w-[830px] h-[1009px] absolute right-[-500px] animate-pulse" />
+              <Blur />
               {/** Blur END */}
               <div className="flex flex-col">
                 <motion.span className="font-[500] text-[34px] leading-[43.2px] text-white my-10 font-syne" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}>What is DMSolving?</motion.span>
