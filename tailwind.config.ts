@@ -24,7 +24,9 @@ const config: Config = {
         'md':'768px',
         'lg':'1024px',
         'xl':'1280px',
-        '2xs':'340px'
+        '2xs':'340px',
+        'list-r-calc':'344px',
+        'text-r-calc':'510px'
       },
       fontFamily: {
         dmsans: ["DM Sans", 'sans'],
