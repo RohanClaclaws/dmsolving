@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import PortfolioCard from "./PortfolioCard";
 import BannerText from "../resuable/BannerText";
 import { motion } from 'framer-motion';
+import Banner from "../resuable/Banner";
 
 const Portfolio = () => {
   const row1 = [
@@ -65,9 +66,10 @@ const Portfolio = () => {
 
   return (
     <div className="bg-black py-[50px] pt-[100px] overflow-hidden">
+      <Banner heading="Portfolio" subheading="Home" />
       <div className="layout">
         <div className="flex flex-col gap-20">
-          <div className="flex gap-10 justify-center p-md:flex-row flex-col">
+          <div className="flex gap-10 justify-center p-md:flex-row flex-col py-20">
             <Image src="/images/portfolio/portfolio_head.png" width={660} height={490} alt="Portfolio" className="-w-[660px] h-[490px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out" />
             <div className="flex flex-col justify-between">
               <div className="font-syne flex flex-col">
