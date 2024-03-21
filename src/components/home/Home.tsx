@@ -215,7 +215,7 @@ const Home = () => {
                     </g>
                   </g>
                   <g clipPath="url(#clip1_378_2157)">
-                    <motion.path d="M655.5 122.701C655.5 182.188 607.27 230.417 547.783 230.417C480.436 230.417 413.128 176.579 359.25 122.701C305.372 68.8229 238.064 14.9844 170.716 14.9844C111.23 14.9844 63 63.2139 63 122.701C63 182.188 111.23 230.417 170.716 230.417C238.064 230.417 305.372 176.579 359.25 122.701C413.128 68.8229 480.436 14.9844 547.783 14.9844C607.27 14.9844 655.5 63.2139 655.5 122.701Z" stroke="#96FF42" strokeMiterlimit="10" strokeLinecap="square" variants={draw2} custom={1} />
+                    <motion.path d="M655.5 122.701C655.5 182.188 607.27 230.417 547.783 230.417C480.436 230.417 413.128 176.579 359.25 122.701C305.372 68.8229 238.064 14.9844 170.716 14.9844C111.23 14.9844 63 63.2139 63 122.701C63 182.188 111.23 230.417 170.716 230.417C238.064 230.417 305.372 176.579 359.25 122.701C413.128 68.8229 480.436 14.9844 547.783 14.9844C607.27 14.9844 655.5 63.2139 655.5 122.701Z" stroke="#FFFFFD" strokeMiterlimit="10" strokeLinecap="square" variants={draw2} custom={1} />
                   </g>
                   <defs>
                     <linearGradient id="paint0_linear_378_2157" x1="140" y1="129.984" x2="606" y2="123.984" gradientUnits="userSpaceOnUse">
@@ -233,7 +233,7 @@ const Home = () => {
               </motion.span>
             </div>
             <div className="flex flex-col mt-40 px-[16px] md:gap-28 gap-10" id="projects">
-              <motion.span className="font-[500] md:text-[111px] text-[36px] md:leading-[144px] text-white home-4k:pll-56" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: 'easeIn' }}>Projects</motion.span>
+              <motion.span className="font-[500] md:text-[111px] text-[36px] md:leading-[144px] text-white home-4k:pll-56 font-syne" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: 'easeIn' }}>Projects</motion.span>
               <div className="flex md:justify-evenly gap-3 md:flex-row flex-col justify-center ">
                 {/** Left side */}
                 <div className="flex flex-col gap-3">
@@ -273,12 +273,12 @@ const Home = () => {
         </div>
         <section>
           <div className="layout md:mt-64 mt-20">
-            <motion.div className="text-white font-[500] md:text-[111px] text-[36px] md:leading-[144px] my-10" initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn' }}>Other projects</motion.div>
+            <motion.div className="text-white font-[500] md:text-[111px] text-[36px] md:leading-[144px] my-10 font-syne" initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn' }}>Other projects</motion.div>
             <Swiper slidesPerView={3} spaceBetween={0} navigation={{ nextEl: '.next', prevEl: '.prev' }} onSlideChange={() => console.log("slide change")}
               onSwiper={() => console.log('swiped')} 
               breakpoints={{
                 //1806px UP
-                '1900': {
+                '2000': {
                   slidesPerView: 4,
                   spaceBetween: 10
                 },
