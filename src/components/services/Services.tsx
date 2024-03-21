@@ -5,21 +5,30 @@ import Image from "next/image";
 import { motion } from "framer-motion"
 
 const Services = () => {
+
+
+
   return (
     <>
       <div className="bg-black">
 
-        <Banner />
+        <Banner heading="services" subheading="Home" />
         <div className="layout bg-red-40 bg-black">
 
           <h1 className="font-syne font-[700] text-[32px] xs:text-[34x] sm:text-[40px] text-center pt-[62px] mb-[60px] text-[#CFDDE8]">Tailored Solutions for Your Digital Marketing Challenges</h1>
 
           <div className=" min-h-[457px] flex justify-evenly flex-wrap mb-[100px] gap-y-7  ">
 
-            <div className="min-h-[355px] max-w-[305px] bg-pink-30 flex flex-col justify-between px-3 py-5 self-start">
+            <div className="min-h-[355px] max-w-[305px] bg-pink-30 flex flex-col justify-between px-3 py-5 self-start ">
               <div className="">
-                <svg width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter0_ddd_338_1600)">
+                <motion.svg
+                  initial={{ x: 0 }}
+                  whileHover={{ x:20 }}
+                  transition={{duration:.74}}
+                  fill="none"
+                  width="141" height="70" viewBox="0 0 141 77" xmlns="http://www.w3.org/2000/svg" >
+                  <g
+                    filter="url(#filter0_ddd_338_1600)">
                     <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="#081D34" />
                     <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
                   </g>
@@ -45,7 +54,7 @@ const Services = () => {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_338_1600" result="shape" />
                     </filter>
                   </defs>
-                </svg>
+                </motion.svg>
               </div>
               <div className="bg-purple-80">
                 <div className="flex flex-col gap-y-4">
@@ -57,7 +66,10 @@ const Services = () => {
 
             <div className="min-h-[355px] max-w-[305px] bg-pink-30 flex flex-col justify-between px-3 py-5 self-center">
               <div className="">
-                <svg width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <motion.svg
+                  initial={{ x: 0 }}
+                  whileHover={{ x:20 }}
+                  transition={{duration:.74}} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_ddd_338_1600)">
                     <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="#081D34" />
                     <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
@@ -84,7 +96,7 @@ const Services = () => {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_338_1600" result="shape" />
                     </filter>
                   </defs>
-                </svg>
+                </ motion.svg>
               </div>
               <div className="bg-purple-80">
                 <div className="flex flex-col gap-y-4">
@@ -96,7 +108,10 @@ const Services = () => {
 
             <div className="min-h-[355px] max-w-[305px] bg-pink-30 flex flex-col justify-between px-3 py-5 self-start">
               <div className="">
-                <svg width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <motion.svg
+                  initial={{ x: 0 }}
+                  whileHover={{ x:20 }}
+                  transition={{duration:.74}} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_ddd_338_1600)">
                     <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="#081D34" />
                     <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
@@ -123,7 +138,7 @@ const Services = () => {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_338_1600" result="shape" />
                     </filter>
                   </defs>
-                </svg>
+                </motion.svg>
               </div>
               <div className="bg-purple-80">
                 <div className="flex flex-col gap-y-4">
@@ -135,7 +150,10 @@ const Services = () => {
 
             <div className="min-h-[355px] max-w-[305px] bg-pink-30 flex flex-col justify-between px-3 py-5 self-center">
               <div className="">
-                <svg width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <motion.svg
+                  initial={{ x: 0 }}
+                  whileHover={{ x:20 }}
+                  transition={{duration:.74}} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_ddd_338_1600)">
                     <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="#081D34" />
                     <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
@@ -162,7 +180,7 @@ const Services = () => {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_338_1600" result="shape" />
                     </filter>
                   </defs>
-                </svg>
+                </motion.svg>
               </div>
               <div className="bg-purple-80">
                 <div className="flex flex-col ">
@@ -177,15 +195,22 @@ const Services = () => {
 
           </div>
 
-          <div className="bg-yellow-  py-[60px]  space-y-[80px] pb-[80px]">
+          <div className="  py-[60px]  space-y-[80px] pb-[80px]">
 
             <div className="flex justify-evenly flex-wrap gap-y-6">
-              <motion.div className="bg-red-400 self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px]"
-                whileHover={{ scale: [null, 1.25, 1] }}
-                transition={{ duration: 2.5 }}
+              <motion.span
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+
               >
-                <Image src={'/images/service1.jpg'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
-              </motion.div>
+                <motion.div className=" self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px]"
+                  animate={{ scale: [null, 1.07, 1] }}
+                  transition={{ duration: 2.5, repeat: Infinity }}
+                >
+                  <Image src={'/images/service1.jpg'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
+                </motion.div>
+              </motion.span>
               <div className="max-w-[685px]  px-4 py-10 bg-pink-60 self-center">
                 <h1 className="font-syne font-[700] text-[30px] 2xs:text-[40px] xs:text-[56px] mb-5 text-[#cccccc]">01/Web Design</h1>
                 <p className="font-dmsans font-[400] xs:text-[19px] mb-[50px] text-[#cccccc]">With a collective expertise in web design, SEO and software development, we are committed to crafting innovative solutions that exceed expectations and redefine standards</p>
@@ -206,12 +231,18 @@ const Services = () => {
             </div>
 
             <div className="flex flex-row-reverse justify-evenly flex-wrap gap-y-6">
-              <motion.div className="bg-red-400 self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px]"
-                animate={{ scale: [null, 1.1, 1] }}
-                transition={{ duration: 2.0,repeat:Infinity }}
+              <motion.span
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
               >
-                <Image src={'/images/service2.jpg'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
-              </motion.div>
+                <motion.div className=" self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px]"
+                  animate={{ scale: [null, 1.07, 1] }}
+                  transition={{ duration: 2.5, repeat: Infinity }}
+                >
+                  <Image src={'/images/service2.jpg'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
+                </motion.div>
+              </motion.span>
               <div className="max-w-[685px]  px-4 py-10 bg-pink-60 self-center">
                 <h1 className="font-syne font-[700] text-[30px] 2xs:text-[40px] xs:text-[56px] mb-5 text-[#cccccc]">02/Digital Marketing</h1>
                 <p className="font-dmsans font-[400] xs:text-[19px] mb-[50px] text-[#cccccc]">Drive your digital presence forward with our tailored digital marketing strategies ranging and craft data-driven approaches to boost your brand visibility, engage your audience, and maximize your ROI.</p>
@@ -232,12 +263,18 @@ const Services = () => {
             </div>
 
             <div className="flex justify-evenly flex-wrap gap-y-6">
-              <motion.div className="bg-red-400 self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px]"
-                whileHover={{ scale: [null, 1.25, 1] }}
-                transition={{ duration: 2.5 }}
+              <motion.span
+                initial={{ opacity: 0, x: -200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
               >
-                <Image src={'/images/service3.jpg'} alt="service1" className="w-full h-full object-cover object-center " width={1000} height={1000} />
-              </motion.div>
+                <motion.div className=" self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px]"
+                  animate={{ scale: [null, 1.07, 1] }}
+                  transition={{ duration: 2.5, repeat: Infinity }}
+                >
+                  <Image src={'/images/service3.jpg'} alt="service1" className="w-full h-full object-cover object-center " width={1000} height={1000} />
+                </motion.div>
+              </motion.span>
               <div className="max-w-[685px]  px-4 py-10 bg-pink-60 self-center">
                 <h1 className="font-syne font-[700] text-[30px] 2xs:text-[40px] xs:text-[53px] mb-5 text-[#cccccc]">03/App Development</h1>
                 <p className="font-dmsans font-[400] xs:text-[19px] mb-[50px] text-[#cccccc]">We bring a touch of style, finesse, and panache to mobile app development, delivering exceptional digital experiences.</p>

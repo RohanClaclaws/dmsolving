@@ -8,7 +8,7 @@ import Blur from "../resuable/Blur";
 const ServicesDetail = () => {
     return (
         <>
-            <Banner />
+            <Banner heading="Services" subheading="Home" />
 
             <div className="bg-black">
                 <div className="layout ">

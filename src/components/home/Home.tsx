@@ -129,7 +129,7 @@ const Home = () => {
             </div>
             <div className="flex items-end">
               <div className="flex items-center gap-10">
-                <a href="#what-is-dmsolving">
+                <a href="#projects">
                   <Image src="/images/home/a.png" width={40} height={40} alt="arrow down" className="w-[40px] h-[40px] animate-bounce border-[1px] bg-transparent rounded-[50%] p-1" />
                 </a>
                 <div className="font-[400] md:text-[19px] text-[14px] leading-[30px] text-[#FFFFFF99] font-syne hover:text-white">
@@ -142,12 +142,12 @@ const Home = () => {
           </section>
         </div>
       </div>
-      <div className="bg-black relative overflow-hidden">
+      <div className="bg-black relative overflow-hidden pt-20">
         <div className="layout home-md:px-[16px] home-md:m-0 home-md:w-full">
           <section className="">
-            <div className="md:justify-evenly flex md:flex-row flex-col justify-center md:gap-0 gap-28">
+            <div className="md:justify-evenly flex md:flex-row flex-col justify-center md:gap-0 gap-28 items-center">
               {/** Blur esque */}
-              <Blur />
+              <Blur top={100} />
               {/** Blur END */}
               <div className="flex flex-col">
                 <motion.span className="font-[500] text-[34px] leading-[43.2px] text-white my-10 font-syne" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}>What is DMSolving?</motion.span>
@@ -215,7 +215,7 @@ const Home = () => {
                     </g>
                   </g>
                   <g clipPath="url(#clip1_378_2157)">
-                    <motion.path d="M655.5 122.701C655.5 182.188 607.27 230.417 547.783 230.417C480.436 230.417 413.128 176.579 359.25 122.701C305.372 68.8229 238.064 14.9844 170.716 14.9844C111.23 14.9844 63 63.2139 63 122.701C63 182.188 111.23 230.417 170.716 230.417C238.064 230.417 305.372 176.579 359.25 122.701C413.128 68.8229 480.436 14.9844 547.783 14.9844C607.27 14.9844 655.5 63.2139 655.5 122.701Z" stroke="#96FF42" strokeMiterlimit="10" strokeLinecap="square" variants={draw2} custom={1} />
+                    <motion.path d="M655.5 122.701C655.5 182.188 607.27 230.417 547.783 230.417C480.436 230.417 413.128 176.579 359.25 122.701C305.372 68.8229 238.064 14.9844 170.716 14.9844C111.23 14.9844 63 63.2139 63 122.701C63 182.188 111.23 230.417 170.716 230.417C238.064 230.417 305.372 176.579 359.25 122.701C413.128 68.8229 480.436 14.9844 547.783 14.9844C607.27 14.9844 655.5 63.2139 655.5 122.701Z" stroke="#FFFFFD" strokeMiterlimit="10" strokeLinecap="square" variants={draw2} custom={1} />
                   </g>
                   <defs>
                     <linearGradient id="paint0_linear_378_2157" x1="140" y1="129.984" x2="606" y2="123.984" gradientUnits="userSpaceOnUse">
@@ -232,8 +232,8 @@ const Home = () => {
                 </motion.svg>
               </motion.span>
             </div>
-            <div className="flex flex-col mt-40 px-[16px] md:gap-28 gap-10">
-              <motion.span className="font-[500] md:text-[111px] text-[36px] md:leading-[144px] text-white home-4k:pl-56" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: 'easeIn' }}>Projects</motion.span>
+            <div className="flex flex-col mt-40 px-[16px] md:gap-28 gap-10" id="projects">
+              <motion.span className="font-[500] md:text-[111px] text-[36px] md:leading-[144px] text-white home-4k:pll-56 font-syne" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: 'easeIn' }}>Projects</motion.span>
               <div className="flex md:justify-evenly gap-3 md:flex-row flex-col justify-center ">
                 {/** Left side */}
                 <div className="flex flex-col gap-3">
@@ -246,7 +246,7 @@ const Home = () => {
                     {hv2 && <Hoverable title="Atet Auto" />}
                   </motion.div>
                   <motion.div className="max-w-[668px] w-full p-9 flex flex-col gap-3 bg-[#191919]" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
-                    <span className="text-white font-[500] text-[35px] leading-[43.2px]">How we design web3 products</span>
+                    <span className="text-white font-[500] text-[35px] leading-[43.2px]">How we design Dmsolving products</span>
                     <div className="flex justify-start">
                       <div className="bg-black rounded-3xl p-3 flex justify-center items-center">
                         <span className="font-[400] text-[16px] leading-[24px] text-white">coming soon</span>
@@ -273,12 +273,12 @@ const Home = () => {
         </div>
         <section>
           <div className="layout md:mt-64 mt-20">
-            <motion.div className="text-white font-[500] md:text-[111px] text-[36px] md:leading-[144px] my-10" initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn' }}>Other projects</motion.div>
+            <motion.div className="text-white font-[500] md:text-[111px] text-[36px] md:leading-[144px] my-10 font-syne" initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn' }}>Other projects</motion.div>
             <Swiper slidesPerView={3} spaceBetween={0} navigation={{ nextEl: '.next', prevEl: '.prev' }} onSlideChange={() => console.log("slide change")}
               onSwiper={() => console.log('swiped')} 
               breakpoints={{
                 //1806px UP
-                '1900': {
+                '2000': {
                   slidesPerView: 4,
                   spaceBetween: 10
                 },
@@ -357,15 +357,15 @@ const Home = () => {
                   </g>
                   <g clipPath="url(#clip2_378_2260)">
                     {/** White Lines */}
-                    <motion.path d="M-2.5 293.781H400" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={1} />
-                    <motion.path d="M400.834 492.948H800.001" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={2} />
-                    <motion.path d="M800 292.114H1200" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} />
-                    <motion.path d="M400.416 293.364V493.364" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={3} />
-                    <motion.path d="M800.416 292.531V493.365" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={4} />
-                    <motion.path d="M1400.42 92.5312V292.531" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={5} />
-                    <motion.path d="M1600 92.9482H1400" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={6} />
-                    <motion.path d="M1199.64 291.955L1315.47 91.3262" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={7} />
-                    <motion.path d="M1399.94 292.349L1315.45 91.0264" stroke="#96FF42" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={8} />
+                    <motion.path d="M-2.5 293.781H400" stroke="#FFFFFD" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={1} />
+                    <motion.path d="M400.834 492.948H800.001" stroke="#FFFFFD" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={2} />
+                    <motion.path d="M800 292.114H1200" stroke="#FFFFFD" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} />
+                    <motion.path d="M400.416 293.364V493.364" stroke="#FFFFFD" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={3} />
+                    <motion.path d="M800.416 292.531V493.365" stroke="#FFFFFD" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={4} />
+                    <motion.path d="M1400.42 92.5312V292.531" stroke="#FFFFFD" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={5} />
+                    <motion.path d="M1600 92.9482H1400" stroke="#FFFFFD" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={6} />
+                    <motion.path d="M1199.64 291.955L1315.47 91.3262" stroke="#FFFFFD" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={7} />
+                    <motion.path d="M1399.94 292.349L1315.45 91.0264" stroke="#FFFFFD" strokeWidth="0.833333" strokeMiterlimit="10" strokeLinecap="round" strokeDasharray="575 575" variants={draw} custom={8} />
                     {/** White lines END */}
                   </g>
                 </g>
@@ -431,16 +431,18 @@ const Home = () => {
                     <span className="text-white font-[400] text-[26px] leading-[39px]">More about us</span>
                     <Image src="/images/home/arrow_right.png" width={39} height={40} alt="right arrow" className="w-[39px] h-[40px]" />
                   </Link>
-                  <Image src="/images/home/about02.jpg.png" width={288} height={191.56} alt="Lets go" className="md:w-[288px] md:h-[191.56px] w-[144px] h-[96px]" />
+                  <div className="overflow-hidden">
+                    <Image src="/images/home/about02.jpg.png" width={288} height={191.56} alt="Lets go" className="md:w-[288px] md:h-[191.56px] w-[144px] h-[96px] hover:scale-[1.1] object-cover transition-all ease-in-out duration-[.3s]" />
+                  </div>
                 </div>
                 {/** Middle end */}
                 {/** Right */}
                 {/* <div className="flex items-end">
                   <Image src="/images/home/about03.jpg.png" width={230.39} height={343.16} alt="hand in hand" className="w-[230.39px] h-[343.16px]" />
                 </div> */}
-                <div className="flex items-end home-3k:absolute right-0 bottom-0 home-sm:hidden animate-[floating_3s_infinite]">
+                <motion.div className="flex items-end home-3k:absolute right-0 bottom-0 home-sm:hidden" initial={{opacity: 0, x: 100}} whileInView={{opacity: 1, x: 0}}>
                   <Image src="/images/home/about03.jpg.png" width={230.39} height={343.16} alt="hand in hand" className="md:w-[230.39px] w-[122.875px] md:h-[344.77px] h-[183.016px]" />
-                </div>
+                </motion.div>
                 {/** Right END */}
               </div>
             </div>
