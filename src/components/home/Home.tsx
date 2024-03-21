@@ -246,7 +246,7 @@ const Home = () => {
                     {hv2 && <Hoverable title="Atet Auto" />}
                   </motion.div>
                   <motion.div className="max-w-[668px] w-full p-9 flex flex-col gap-3 bg-[#191919]" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
-                    <span className="text-white font-[500] text-[35px] leading-[43.2px]">How we design web3 products</span>
+                    <span className="text-white font-[500] text-[35px] leading-[43.2px]">How we design Dmsolving products</span>
                     <div className="flex justify-start">
                       <div className="bg-black rounded-3xl p-3 flex justify-center items-center">
                         <span className="font-[400] text-[16px] leading-[24px] text-white">coming soon</span>
