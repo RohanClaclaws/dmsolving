@@ -37,14 +37,18 @@ const config: Config = {
     screens: {
       'home-md': {'max': '768px'},
       'home-sm': {'max': '425px'},
+      'service-detail':{'max':'680px'},
       'home-lg': '1268px',
       'home-4k': '1441px',
       'home-3k': { 'max': '1440px'},
+      'p-md': '1190px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px',
+      'blur-r-hide':'1310px',
+      
     }
   },
   plugins: [],
