@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface PortfolioCardProps {
   img: string,
@@ -23,7 +24,9 @@ const PortfolioCard = ({ img, title, description, award_winning }: PortfolioCard
               <span className="max-w-[258px] w-full text-[#CFDDE8] font-[700] text-[26px] leading-[31.2px] font-syne underline">
                 Award Winning Project
               </span>
-              <Image src="/images/portfolio/BTN.png" width={50} height={50} alt="Big Blue Button" className="w-[50px] h-[50px] cursor-pointer" />
+              <Link href="/portfolio/clash-of-the-claws">
+                <Image src="/images/portfolio/BTN.png" width={50} height={50} alt="Big Blue Button" className="w-[50px] h-[50px] cursor-pointer" />
+              </Link>
             </div>
           </div>
         )
