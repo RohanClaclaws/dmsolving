@@ -44,7 +44,7 @@ const Navbar = () => {
         },
         {
             label: "About",
-            href: "/about",
+            href: "/about-us",
         },
         {
             label: "Pricing",
@@ -52,7 +52,7 @@ const Navbar = () => {
         },
         {
             label: "Request a Proposal",
-            href: "/proposal",
+            href: "/contact-us",
         },
     ].map(({ label, href }) => (
         <li
