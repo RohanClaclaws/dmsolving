@@ -40,6 +40,7 @@ const config: Config = {
       'home-lg': '1268px',
       'home-4k': '1441px',
       'home-3k': { 'max': '1440px'},
+      'pricing-lg': '1190px',
       'p-md': '1190px',
       'sm': '640px',
       'md': '768px',
