@@ -142,12 +142,12 @@ const Home = () => {
           </section>
         </div>
       </div>
-      <div className="bg-black relative overflow-hidden">
+      <div className="bg-black relative overflow-hidden pt-20">
         <div className="layout home-md:px-[16px] home-md:m-0 home-md:w-full">
           <section className="">
-            <div className="md:justify-evenly flex md:flex-row flex-col justify-center md:gap-0 gap-28">
+            <div className="md:justify-evenly flex md:flex-row flex-col justify-center md:gap-0 gap-28 items-center">
               {/** Blur esque */}
-              <Blur />
+              <Blur top={100} />
               {/** Blur END */}
               <div className="flex flex-col">
                 <motion.span className="font-[500] text-[34px] leading-[43.2px] text-white my-10 font-syne" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}>What is DMSolving?</motion.span>
