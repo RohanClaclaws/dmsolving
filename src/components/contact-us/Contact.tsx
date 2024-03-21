@@ -1,9 +1,12 @@
+'use client'
+import {motion } from "framer-motion"
 import Banner from "../resuable/Banner";
+
 
 const Contact = () => {
   return (
     <>
-        <Banner />
+        <Banner heading="Contact" subheading="Home"/>
 
       <div className="bg-[#07192d  bg-black">
         <div className="layout ">
@@ -43,8 +46,8 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-[#0D2238] w-full max-w-[616px] py-5">
-              <div className="px-5 py-3 ">
+            <motion.div className="bg-[#0D2238] w-full max-w-[616px] py-5 ">
+              <div className="px-5 py-3  ">
                 <form className="flex flex-col gap-y-4 ">
                   <div className="input-collapse-contact:flex gap-x-2 space-y-3 input-collapse-contact:space-y-0">
                     <div className=" flex flex-col gap-y-4 w-full">
@@ -69,7 +72,7 @@ const Contact = () => {
                   </button>
                 </form>
               </div>
-            </div>
+            </motion.div>
 
           </div>
 
@@ -91,7 +94,7 @@ const Contact = () => {
 
           </div>
 
-          <div className=" flex justify-evenly py-[50px] mb-[80px] flex-wrap gap-y-8 gap-x-3 bg-red-20 pb-[80px]">
+          <div className=" flex justify-evenly py-[50px]  flex-wrap gap-y-8 gap-x-3 bg-red-20 pb-[80px]">
 
             <div className="w-[550px] ">
               <h1 className="text-[#00EBFF] text-[25px] sm:text-[32px] font-syne pb-4">FAQs</h1>
