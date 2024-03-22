@@ -14,7 +14,7 @@ const Section1 = () => {
                 duration:0.85,
               }}
             >
-                    <div className="sm:mr-12 sm:block hidden">
+                    {/* <div className="sm:mr-12 sm:block hidden">
                         <Image
                             src="/about/about-back.png"
                             width={500}
@@ -30,8 +30,24 @@ const Section1 = () => {
                             alt="Picture of the about back"
                             className=' max-w-[300px]  min-w-[300px] -mt-[260px] -ml-[40px] mb-[80px]'
                         />
-                    </div>
+                    </div> */}
+                    <div className="sm:mr-12 sm:block hidden">
+                        <Image
+                            src="/about/about-section1.png"
+                            width={500}
+                            height={500}
+                            alt="Picture of the about back"
+                            className=' max-w-[500px]  min-w-[500px] '
+                        />
+                        </div>
                     </motion.div>
+
+                    <motion.div
+              whileInView={{x:[200,0],opacity:[0,1],y:[100,0]}}
+              transition={{
+                duration:0.85,
+              }}
+            >
                     <div className="flex flex-col max-w-[646px] w-full">
                         <h2 className="font-dmsans text-white text-2xl items-start mb-16">We’re 
                         
@@ -53,6 +69,8 @@ const Section1 = () => {
                         </p>
                         <div className="w-20 h-0.5 bg-[#FFFFFF] mt-2 mb-4"></div>
                     </div>
+
+                   </motion.div>
                 </div>
             </div>
         </section>
