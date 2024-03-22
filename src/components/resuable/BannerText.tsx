@@ -7,7 +7,7 @@ const BannerText = () => {
     const text2 = "DMSolving".split(" ");
 
     return (
-        <div className="text-center py-[85px] bg-[#061b2D]">
+        <div className="text-center py-[85px] bg-[url('/images/pbg.png')]">
             <h3 className=" font-syne text-[21px] mb-2 sm:text-[27px] text-[#ffffff]">
                 Tell us about your project
             </h3>
