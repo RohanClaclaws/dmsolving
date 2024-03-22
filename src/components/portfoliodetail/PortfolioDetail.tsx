@@ -32,10 +32,11 @@ interface Deliverables{
 
 interface props2 {
     detailObject: props,
-    delivery:Deliverables
+    delivery:Deliverables,
+    children?: React.ReactNode
 }
 
-const PortfolioDetail = ({ detailObject,delivery }: props2) => {
+const PortfolioDetail = ({ detailObject,delivery, children }: props2) => {
     return (
         <>
             <Banner subheading="Home" heading="Portfolio" />
@@ -102,14 +103,14 @@ const PortfolioDetail = ({ detailObject,delivery }: props2) => {
 
                     <div className="bg-red pb-[90px]">
                         <div className=" max-w-[1004px] min-h-[400px mx-auto  ">
-                            <img src={`/images/Placeholder5.png`} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" alt="image3" />
+                            <img src={detailObject.image3} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" alt="image3" />
                             <h1 className="font-syne font-[600] text-[21px] 2xs:text-[26px] text-[#ffffff] pb-[30px] pl-[10px]">{detailObject.heading4.title}</h1>
                             <p className="px-3 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[17px] sm:text-[20px]">
                                 {detailObject.heading4.description}
                             </p>
                         </div>
                     </div>
-
+                    {children}
                     <div className=" pt-[30px] pb-[80px]">
                         <div className="flex gap-x-4 gap-y-4 justify-center flex-wrap">
                             <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] ">
