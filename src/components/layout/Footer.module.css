@@ -82,7 +82,7 @@
     opacity: 0.6;
 }
 
-.footer .content .right .item::before {
+.footer .content .right .projects .item::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -95,11 +95,11 @@
     transition: transform 0.3s;
 }
 
-.footer .content .right .item:hover::before {
+.footer .content .right .projects .item:hover::before {
     transform: scaleX(1);
 }
 
-.footer .content .right .item:not(:hover)::before {
+.footer .content .right .projects .item:not(:hover)::before {
     transform-origin: left;
 }
 
@@ -115,6 +115,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transform: translateY(-6rem);
+}
+
+.footer .content .right .follow ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.footer .content .right .follow .item:hover {
+    opacity: 1;
 }
 
 .footer .footerBackground {
