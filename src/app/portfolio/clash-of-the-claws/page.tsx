@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 }
 
 const claclaws={
-  image1:'',
+  image1:``,
   image2:'',
   image3:'',
   heading1:{
