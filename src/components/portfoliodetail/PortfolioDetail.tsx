@@ -2,10 +2,10 @@ import Banner from "../resuable/Banner";
 import Image from "next/image";
 import BannerText from "../resuable/BannerText";
 
-const PortfolioDetail = () => {
+const PortfolioDetail = ({}) => {
     return (
         <>
-            <Banner />
+            <Banner subheading="Home" heading="Portfolio"/>
 
             <div className="bg-black">
                 <div className="layout">
@@ -65,7 +65,7 @@ const PortfolioDetail = () => {
 
                     <div className="bg-red pb-[90px]">
                         <div className=" max-w-[1004px] min-h-[400px mx-auto  ">
-                            <img src={`/images/Placeholder2.png`} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" alt="image3" />
+                            <img src={`/images/Placeholder5.png`} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" alt="image3" />
                             <h1 className="font-syne font-[600] text-[21px] 2xs:text-[26px] text-[#ffffff] pb-[30px] pl-[10px]">UI components</h1>
                             <p className="px-3 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[17px] sm:text-[20px]">
                                 UI components formed the backbone of the website&apos;s user interface, providing users with intuitive tools to navigate and interact with the content. From sleek navigation menus to interactive buttons and forms, each component was meticulously designed to prioritize functionality without sacrificing aesthetics. The UI elements were crafted to complement the overall design language of the website and ensure a seamless and engaging user experience across all devices.

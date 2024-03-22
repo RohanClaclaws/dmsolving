@@ -3,6 +3,7 @@ import Banner from "../resuable/Banner";
 import BannerText from "../resuable/BannerText";
 import Image from "next/image";
 import { motion } from "framer-motion"
+import Link from "next/link";
 
 const Services = () => {
 
@@ -23,8 +24,8 @@ const Services = () => {
               <div className="">
                 <motion.svg
                   initial={{ x: 0 }}
-                  whileHover={{ x:20 }}
-                  transition={{duration:.74}}
+                  whileHover={{ x: 20 }}
+                  transition={{ duration: .74 }}
                   fill="none"
                   width="141" height="70" viewBox="0 0 141 77" xmlns="http://www.w3.org/2000/svg" >
                   <g
@@ -68,8 +69,8 @@ const Services = () => {
               <div className="">
                 <motion.svg
                   initial={{ x: 0 }}
-                  whileHover={{ x:20 }}
-                  transition={{duration:.74}} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  whileHover={{ x: 20 }}
+                  transition={{ duration: .74 }} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_ddd_338_1600)">
                     <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="#081D34" />
                     <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
@@ -110,8 +111,8 @@ const Services = () => {
               <div className="">
                 <motion.svg
                   initial={{ x: 0 }}
-                  whileHover={{ x:20 }}
-                  transition={{duration:.74}} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  whileHover={{ x: 20 }}
+                  transition={{ duration: .74 }} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_ddd_338_1600)">
                     <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="#081D34" />
                     <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
@@ -152,8 +153,8 @@ const Services = () => {
               <div className="">
                 <motion.svg
                   initial={{ x: 0 }}
-                  whileHover={{ x:20 }}
-                  transition={{duration:.74}} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  whileHover={{ x: 20 }}
+                  transition={{ duration: .74 }} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_ddd_338_1600)">
                     <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="#081D34" />
                     <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
@@ -184,7 +185,7 @@ const Services = () => {
               </div>
               <div className="bg-purple-80">
                 <div className="flex flex-col ">
-                  <h1 className="font-syne font-[800] text-[50px] text-[#cfdde8]">GO</h1>
+                  {/* <h1 className="font-syne font-[800] text-[50px] text-[#cfdde8]">GO</h1> */}
                   <div className="flex flex-col gap-y-4">
                     <h1 className="font-syne font-[600] text-[21px] xs:text-[25px] text-[#cfdde8]"><span className="text-[#00Ebff]">4</span> / Go To Run</h1>
                     <p className="text-[#8FABBD] font-dmsans font-[400] text-[15px] xs:tw-text-[16px]">Gain deep insights into your needs and goals through comprehensice research and close collaboration</p>
@@ -204,14 +205,20 @@ const Services = () => {
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
 
               >
-                <motion.div className=" self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px]"
-                  animate={{ scale: [null, 1.07, 1] }}
-                  transition={{ duration: 2.5, repeat: Infinity }}
-                >
-                  <Image src={'/images/service1.jpg'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
-                </motion.div>
+                <Link href="/services/servicesdetail">
+                  <motion.div className=" self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px] cursor-pointer"
+                    animate={{ scale: [null, 1.07, 1] }}
+                    transition={{ duration: 2.5, repeat: Infinity }}
+                  >
+                    <Image src={'/images/service1.jpg'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
+                  </motion.div>
+                </Link>
               </motion.span>
-              <div className="max-w-[685px]  px-4 py-10 bg-pink-60 self-center">
+              <motion.div className="max-w-[685px]  px-4 py-10 bg-pink-60 self-center"
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+              >
                 <h1 className="font-syne font-[700] text-[30px] 2xs:text-[40px] xs:text-[56px] mb-5 text-[#cccccc]">01/Web Design</h1>
                 <p className="font-dmsans font-[400] xs:text-[19px] mb-[50px] text-[#cccccc]">With a collective expertise in web design, SEO and software development, we are committed to crafting innovative solutions that exceed expectations and redefine standards</p>
                 <div className="flex flex-wrap gap-y-3 gap-x-8  bg-orange-40">
@@ -226,7 +233,7 @@ const Services = () => {
                   <div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
             </div>
 
@@ -236,29 +243,35 @@ const Services = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
               >
-                <motion.div className=" self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px]"
-                  animate={{ scale: [null, 1.07, 1] }}
-                  transition={{ duration: 2.5, repeat: Infinity }}
-                >
-                  <Image src={'/images/service2.jpg'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
-                </motion.div>
+                <Link href="/services/servicesdetail">
+                  <motion.div className=" self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px] cursor-pointer"
+                    animate={{ scale: [null, 1.07, 1] }}
+                    transition={{ duration: 2.5, repeat: Infinity }}
+                  >
+                    <Image src={'/images/service2.jpg'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
+                  </motion.div>
+                </Link>
               </motion.span>
-              <div className="max-w-[685px]  px-4 py-10 bg-pink-60 self-center">
+              <motion.div className="max-w-[685px]  px-4 py-10 bg-pink-60 self-center"
+                initial={{ opacity: 0, x: -200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut', }}
+              >
                 <h1 className="font-syne font-[700] text-[30px] 2xs:text-[40px] xs:text-[56px] mb-5 text-[#cccccc]">02/Digital Marketing</h1>
                 <p className="font-dmsans font-[400] xs:text-[19px] mb-[50px] text-[#cccccc]">Drive your digital presence forward with our tailored digital marketing strategies ranging and craft data-driven approaches to boost your brand visibility, engage your audience, and maximize your ROI.</p>
                 <div className="flex flex-wrap gap-y-3 gap-x-8  bg-orange-40">
                   <div className="flex flex-col gap-y-3 text-[#cccccc] justify-center font-[400] font-dmsans text-[18px]">
-                    <h3 ><span className="mr-2">➕</span> Customized Design solutions</h3>
-                    <h3><span className="mr-2">➕</span> EO Integration</h3>
+                    <h3 ><span className="mr-2">➕</span> Search Engine Optimization (SEO)</h3>
+                    <h3><span className="mr-2">➕</span> Social Media Marketing</h3>
                   </div>
                   <div className="flex flex-col gap-y-3 text-[#cccccc] font-[400] font-dmsans text-[18px]">
-                    <h3><span className="mr-2">➕</span> Responsive</h3>
-                    <h3><span className="mr-2">➕</span> Content Creation</h3>
+                    <h3><span className="mr-2">➕</span> Content Marketing</h3>
+                    <h3><span className="mr-2">➕</span> Email Marketing</h3>
                   </div>
                   <div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
             </div>
 
@@ -268,29 +281,35 @@ const Services = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
               >
-                <motion.div className=" self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px]"
-                  animate={{ scale: [null, 1.07, 1] }}
-                  transition={{ duration: 2.5, repeat: Infinity }}
-                >
-                  <Image src={'/images/service3.jpg'} alt="service1" className="w-full h-full object-cover object-center " width={1000} height={1000} />
-                </motion.div>
+                <Link href="/services/servicesdetail">
+                  <motion.div className=" self-stretch max-w-[685px] service-image-left-right-calc:w-[479px] h-[618px]"
+                    animate={{ scale: [null, 1.07, 1] }}
+                    transition={{ duration: 2.5, repeat: Infinity }}
+                  >
+                    <Image src={'/images/service3.jpg'} alt="service1" className="w-full h-full object-cover object-center " width={1000} height={1000} />
+                  </motion.div>
+                </Link>
               </motion.span>
-              <div className="max-w-[685px]  px-4 py-10 bg-pink-60 self-center">
+              <motion.div className="max-w-[685px]  px-4 py-10 bg-pink-60 self-center"
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+              >
                 <h1 className="font-syne font-[700] text-[30px] 2xs:text-[40px] xs:text-[53px] mb-5 text-[#cccccc]">03/App Development</h1>
                 <p className="font-dmsans font-[400] xs:text-[19px] mb-[50px] text-[#cccccc]">We bring a touch of style, finesse, and panache to mobile app development, delivering exceptional digital experiences.</p>
                 <div className="flex flex-wrap gap-y-3 gap-x-8  bg-orange-40">
                   <div className="flex flex-col gap-y-3 text-[#cccccc] justify-center font-[400] font-dmsans text-[18px]">
-                    <h3 ><span className="mr-2">➕</span> Customized Design solutions</h3>
-                    <h3><span className="mr-2">➕</span> EO Integration</h3>
+                    <h3 ><span className="mr-2">➕</span> Customized Solutions</h3>
+                    <h3><span className="mr-2">➕</span> Technical Expertise</h3>
                   </div>
                   <div className="flex flex-col gap-y-3 text-[#cccccc] font-[400] font-dmsans text-[18px]">
-                    <h3><span className="mr-2">➕</span> Responsive</h3>
-                    <h3><span className="mr-2">➕</span> Content Creation</h3>
+                    <h3><span className="mr-2">➕</span> Innovative Design</h3>
+                    <h3><span className="mr-2">➕</span> Quality Assurance</h3>
                   </div>
                   <div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
             </div>
 
