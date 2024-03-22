@@ -4,9 +4,18 @@ import Banner from "../resuable/Banner";
 
 
 const Contact = () => {
+
+   const handleSubmit=async(event:any)=>{
+    event.preventDefault();
+    await fetch("/api",{
+      method:'POST',
+      body:JSON.stringify({name:"asidj"})
+    })
+  }
+
   return (
     <>
-        <Banner heading="Contact" subheading="Home"/>
+        <Banner heading="Contact" subheading="Home" image="/images/breadcrumbcontact.png"/>
 
       <div className="bg-[#07192d  bg-black">
         <div className="layout ">
@@ -53,7 +62,7 @@ const Contact = () => {
               }}
             >
               <div className="px-5 py-3  ">
-                <form className="flex flex-col gap-y-7 outline-none">
+                <form className="flex flex-col gap-y-7 outline-none" onSubmit={handleSubmit}>
                   <div className="input-collapse-contact:flex gap-x-2 space-y-5 input-collapse-contact:space-y-0">
                     <div className=" flex flex-col gap-y-2 w-full">
                       <label className="text-[#cfdde8]">Name <sup className="text-[#8FA88D]">*</sup></label>

@@ -19,6 +19,7 @@ const servciesDetailObject={
   bullet4:`Illustration`,
   bullet5:`Prototype`,
   bullet6:`Test`,
+  bannerImage:`/images/breadcrumb2.png`,
 
   heading2:{
     title:`What does web design include?`,
