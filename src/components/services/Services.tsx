@@ -7,8 +7,6 @@ import Link from "next/link";
 
 const Services = () => {
 
-
-
   return (
     <>
       <div className="bg-black">
@@ -60,7 +58,7 @@ const Services = () => {
               <div className="bg-purple-80">
                 <div className="flex flex-col gap-y-4">
                   <h1 className="font-syne font-[600] text-[21px] xs:text-[25px] text-[#cfdde8]"><span className="text-[#00Ebff]">1</span> / Understand</h1>
-                  <p className="text-[#8FABBD] font-dmsans font-[400] text-[15px] xs:tw-text-[16px]">Gain deep insights into your needs and goals through comprehensice research and close collaboration</p>
+                  <p className="text-[#8FABBD] font-dmsans font-[400] text-[15px] xs:tw-text-[16px]">Gain deep insights into your needs and goals through comprehensive research and close collaboration.</p>
                 </div>
               </div>
             </div>
@@ -102,7 +100,7 @@ const Services = () => {
               <div className="bg-purple-80">
                 <div className="flex flex-col gap-y-4">
                   <h1 className="font-syne font-[600] text-[21px] xs:text-[25px] text-[#cfdde8]"><span className="text-[#00Ebff]">2</span> / Design</h1>
-                  <p className="text-[#8FABBD] font-dmsans font-[400] text-[15px] xs:tw-text-[16px]">Gain deep insights into your needs and goals through comprehensice research and close collaboration</p>
+                  <p className="text-[#8FABBD] font-dmsans font-[400] text-[15px] xs:tw-text-[16px]">Craft a tailored, visually appealing design that aligns with your brand identity and enhances user engagement.</p>
                 </div>
               </div>
             </div>
@@ -144,7 +142,7 @@ const Services = () => {
               <div className="bg-purple-80">
                 <div className="flex flex-col gap-y-4">
                   <h1 className="font-syne font-[600] text-[21px] xs:text-[25px] text-[#cfdde8]"><span className="text-[#00Ebff]">3</span> / Validation</h1>
-                  <p className="text-[#8FABBD] font-dmsans font-[400] text-[15px] xs:tw-text-[16px]">Gain deep insights into your needs and goals through comprehensice research and close collaboration</p>
+                  <p className="text-[#8FABBD] font-dmsans font-[400] text-[15px] xs:tw-text-[16px]">Rigorously test the service across devices and platforms, addressing any issues to ensure a flawless user experience.</p>
                 </div>
               </div>
             </div>
@@ -187,8 +185,8 @@ const Services = () => {
                 <div className="flex flex-col ">
                   {/* <h1 className="font-syne font-[800] text-[50px] text-[#cfdde8]">GO</h1> */}
                   <div className="flex flex-col gap-y-4">
-                    <h1 className="font-syne font-[600] text-[21px] xs:text-[25px] text-[#cfdde8]"><span className="text-[#00Ebff]">4</span> / Go To Run</h1>
-                    <p className="text-[#8FABBD] font-dmsans font-[400] text-[15px] xs:tw-text-[16px]">Gain deep insights into your needs and goals through comprehensice research and close collaboration</p>
+                    <h1 className="font-syne font-[600] text-[21px] xs:text-[25px] text-[#cfdde8]"><span className="text-[#00Ebff]">4</span> / Launch</h1>
+                    <p className="text-[#8FABBD] font-dmsans font-[400] text-[15px] xs:tw-text-[16px]">Prepare for deployment, provide training and support, and monitor performance for successful implementation.</p>
                   </div>
                 </div>
               </div>
