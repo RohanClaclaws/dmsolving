@@ -1,22 +1,24 @@
 const nodemailer = require("nodemailer")
 
 export async function POST(req: Request) {
+  
     const {name, email, subject, message } = await req.json()
 
+
     const transporter = nodemailer.createTransport({
-        host: 'smtp.elasticemail.com',
-        port: 2525,
-        secure: false,
+        host: process.env.SMTP_HOST,
+        port: process.env.SMTP_PORT,
+        secure: true,
         auth: {
-          user: 'jurong@claclaws.com',
-          pass: 'B48D25C12E2F64B220FD2973B32A0BC7D98E'
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS
         }
       });
   
       try {
         await transporter.sendMail({
-          from: 'jurong@claclaws.com',
-          to: email,
+          from: process.env.SMTP_USER,
+          to: process.env.SMTP_TO_EMAIL,
           subject: subject,
           text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
         });

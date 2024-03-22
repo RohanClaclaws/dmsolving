@@ -50,7 +50,7 @@ const Footer = () => {
             <div className={`${styles.content} layout`}>
                 <div className={styles.left}>
                     <div className={styles.description}>
-                        <h1>DMSolving product studio</h1>
+                        <h1>DMSolving Studio</h1>
                         <p>Feel free to reach out if you want to collaborate with us, or simply have a chat.</p>
                     </div>
                     <div>

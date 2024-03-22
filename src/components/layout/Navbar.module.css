@@ -115,7 +115,7 @@
     transform-origin: left;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .phoneNumber {
         display: none;
     }
