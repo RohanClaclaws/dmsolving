@@ -129,6 +129,8 @@ const PortfolioDetail = ({ detailObject,delivery }: props2) => {
                 </div>
             </div>
 
+            
+
             <BannerText />
 
 
