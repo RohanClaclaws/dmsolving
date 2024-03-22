@@ -28,8 +28,8 @@ const Services = () => {
                   width="141" height="70" viewBox="0 0 141 77" xmlns="http://www.w3.org/2000/svg" >
                   <g
                     filter="url(#filter0_ddd_338_1600)">
-                    <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="#081D34" />
-                    <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
+                    <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="white" />
+                    <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="white" />
                   </g>
                   <defs>
                     <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -70,8 +70,8 @@ const Services = () => {
                   whileHover={{ x: 20 }}
                   transition={{ duration: .74 }} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_ddd_338_1600)">
-                    <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="#081D34" />
-                    <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
+                    <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="white" />
+                    <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="white" />
                   </g>
                   <defs>
                     <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -112,8 +112,8 @@ const Services = () => {
                   whileHover={{ x: 20 }}
                   transition={{ duration: .74 }} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_ddd_338_1600)">
-                    <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="#081D34" />
-                    <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
+                    <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="white" />
+                    <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="white" />
                   </g>
                   <defs>
                     <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -154,8 +154,8 @@ const Services = () => {
                   whileHover={{ x: 20 }}
                   transition={{ duration: .74 }} width="141" height="70" viewBox="0 0 141 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_ddd_338_1600)">
-                    <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="#081D34" />
-                    <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
+                    <path d="M7 7L40.497 35.3515L7 63.703H33.2565L66.7565 35.3515L33.2565 7H7Z" fill="white" />
+                    <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="white" />
                   </g>
                   <defs>
                     <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
@@ -208,7 +208,7 @@ const Services = () => {
                     animate={{ scale: [null, 1.07, 1] }}
                     transition={{ duration: 2.5, repeat: Infinity }}
                   >
-                    <Image src={'/images/service1.jpg'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
+                    <Image src={'/images/services/s1.png'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
                   </motion.div>
                 </Link>
               </motion.span>
@@ -246,7 +246,7 @@ const Services = () => {
                     animate={{ scale: [null, 1.07, 1] }}
                     transition={{ duration: 2.5, repeat: Infinity }}
                   >
-                    <Image src={'/images/service2.jpg'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
+                    <Image src={'/images/services/s222.png'} alt="service1" className="w-full h-full object-cover object-center" width={1000} height={1000} />
                   </motion.div>
                 </Link>
               </motion.span>
@@ -284,7 +284,7 @@ const Services = () => {
                     animate={{ scale: [null, 1.07, 1] }}
                     transition={{ duration: 2.5, repeat: Infinity }}
                   >
-                    <Image src={'/images/service3.jpg'} alt="service1" className="w-full h-full object-cover object-center " width={1000} height={1000} />
+                    <Image src={'/images/services/se3.png'} alt="service1" className="w-full h-full object-cover object-center " width={1000} height={1000} />
                   </motion.div>
                 </Link>
               </motion.span>

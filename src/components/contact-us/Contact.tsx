@@ -41,11 +41,11 @@ const Contact = () => {
       <div className="bg-[#07192d  bg-black">
         <div className="layout ">
 
-          <div className="flex flex-wrap  items-center justify-evenly gap-y-[60px] py-8 mb-[80px] pt-[80px]">
+          <div className="flex flex-wrap  items-center justify-evenly gap-y-[60px] py-8 pt-[80px]">
 
             <div className="bg-red-80  max-w-[704px] min-h-[579px  ">
               <div className="flex flex-col gap-y-4 pb-5">
-                <h1 className="font-syne font-[700] text-[#CFDDE8] sm:text-[42px]  text-[22px] sm:leading-[50px] pb-3">Fell Free to Message <br /> With Us </h1>
+                <h1 className="font-syne font-[700] text-[#CFDDE8] sm:text-[42px]  text-[22px] sm:leading-[50px] pb-3">Ready to Create and <br /> Collaborate ?</h1>
                 <p className="font-dmsans font-[400] text-[#8FA8BD] sm:text-[16px]">
                 Whether you have questions, feedback, or just want to say hello, we &apos; re here to chat and assist you. Your satisfaction is our priority, and we look forward to hearing from you!
                 </p>
@@ -53,7 +53,7 @@ const Contact = () => {
               <div className="flex mt-5 gap-x-[80px] flex-wrap gap-y-5 pb-3">
                 <div className="flex flex-col gap-y-3">
                   <h3 className="font-syne font-[500] text-[#8FA8BD]">Contact Details</h3>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col mb-4">
                     <p className="font-syne font-[500] text-[#CFDDE8]">info@dmsolving.com
 </p>
                     <p className="font-syne font-[500] text-[#CFDDE8]">(+1) 647-856-3919</p>
@@ -102,7 +102,7 @@ const Contact = () => {
                     <input type="text" className="py-3 px-2 text-[#8FA88D] bg-black border-[1px] border-gray-800 rounded-md" placeholder="How can we help you ?" ref={subject} required />
                   </div>
                   <div className="flex flex-col gap-y-2">
-                    <label className="text-[#cfdde8]">Comments / Questions <sup className="text-[#8FA88D]">*</sup></label>
+                    <label className="text-[#cfdde8]">Tell Us About Your Project <sup className="text-[#8FA88D]">*</sup></label>
                     <textarea className="py-3 px-2  text-[#8FA88D] min-h-[150px] resize-none bg-black border-[1px] border-gray-800 rounded-md" placeholder="How can we help you ?" ref={comments} required />
                   </div>
                   <button className="font-dmsans text-center font-[400] text-[#081D34] py-3 px-5  bg-white w-fit mt-4 rounded-lg hover:bg-transparent hover:text-white border-[1px] border-transparent hover:border-white" >
@@ -114,12 +114,12 @@ const Contact = () => {
 
           </div>
 
-          <div className="bg-[#0d2238] py-[70px] px-[30px] sm:px-[70px] mb-[80px">
+          {/* <div className="bg-[#0d2238] py-[70px] px-[30px] sm:px-[70px] mb-[80px">
 
             <div className=" flex flex-col justify-between pb-4 sm:flex-row gap-y-4">
               <h1 className="font-syne font-[700] text-[#CFDDE8] sm:text-[42px]  text-[24px] sm:leading-[50px]">Live Chat</h1>
               <div>
-                {/* <div className="  w-[65px] sm:w-[80px] aspect-square bg-yellow-200 rounded-full " /> */}
+                <div className="  w-[65px] sm:w-[80px] aspect-square bg-yellow-200 rounded-full " />
               </div>
             </div>
             <div className="flex justify-between flex-wrap gap-y-6  items-end">
@@ -130,7 +130,7 @@ const Contact = () => {
               <button className=" px-1 py-2 cursor-pointer text-[#00EBFF] text-[15px]">Start a conversation <span className="ml-2">➡</span></button>
             </div>
 
-          </div>
+          </div> */}
 
           {/* <div className=" flex justify-evenly py-[50px]  flex-wrap gap-y-8 gap-x-3 bg-red-20 pb-[80px]">
 

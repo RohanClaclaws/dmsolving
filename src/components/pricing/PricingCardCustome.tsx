@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Perks from "./Perks"
+import Link from "next/link"
 
 interface Props {
   heading: string,
@@ -49,10 +50,10 @@ const PricingCardCustom = ({ heading, price, attributes, uiUX, frontDev, backDev
           }
         </div>
         <div className="flex justify-center">
-          <div className="rounded-[40px] px-[30px] py-[12px] bg-white flex gap-3 items-center hover:scale-[1.05] cursor-pointer">
+          <Link className="rounded-[40px] px-[30px] py-[12px] bg-white flex gap-3 items-center hover:scale-[1.05] cursor-pointer" href="/contact-us">
             <span className="font-[700] text-[14px] text-black">Get Started</span>
             <Image src="/images/pricing/starling.png" width={35.13} height={35.13} alt="starling" className="w-[35.13px] h-[35.13px]" />
-          </div>
+          </Link>
         </div>
       </div>
       {/** Left side END */}

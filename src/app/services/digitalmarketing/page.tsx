@@ -12,7 +12,7 @@ const servciesDetailObject={
     para:`Our team of experienced developers can make any app you desire, from mobile games to enterprise apps and everything in between. `,
   },
   mainImage:`/images/digitalMarketing/dmMain.png`,
-  bullet1:`DEO`,
+  bullet1:`SEO`,
   bullet2:`SEM`,
   bullet3:`SMM`,
   bullet4:`Content Marketing`,
