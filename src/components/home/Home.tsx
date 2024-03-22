@@ -96,17 +96,40 @@ const Home = () => {
     },
   ]
 
-  const stagger = {
-    show: {
-      transition: {
-        staggerChildren: 0.5,
-        ease: 'easeOut'
-      }
+  const options = {
+    productClarity: {
+      header: "Are you at the idea stage? We will help you identify the critical MVP product scope.",
+      sub1: "product goal & vision",
+      sub2: "brand voice",
+      sub3: "product positioning"
     },
-    hidden: {
-      transition: {
-        staggerChildren: 1
-      }
+    uiux: {
+      header: "Sharp look, great experience and memorable brand as deliverables to launch.",
+      sub1: "brand identity",
+      sub2: "product design",
+      sub3: "user experience"
+    },
+    maintain: {
+      header: "After launch cooperation. We will work closely to bring new features and guide product market fit.",
+      sub1: "user testing",
+      sub2: "analytics",
+      sub3: "product expansion"
+    },
+  }
+
+  const [currentGrow, setCurrentGrow] = useState(options.productClarity);
+  const [current, setCurrent] = useState(0);
+  const handleGrow = (identifier: string) => {
+    switch (identifier) {
+      case "productClarity":
+        setCurrentGrow(options.productClarity);
+        break;
+      case "uiDesign":
+        setCurrentGrow(options.uiux);
+        break;
+      case "maintainProcess":
+        setCurrentGrow(options.maintain);
+        break;
     }
   }
 
@@ -121,15 +144,15 @@ const Home = () => {
         <div className="layout">
           <section className="h-[100dvh] justify-center flex flex-col relative py-10">
             <div className="flex justify-center flex-1 items-center">
-              <div className="flex flex-col items-center m-10 font-dmsans text-center md:gap-20 gap-0">
-                <motion.span className="font-[500] md:text-[150px] text-[50px] md:leading-[100px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeIn' }}>Grow{" "}your</motion.span>
-                <motion.span className="font-[500] md:text-[150px] text-[50px] md:leading-[100px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, ease: 'easeIn' }}>brand</motion.span>
-                <motion.span className="font-[500] md:text-[150px] text-[50px] md:leading-[100px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeIn' }}>with us</motion.span>
+              <div className="flex flex-col items-center m-10 font-dmsans text-center md:gap-10 gap-0">
+                <motion.span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeIn' }}>Grow{" "}your</motion.span>
+                <motion.span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, ease: 'easeIn' }}>brand</motion.span>
+                <motion.span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeIn' }}>with us</motion.span>
               </div>
             </div>
             <div className="flex items-end">
               <div className="flex items-center gap-10">
-                <a href="#projects">
+                <a href="#how-can-we-help-you-grow">
                   <Image src="/images/home/a.png" width={40} height={40} alt="arrow down" className="w-[40px] h-[40px] animate-bounce border-[1px] bg-transparent rounded-[50%] p-1" />
                 </a>
                 <div className="font-[400] md:text-[19px] text-[14px] leading-[30px] text-[#FFFFFF99] font-syne hover:text-white">
@@ -239,11 +262,11 @@ const Home = () => {
                 <div className="flex flex-col gap-3">
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv1(true)} onMouseLeave={() => setHv1(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
                     <Image src="/images/home/h1.png" width={668} height={430} alt="home" className="w-[668px] h-[429.89px] object-cover" />
-                    {hv1 && <Hoverable title="Clash of the Claws" />}
+                    {hv1 && <Hoverable title="Clash of the Claws" path="/portfolio/clash-of-the-claws" />}
                   </motion.div>
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv2(true)} onMouseLeave={() => setHv2(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
                     <Image src="/images/home/h2.png" width={668} height={430} alt="home" className="w-[668px] h-[409.31px] object-cover" />
-                    {hv2 && <Hoverable title="Atet Auto" />}
+                    {hv2 && <Hoverable title="Atet Auto" path="" />}
                   </motion.div>
                   <motion.div className="max-w-[668px] w-full p-9 flex flex-col gap-3 bg-[#191919]" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
                     <span className="text-white font-[500] text-[35px] leading-[43.2px]">How we design Dmsolving products</span>
@@ -259,11 +282,11 @@ const Home = () => {
                 <div className="flex flex-col gap-3">
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv3(true)} onMouseLeave={() => setHv3(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
                     <Image src="/images/home/h3.png" width={668} height={677.55} alt="home" className="w-[668px] h-[677.55px] object-cover" />
-                    {hv3 && <Hoverable title="Centure AI" />}
+                    {hv3 && <Hoverable title="Centure AI" path="" />}
                   </motion.div>
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv4(true)} onMouseLeave={() => setHv4(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
                     <Image src="/images/home/h4.png" width={668} height={353} alt="home" className="w-[668px] h-[353px] object-cover" />
-                    {hv4 && <Hoverable title="ClaClaws" />}
+                    {hv4 && <Hoverable title="ClaClaws" path="" />}
                   </motion.div>
                 </div>
                 {/** Right side END */}
@@ -383,7 +406,8 @@ const Home = () => {
               </motion.svg>
               {/** SVG END */}
             </div>
-            <section className=" flex flex-col md:gap-32 gap-10">
+            {/* <div id="how-can-we-help-you-grow"></div> */}
+            <section className=" flex flex-col md:gap-32 gap-10 pt-20" id="how-can-we-help-you-grow">
               <motion.div className="flex flex-col items-center text-white font-syne font-[600] md:text-[114px] home-sm:text-[36px] md:leading-[118px] text-[80px]"
                 initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn' }}>
                 <span>How can we<br />help you grow</span>
@@ -391,21 +415,30 @@ const Home = () => {
               </motion.div>
               <div className="flex home-lg:justify-evenly justify-center flex-row items-start gap-10 flex-wrap">
                 <motion.div className="flex flex-col justify-between" initial={{ opacity: 0, x: -200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
-                  <span className="text-[36px] leading-[54px] text-white cursor-pointer">&bull;Product clarity</span>
-                  <span className="font-[400] text-[35px] leading-[54px] text-[#FFFFFF99] hover:text-white cursor-pointer">UX/UI design</span>
-                  <span className="font-[400] text-[35px] leading-[54px] text-[#FFFFFF99] hover:text-white cursor-pointer">Maintain process</span>
+                  <span className={`text-[36px] leading-[54px] ${current === 0 ? "text-white" : "text-[#FFFFFF99]"} cursor-pointer hover:text-white`} onClick={() => {
+                    handleGrow("productClarity")
+                    setCurrent(0);
+                  }}>{current === 0 && <span>&bull;</span>}Product clarity</span>
+                  <span className={`text-[36px] leading-[54px] ${current === 1 ? "text-white" : "text-[#FFFFFF99]"} cursor-pointer hover:text-white`} onClick={() => {
+                    handleGrow("uiDesign")
+                    setCurrent(1);
+                  }}>{current === 1 && <span>&bull;</span>}UX/UI design</span>
+                  <span className={`text-[36px] leading-[54px] ${current === 2 ? "text-white" : "text-[#FFFFFF99]"} cursor-pointer hover:text-white`} onClick={() => {
+                    handleGrow("maintainProcess")
+                    setCurrent(2);
+                  }}>{current === 2 && <span>&bull;</span>}Maintain process</span>
                 </motion.div>
                 <motion.span initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
                   <Image src="/images/home/help.png" width={317.88} height={221.5} alt="help me" className="md:w-[317.88px] md:h-[221.5px] w-[282.56px] h-[196.89px]" />
                 </motion.span>
                 <motion.div className="max-w-[397.88px] w-full" initial={{ opacity: 0, x: 200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
                   <span className="md:text-[26px] text-[20px] leading-[32px] font-[400] text-white">
-                    Are you at the idea stage? We will help you identify the critical MVP product scope.
+                    {currentGrow.header}
                   </span>
                   <div className="flex flex-col font-[400] md:text-[26px] text-[20px] leading-[32px] text-[#FFFFFF99] md:p-5 py-5">
-                    <span>product goal & vision</span>
-                    <span>brand voice</span>
-                    <span>product positioning</span>
+                    <span>&bull; {currentGrow.sub1}</span>
+                    <span>&bull; {currentGrow.sub2}</span>
+                    <span>&bull; {currentGrow.sub3}</span>
                   </div>
                 </motion.div>
               </div>
