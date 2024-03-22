@@ -57,7 +57,7 @@ const Page = () => {
   ]
   return (
     <div className="bg-black">
-      <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables}>
+      <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables} bannerImage="/images/atetbg.JPG">
         <div className="flex flex-col items-center gap-20 py-20">
           {
             bottomPics.map((e, idx) => {

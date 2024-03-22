@@ -51,5 +51,5 @@ const projectDelivarables={
 
 
 export default function Page() {
-  return <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables} />
+  return <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables} bannerImage="/images/clashclaw.png" />
 }
