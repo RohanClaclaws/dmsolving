@@ -14,7 +14,7 @@ const Services = () => {
       <div className="bg-black">
 
         <Banner heading="services" subheading="Home" />
-        <div className="layout bg-red-40 bg-black">
+        <div className="layout bg-red-40 bg-black overflow-x-hidden">
 
           <h1 className="font-syne font-[700] text-[32px] xs:text-[34x] sm:text-[40px] text-center pt-[62px] mb-[60px] text-[#CFDDE8]">Tailored Solutions for Your Digital Marketing Challenges</h1>
 
