@@ -80,6 +80,7 @@ const PortfolioDetail = ({detailObject}:props2) => {
                             <p className="px-4 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[17px] sm:text-[20px] pb-[80px]">
                                 Iconography within the website was meticulously curated to align seamlessly with the game&apos;s visual identity. Each icon was chosen with precision to represent different functionalities and features within the VR game. From navigation elements to interactive buttons, every icon was designed to be intuitive and easily recognizable, enhancing user experience and facilitating smooth interaction with the website.
                             </p>
+                            {/* sidis */}
                         </div>
                     </div>
 
