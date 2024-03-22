@@ -6,44 +6,44 @@ import Link from "next/link"
 const projects = [
     {
         label: "WingRiders",
-        href: "/wingriders"
+        href: "/contact-us"
     },
     {
         label: "Trackee",
-        href: "/trackee"
+        href: "/contact-us"
     },
     {
         label: "Worldcoin",
-        href: "/wordcoin"
+        href: "/contact-us"
     },
     {
         label: "Audience+",
-        href: "/audience"
+        href: "/contact-us"
     },
 ]
 
 const follow = [
     {
         label: "Facebook",
-        href: "/facebook"
+        href: "/contact-us"
     },
     {
         label: "Instagram",
-        href: "/instagram"
+        href: "/contact-us"
     },
     {
         label: "Dribbble",
-        href: "/dribbble"
+        href: "/contact-us"
     },
     {
         label: "Linkedin",
-        href: "/linkedin"
+        href: "/contact-us"
     },
 ]
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div className={styles.content}>
+            <div className={`${styles.content} layout`}>
                 <div className={styles.left}>
                     <div className={styles.description}>
                         <h1>DMSolving product studio</h1>
@@ -66,7 +66,7 @@ const Footer = () => {
                         <h5>Our projects</h5>
                         <ul>
                             {
-                                projects && projects.map(({label, href}) => (
+                                projects && projects.map(({ label, href }) => (
                                     <li key={href}>
                                         <Link href={href}
                                             className={styles.item}
@@ -83,7 +83,7 @@ const Footer = () => {
                         <h5>Follow us</h5>
                         <ul>
                             {
-                                follow && follow.map(({label, href}) => (
+                                follow && follow.map(({ label, href }) => (
                                     <li key={href}>
                                         <Link href={href}
                                             className={styles.item}
@@ -97,6 +97,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+
 
             <motion.div
                 className={styles.footerBackground}
@@ -131,10 +132,10 @@ const Footer = () => {
                     })
                 }}
             >
-                <Image 
-                    src={"/images/footer/top-arrow.png"} 
-                    alt={"top-arrow"} 
-                    height={157} 
+                <Image
+                    src={"/images/footer/top-arrow.png"}
+                    alt={"top-arrow"}
+                    height={157}
                     width={160}
                     className={styles.topArrow}
                 />
