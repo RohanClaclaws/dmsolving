@@ -3,9 +3,44 @@ import BannerText from "../resuable/BannerText";
 import Banner from "../resuable/Banner";
 import Image from "next/image";
 import { GoDotFill } from "react-icons/go";
-import Blur from "../resuable/Blur";
+import {motion} from "framer-motion"
 
-const ServicesDetail = () => {
+interface HeadingObj {
+    title: string,
+    para: string,
+}
+
+interface SectionObj {
+    image: string,
+    title: string,
+    para: string,
+    bullet1: string,
+    bullet2: string,
+    bullet3: string,
+    bullet4: string
+}
+
+interface MainObj {
+    heading1: HeadingObj,
+    heading2: HeadingObj,
+    section1: SectionObj,
+    section2: SectionObj,
+    section3: SectionObj,
+    mainImage: string,
+    bullet1: string,
+    bullet2: string,
+    bullet3: string,
+    bullet4: string,
+    bullet5: string,
+    bullet6: string,
+
+}
+
+interface propMain {
+    detailObject: MainObj
+}
+
+const ServicesDetail = ({ detailObject }: propMain) => {
     return (
         <>
             <Banner heading="Services" subheading="Home" />
@@ -13,35 +48,44 @@ const ServicesDetail = () => {
             <div className="bg-black">
                 <div className="layout ">
                     <div className="py-[94px]  flex justify-evenly flex-wrap  gap-y-10">
-                        <div className=" flex flex-col  gap-y-5 px-3 max-w-[750px]">
-                            <h1 className="font-syne font-[700] text-white home-sm:text-[24px] text-[30px] sm:text-[35px] md:text-[43px] lg:text-[54px]">Web Design</h1>
-                            <p className="font-syne font-[600] text-white home-sm:text-[22px] text-[27px] sm:text-[32px] md:text-[40px] "> An influential website design agency that keeps perfect balance of creative design, inventive strategies, and advanced technology to boost your business.
+                        <motion.div className=" flex flex-col  gap-y-5 px-3 max-w-[750px] "
+                         initial={{ opacity: 0, x: -100 }}
+                         whileInView={{ opacity: 1, x: 0 }}
+                         transition={{ duration:0.4, ease: 'easeInOut' }}
+                        >
+                            <h1 className="font-syne font-[700] text-white home-sm:text-[24px] text-[30px] sm:text-[35px] md:text-[43px] lg:text-[54px]">{detailObject.heading1.title}</h1>
+                            <p className="font-syne font-[600] text-white home-sm:text-[22px] text-[27px] sm:text-[32px] md:text-[40px] ">
+                                {detailObject.heading1.para}
                             </p>
 
                             <div className="pt-[40px] ">
                                 <ul className=" flex justify-center">
                                     <div className="flex flex-col gap-y-3 ">
                                         <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className="flex items-center"> <GoDotFill className="text-[#00EBFF] mr-2" /> Research</li>
-                                            <li className="flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> Illustration</li>
+                                            <li className="flex items-center"> <GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.bullet1}</li>
+                                            <li className="flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.bullet2}</li>
                                         </div>
                                         <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className=" flex items-center"> <GoDotFill className="text-[#00EBFF] mr-2" /> UI Design</li>
-                                            <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> Prototype</li>
+                                            <li className=" flex items-center"> <GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.bullet3}</li>
+                                            <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.bullet4}</li>
                                         </div>
                                         <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className=" flex items-center"> <GoDotFill className="text-[#00EBFF] mr-2" /> UX Design</li>
-                                            <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> Test</li>
+                                            <li className=" flex items-center"> <GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.bullet5}</li>
+                                            <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.bullet6}</li>
                                         </div>
 
                                     </div>
                                 </ul>
                             </div>
 
-                        </div>
-                        <div className="w-[440px] ">
-                            <Image alt="servicedetail-1" src={'/images/ServicesDetail.png'} className="w-full h-full object-cover" width={1000} height={1000} />
-                        </div>
+                        </motion.div>
+                        <motion.div className="w-[440px] "
+                          initial={{ opacity: 0, x: 200 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration:0.4, ease: 'easeInOut' }}
+                        >
+                            <Image alt="servicedetail-1" src={detailObject.mainImage} className="w-full h-full object-cover" width={1000} height={1000} />
+                        </motion.div>
                     </div>
                 </div>
             </div>
@@ -49,12 +93,9 @@ const ServicesDetail = () => {
 
             <div className="relative bg-black py-[80px] overflow-hidden">
                 <div className="layout ">
-                    <h1 className="font-syne font-[700] home-sm:text-[30px] text-[44px] text-white text-center pb-[60px] ">What does web design include ?</h1>
-                    <p className="font-dmsans font-[400] home-sm:text-[20px] text-[24px] md:text-[31px] text-[#8FA8BD] ">
-                        Visual appeal and user-friendliness create engaging first impressions and user
-                        interactions, fostering longer visits and higher conversion reates. Optimization for various devices and SEO increases reach and visibility. Quality assurance, relevant content,
-                        and sustained maintenance keep the site error-free, updated, and responsive to evolving trends and user needs. Collectively, these factors are the cornerstones of a successfull
-                        web design, ensuring it not only looks great but functions effectively and evolves with the digital landscape.
+                    <h1 className="font-syne font-[700] home-sm:text-[30px] text-[44px] text-white text-center pb-[60px] ">{detailObject.heading2.title}</h1>
+                    <p className="font-dmsans font-[400] home-sm:text-[20px] text-[24px] md:text-[31px] text-[#8FA8BD] text-center ">
+                        {detailObject.heading2.para}
                     </p>
                 </div>
 
@@ -70,91 +111,100 @@ const ServicesDetail = () => {
 
                         <div className="w-[600px] flex flex-wrap  gap-x-2">
                             <div className="max-w-[304px] min-h-[400px] mx-auto">
-                                <Image src={'/images/detail1.jpg'} width={1000} height={1000}  className="w-full h-full object-cover home-sm:rotate-0 rotate-[10deg]" alt="detail-1"/>
+                                <Image src={detailObject.section1.image} width={1000} height={1000} className="w-full h-full object-cover home-sm:rotate-0 rotate-[10deg]" alt="detail-1" />
                             </div>
                             <ul className=" flex justify-center  self-start pt-[40px] service-detail:w-full ">
-                                    <div className="flex flex-col flex-wrap gap-y-3 ">
-                                        <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className="flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> Illustration</li>
-                                        </div>
-                                        <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> Prototype</li>
-                                        </div>
-                                        <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> Test</li>
-                                        </div>
-
+                                <div className="flex flex-col flex-wrap gap-y-3 ">
+                                    <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className="flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section1.bullet1}</li>
                                     </div>
-                                </ul>
+                                    <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section1.bullet2}</li>
+                                    </div>
+                                    <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section1.bullet3}</li>
+                                    </div>
+                                    <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section1.bullet4}</li>
+                                    </div>
+
+                                </div>
+                            </ul>
                         </div>
-                        <div className="flex flex-col ">
+                        <div className="flex flex-col max-w-[486px]">
                             <div className="flex flex-col gap-y-5">
-                                    <h1 className="font-syne font-[700] text-[42px] text-white">Visual Design</h1>
-                                    <p className="font-400 font-dmsans text-[16px] text-[#8FA8BD] pb-[50px]">Enhance the first impression, encourages abd ensures that <br/> users can easily find the information they seek</p>
+                                <h1 className="font-syne font-[700] text-[42px] text-white">{detailObject.section1.title}</h1>
+                                <p className="font-400 font-dmsans text-[16px] text-[#8FA8BD] pb-[50px]">
+                                {detailObject.section1.para}
+                                </p>
                             </div>
-                            <div className="border-[2px] border-[#00EBFF] w-[50px]"/>
+                            <div className="border-[2px] border-[#00EBFF] w-[50px]" />
                         </div>
                     </div>
 
                     <div className="flex justify-evenly flex-wrap gap-y-[50px] py-[80px]">
                         <div className="w-[600px] flex flex-wrap  gap-x-2">
                             <div className="max-w-[304px] min-h-[400px] mx-auto">
-                                <Image src={'/images/detail2.jpg'} width={1000} height={1000}  className="w-full h-full object-cover home-sm:rotate-0 rotate-[10deg]" alt="detail-1"/>
+                                <Image src={detailObject.section2.image} width={1000} height={1000} className="w-full h-full object-cover home-sm:rotate-0 rotate-[10deg]" alt="detail-1" />
                             </div>
                             <ul className=" flex justify-center  self-start pt-[40px] service-detail:w-full ">
-                                    <div className="flex flex-col flex-wrap gap-y-3 ">
-                                        <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className="flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> Usability</li>
-                                        </div>
-                                        <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> Efficiency</li>
-                                        </div>
-                                        <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> Interactivity</li>
-                                        </div>
-
+                                <div className="flex flex-col flex-wrap gap-y-3 ">
+                                    <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className="flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.section2.bullet1}</li>
                                     </div>
-                                </ul>
+                                    <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.section2.bullet2}</li>
+                                    </div>
+                                    <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.section2.bullet3}</li>
+                                    </div>
+
+                                </div>
+                            </ul>
                         </div>
-                        <div className="flex flex-col ">
+                        <div className="flex flex-col max-w-[486px] ">
                             <div className="flex flex-col gap-y-5">
-                                    <h1 className="font-syne font-[700] text-[42px] text-white">Functional</h1>
-                                    <p className="font-400 font-dmsans text-[16px] text-[#8FA8BD] pb-[50px]">A responsive design ensures that the site adpats seamlessly<br/> to desktops, tablets, and mobile devices, expanding its reach to a broader <br/> audience</p>
+                                <h1 className="font-syne font-[700] text-[42px] text-white">{detailObject.section2.title}</h1>
+                                <p className="font-400 font-dmsans text-[16px] text-[#8FA8BD] pb-[50px]">
+                                    {detailObject.section2.para}
+                                </p>
                             </div>
-                            <div className="border-[2px] border-[#00EBFF] w-[50px]"/>
+                            <div className="border-[2px] border-[#00EBFF] w-[50px]" />
                         </div>
                     </div>
 
                     <div className="flex justify-evenly flex-wrap gap-y-[50px] py-[90px]">
                         <div className="w-[600px] flex flex-wrap  gap-x-2">
                             <div className="max-w-[334px] min-h-[400px] mx-auto">
-                                <Image src={'/images/detail3.jpg'} width={1000} height={1000}  className="w-full h-full object-cover home-sm:rotate-0 rotate-[10deg]" alt="detail-1"/>
+                                <Image src={detailObject.section3.image} width={1000} height={1000} className="w-full h-full object-cover home-sm:rotate-0 rotate-[10deg]" alt="detail-1" />
                             </div>
                             <ul className=" flex justify-center  self-start pt-[40px] service-detail:w-full ">
-                                    <div className="flex flex-col flex-wrap gap-y-3 ">
-                                        <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className="flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> Reliability</li>
-                                        </div>
-                                        <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> Efficiency</li>
-                                        </div>
-                                        <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> Interactivity</li>
-                                        </div>
-
+                                <div className="flex flex-col flex-wrap gap-y-3 ">
+                                    <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className="flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section3.bullet1}</li>
                                     </div>
-                                </ul>
+                                    <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section3.bullet2}</li>
+                                    </div>
+                                    <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section3.bullet3}</li>
+                                    </div>
+
+                                </div>
+                            </ul>
                         </div>
-                        <div className="flex flex-col ">
+                        <div className="flex flex-col  max-w-[486px] ">
                             <div className="flex flex-col gap-y-5">
-                                    <h1 className="font-syne font-[700] text-[42px] text-white">Quality</h1>
-                                    <p className="font-400 font-dmsans text-[16px] text-[#8FA8BD] pb-[50px]">Long-term maintenance and updates are essential for keeping <br/> the website aligned with evolving technology, security and user <br/> expectations.</p>
+                                <h1 className="font-syne font-[700] text-[42px] text-white">{detailObject.section3.title}</h1>
+                                <p className="font-400 font-dmsans text-[16px] text-[#8FA8BD] pb-[50px]">
+                                    {detailObject.section3.para}
+                                </p>
                             </div>
-                            <div className="border-[2px] border-[#00EBFF] w-[50px]"/>
+                            <div className="border-[2px] border-[#00EBFF] w-[50px]" />
                         </div>
                     </div>
-                
-                0</div>
+
+                    0</div>
             </div>
 
             <BannerText />

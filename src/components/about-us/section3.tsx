@@ -1,17 +1,18 @@
 const Section3 = () => {
     return (
         <section className="layout text-white mt-[150px] pb-[200px]">
-      <p className="font-syne text-4xl">What Makes Us  <span className="font-syne text-4xl text-[#F6841A]"> Different? </span>  </p>
+      <p className="font-syne text-4xl">What Makes Us  <span className="font-syne text-4xl font-bold text-[#FFFFFF]"> Different </span> ?  </p>
         <div className="lg:w-6/6 mx-auto">
           <div className="flex flex-col sm:flex-row mt-10">
             <div className="sm:w-1/4 text-start sm:pr-8 sm:py-8">
 
               <p className="font-syne text-4xl">SKILLS</p>
 
-              <p className="font-syne text-sm text-[#00EBFF]">How do we solve your digital marketing needs?</p>
+           
 
             </div>
             <div className="sm:w-3/4 sm:pl-8 sm:py-8 ">
+            <p className="font-syne text-sm text-[#00EBFF]">How do we solve your digital marketing needs</p>
               <div className="w-[full] h-0.5  mt-2 bg-[#00EBFF] mb-[50px]"></div>
 
 

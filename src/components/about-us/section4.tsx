@@ -8,11 +8,12 @@ const Section4 = () => {
 
             <p className="font-syne text-4xl">TEAM</p>
 
-            <p className="font-syne text-sm text-[#00EBFF]">Strength  Feature</p>
+            
 
           </div>
           <div className="sm:w-3/4 sm:pl-8 sm:py-8">
-            <div className="w-[full] h-0.5  mt-2 bg-[#00EBFF] mb-[50px]"></div>
+          <p className="font-syne text-sm text-[#00EBFF]">Our expert solutions with our expert teams</p>
+            <div className="w-[full] h-0.5  mt-2 bg-[#00EBFF] mb-[100px]"></div>
 
 
             <svg width="1192" height="413" viewBox="0 0 1192 413" fill="none" className="max-w-full max-h-full sm:-mt-[150px] lg:-mt-[100px] -mt-[150px]" xmlns="http://www.w3.org/2000/svg">

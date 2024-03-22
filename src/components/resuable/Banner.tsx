@@ -6,7 +6,6 @@ interface props{
 }
 
 const Banner=({heading,subheading,image}:props)=>{
-
     return (
         <div className="text-center min-h-[340px] flex justify-center items-center relative   bg-cover bg-center " 
         style={{backgroundImage: image ? `url(${image})` : `url("/images/banner.jpg")`}}>
