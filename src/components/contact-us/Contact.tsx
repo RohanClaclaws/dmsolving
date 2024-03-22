@@ -56,7 +56,9 @@ const Contact = () => {
                   <div className="flex flex-col">
                     <p className="font-syne font-[500] text-[#CFDDE8]">info@dmsolving.com
 </p>
-                    <p className="font-syne font-[500] text-[#CFDDE8]">+1 647-856-3919</p>
+                    <p className="font-syne font-[500] text-[#CFDDE8]">(+1) 647-856-3919</p>
+                    <p className="font-syne font-[500] text-[#CFDDE8]">(+1) 647-617-1832</p>
+
                   </div>
                 </div>
                 <div className="flex flex-col gap-y-3 pb-6">
