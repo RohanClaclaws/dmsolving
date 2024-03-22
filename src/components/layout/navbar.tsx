@@ -46,15 +46,15 @@ const Navbar = () => {
             subMenu: [
                 {
                     label: "Web Design",
-                    href: "/services/webDesign"
+                    href: "/services/webdesign"
                 },
                 {
                     label: "Digital Marketing",
-                    href: "/services/digitalMarketing"
+                    href: "/services/digitalmarketing"
                 },
                 {
                     label: "App Development",
-                    href: "/services/appDevelopment"
+                    href: "/services/appdevelopment"
                 }
 
             ]
