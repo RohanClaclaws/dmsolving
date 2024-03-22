@@ -2,7 +2,27 @@ import Banner from "../resuable/Banner";
 import Image from "next/image";
 import BannerText from "../resuable/BannerText";
 
-const PortfolioDetail = ({}) => {
+interface HeadObj{
+    title:string,
+    description:string
+}
+
+interface props{
+   image1:string,
+   image2:string,
+   image3:string,
+   heading1:HeadObj,
+   heading2:HeadObj,
+   heading3:HeadObj,
+   heading4:HeadObj,
+   maindescription:string
+}
+
+interface props2{
+    detailObject:props
+ }
+
+const PortfolioDetail = ({detailObject}:props2) => {
     return (
         <>
             <Banner subheading="Home" heading="Portfolio"/>
