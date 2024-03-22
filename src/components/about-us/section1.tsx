@@ -49,25 +49,41 @@ const Section1 = () => {
               }}
             >
                     <div className="flex flex-col max-w-[646px] w-full">
-                        <h2 className="font-dmsans text-white text-2xl items-start mb-16">We’re 
+                        <h2 className="font-dmsans text-white text-[35px] items-start mb-2">We’re 
                         
-                         <span className='font-dmsans text-[#FFD526] text-2xl'> happy </span> 
+                         <span className='font-dmsans text-[#FFD526] text-[35px]'> happy </span> 
                         
-                         that you’re interested to learn more about us</h2>
+                         that you’re
+                         <br />
+                          interested to learn more
+                          <br />
+                           about us</h2>
 
 
                         <p className="font-syne text-white mb-10">
-                        At DMSolving, our mission is to bring your business success through creative and innovative solutions.
+                        At DMSolving, our mission is to bring your business success through 
+                        <br />
+                        creative and innovative solutions.
                         </p>
 
                         <p className="font-syne text-white mb-10">
                         We understand that in today’s fast-paced digital landscape,
-                         creativity is the driving force behind effective marketing strategies,
-                          web design, and app development. Our dedicated team of experts are committed
-                           to crafting solutions that not only captivate and engage your audience, 
-                           but also drive tangible profits to your company. 
+                         creativity is
+                         <br />
+                          the driving force behind effective marketing strategies,
+                          web design, and 
+                          <br />
+                          app development. Our dedicated team of experts are
+                          
+                           committed
+                           to 
+                           <br />
+                           crafting solutions that not only captivate and engage your audience, 
+                           but 
+                           <br />
+                           also drive tangible profits to your company. 
                         </p>
-                        <div className="w-20 h-0.5 bg-[#FFFFFF] mt-2 mb-4"></div>
+                        <div className="w-20 h-0.5 bg-[#FFFFFF] mt-10"></div>
                     </div>
 
                    </motion.div>

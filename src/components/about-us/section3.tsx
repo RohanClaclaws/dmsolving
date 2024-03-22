@@ -33,7 +33,7 @@ const Section3 = () => {
                 duration:0.85,
               }}
             >
-          <div className="sm:w-3/4 sm:pl-8 sm:py-8 ">
+          <div className="sm:w-3/4 sm:pl-8 sm:py-8 ml-[160px]">
             <p className="font-syne text-[24px] text-[#00EBFF]">How do we solve your digital marketing needs</p>
             <div className="w-[full] h-0.5  mt-2 bg-[#00EBFF] mb-[50px]"></div>
 
