@@ -33,6 +33,7 @@ interface MainObj {
     bullet4: string,
     bullet5: string,
     bullet6: string,
+    bannerImage?:string
 
 }
 
@@ -43,7 +44,7 @@ interface propMain {
 const ServicesDetail = ({ detailObject }: propMain) => {
     return (
         <>
-            <Banner heading="Services" subheading="Home" />
+            <Banner heading="Services" subheading="Home" image={detailObject.bannerImage}/>
 
             <div className="bg-black">
                 <div className="layout ">
@@ -59,19 +60,19 @@ const ServicesDetail = ({ detailObject }: propMain) => {
                             </p>
 
                             <div className="pt-[40px] ">
-                                <ul className=" flex justify-center">
+                                <ul className=" flex justify-start">
                                     <div className="flex flex-col gap-y-3 ">
                                         <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className="flex items-center"> <GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.bullet1}</li>
-                                            <li className="flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.bullet2}</li>
+                                            <li className="flex items-center"> <GoDotFill className="text-white mr-2" /> {detailObject.bullet1}</li>
+                                            <li className="flex items-center"><GoDotFill className="text-white mr-2" /> {detailObject.bullet2}</li>
                                         </div>
-                                        <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className=" flex items-center"> <GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.bullet3}</li>
-                                            <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.bullet4}</li>
+                                        <div className="flex flex-wrap  gap-x-8 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                            <li className=" flex items-center"> <GoDotFill className="text-white mr-2" /> {detailObject.bullet3}</li>
+                                            <li className=" flex items-center"><GoDotFill className="text-white mr-2" /> {detailObject.bullet4}</li>
                                         </div>
                                         <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                            <li className=" flex items-center"> <GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.bullet5}</li>
-                                            <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.bullet6}</li>
+                                            <li className=" flex items-center"> <GoDotFill className="text-white mr-2" /> {detailObject.bullet5}</li>
+                                            <li className=" flex items-center"><GoDotFill className="text-white mr-2" /> {detailObject.bullet6}</li>
                                         </div>
 
                                     </div>
@@ -111,7 +112,7 @@ const ServicesDetail = ({ detailObject }: propMain) => {
 
                         <div className="w-[600px] flex flex-wrap  gap-x-2">
                             <div className="max-w-[304px] min-h-[400px] mx-auto">
-                                <Image src={detailObject.section1.image} width={1000} height={1000} className="w-full h-full object-cover home-sm:rotate-0 rotate-[10deg]" alt="detail-1" />
+                                <Image src={detailObject.section1.image} width={1000} height={1000} className="w-full h-full object-cover home-sm:rotate-0 rotate-[0deg] duration-100 cursor-pointer hover:rotate-[10deg]" alt="detail-1" />
                             </div>
                             <ul className=" flex justify-center  self-start pt-[40px] service-detail:w-full ">
                                 <div className="flex flex-col flex-wrap gap-y-3 ">
@@ -145,18 +146,18 @@ const ServicesDetail = ({ detailObject }: propMain) => {
                     <div className="flex justify-evenly flex-wrap gap-y-[50px] py-[80px]">
                         <div className="w-[600px] flex flex-wrap  gap-x-2">
                             <div className="max-w-[304px] min-h-[400px] mx-auto">
-                                <Image src={detailObject.section2.image} width={1000} height={1000} className="w-full h-full object-cover home-sm:rotate-0 rotate-[10deg]" alt="detail-1" />
+                                <Image src={detailObject.section2.image} width={1000} height={1000} className="w-full h-full object-cover home-sm:rotate-0 rotate-[0deg] duration-100 cursor-pointer hover:rotate-[10deg]" alt="detail-1" />
                             </div>
                             <ul className=" flex justify-center  self-start pt-[40px] service-detail:w-full ">
                                 <div className="flex flex-col flex-wrap gap-y-3 ">
                                     <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                        <li className="flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.section2.bullet1}</li>
+                                        <li className="flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section2.bullet1}</li>
                                     </div>
                                     <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                        <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.section2.bullet2}</li>
+                                        <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section2.bullet2}</li>
                                     </div>
                                     <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                        <li className=" flex items-center"><GoDotFill className="text-[#FFD55B] mr-2" /> {detailObject.section2.bullet3}</li>
+                                        <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section2.bullet3}</li>
                                     </div>
 
                                 </div>
@@ -176,7 +177,7 @@ const ServicesDetail = ({ detailObject }: propMain) => {
                     <div className="flex justify-evenly flex-wrap gap-y-[50px] py-[90px]">
                         <div className="w-[600px] flex flex-wrap  gap-x-2">
                             <div className="max-w-[334px] min-h-[400px] mx-auto">
-                                <Image src={detailObject.section3.image} width={1000} height={1000} className="w-full h-full object-cover home-sm:rotate-0 rotate-[10deg]" alt="detail-1" />
+                                <Image src={detailObject.section3.image} width={1000} height={1000} className="w-full h-full object-cover home-sm:rotate-0 rotate-[0deg] duration-100 cursor-pointer hover:rotate-[10deg]" alt="detail-1" />
                             </div>
                             <ul className=" flex justify-center  self-start pt-[40px] service-detail:w-full ">
                                 <div className="flex flex-col flex-wrap gap-y-3 ">
