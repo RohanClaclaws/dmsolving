@@ -4,19 +4,19 @@ export async function POST(req: Request) {
     const {name, email, subject, message } = await req.json()
 
     const transporter = nodemailer.createTransport({
-        host: 'smtp.elasticemail.com',
-        port: 2525,
-        secure: false,
+        host: 'mail.dmsolving.com',
+        port: 465,
+        secure: true,
         auth: {
-          user: 'jurong@claclaws.com',
-          pass: 'B48D25C12E2F64B220FD2973B32A0BC7D98E'
+          user: 'hello@dmsolving.com',
+          pass: 'Hello@123!@#'
         }
       });
   
       try {
         await transporter.sendMail({
-          from: 'jurong@claclaws.com',
-          to: email,
+          from: "hello@dmsolving.com",
+          to: 'info@dmsolving.com',
           subject: subject,
           text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
         });
