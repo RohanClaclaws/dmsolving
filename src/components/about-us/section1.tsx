@@ -7,13 +7,13 @@ const Section1 = () => {
 
                 <div className="flex flex-col justify-center lg:flex-row mt-10">
 
-                    <div className="mr-12">
+                    <div className="sm:mr-12 sm:block hidden">
                         <Image
                             src="/about/about-back.png"
                             width={500}
                             height={500}
                             alt="Picture of the about back"
-                            className=' max-w-[500px]  min-w-[500px]'
+                            className=' max-w-[500px]  min-w-[500px] '
                         />
 
                         <Image
