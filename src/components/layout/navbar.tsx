@@ -18,6 +18,11 @@ const Navbar = () => {
             }
         }
 
+        window.scrollTo({
+            top: 0,
+            behavior: "instant"
+        })
+
         window.addEventListener('scroll', handleScroll)
 
         return () => {
@@ -41,15 +46,15 @@ const Navbar = () => {
             subMenu: [
                 {
                     label: "Web Design",
-                    href: "/webDesign"
+                    href: "/services/webDesign"
                 },
                 {
                     label: "Digital Marketing",
-                    href: "/digitalMarketing"
+                    href: "/services/digitalMarketing"
                 },
                 {
                     label: "App Development",
-                    href: "/appDevelopment"
+                    href: "/services/appDevelopment"
                 }
 
             ]

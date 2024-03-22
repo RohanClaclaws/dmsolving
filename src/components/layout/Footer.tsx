@@ -5,39 +5,43 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 const projects = [
     {
-        label: "WingRiders",
-        href: "/contact-us"
+        label: "Home",
+        href: "/"
     },
     {
-        label: "Trackee",
-        href: "/contact-us"
+        label: "Services",
+        href: "/services"
     },
     {
-        label: "Worldcoin",
-        href: "/contact-us"
+        label: "Portfolio",
+        href: "/portfolio"
     },
     {
-        label: "Audience+",
+        label: "About",
+        href: "/about-us"
+    },
+    {
+        label: "Pricing",
+        href: "/pricing"
+    },
+    {
+        label: "Request a portfolio",
         href: "/contact-us"
     },
 ]
 
 const follow = [
     {
-        label: "Facebook",
-        href: "/contact-us"
+        label: <Image src={"/images/footer/facebook.png"} alt={"facebook"} height={30} width={30}/>,        
+        href: "https://www.facebook.com/people/DM-Solving/61552580015958/"
     },
     {
-        label: "Instagram",
-        href: "/contact-us"
+        label: <Image src={"/images/footer/instgram.png"} alt={"instgram"} height={30} width={30}/>,
+        href: "https://www.instagram.com/dmsolving/"
     },
     {
-        label: "Dribbble",
-        href: "/contact-us"
-    },
-    {
-        label: "Linkedin",
-        href: "/contact-us"
+        label: <Image src={"/images/footer/twiter.png"} alt={"twiter"} height={30} width={30}/>,
+        href: "https://twitter.com/DMsolving?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
     },
 ]
 const Footer = () => {
@@ -63,7 +67,7 @@ const Footer = () => {
                 </div>
                 <div className={styles.right}>
                     <div className={styles.projects}>
-                        <h5>Our projects</h5>
+                        <h5>Navigation</h5>
                         <ul>
                             {
                                 projects && projects.map(({ label, href }) => (

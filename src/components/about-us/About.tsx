@@ -15,7 +15,7 @@ import Section6 from "./section6";
 const About = () => {
   return (
     <div>
-      <Banner heading='About' subheading="Home" />
+      <Banner heading='About' subheading="Home" image="/about/about-hero-bg.jpg"/>
       <div className="bg-black">
         <Section1 />
 
