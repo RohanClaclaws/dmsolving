@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 const Section6 = () => {
     return (
         <section className="relative">
@@ -22,7 +23,14 @@ const Section6 = () => {
             designers, and digital experts who collaborate 
             to turn the ordinary into extraordinary
             </p>
+
+               <Link href={'/contact-us'}>
+                <button className="font-dmsans text-center font-[400] text-[#081D34] py-3 px-5  bg-white w-fit mt-4 rounded-lg hover:bg-transparent hover:text-white border-[1px] border-transparent hover:border-white" >
+                    Send Message
+                </button>
+            </Link>
           </div>
+       
         </div>
       </section>
     )

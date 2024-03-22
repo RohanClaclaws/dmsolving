@@ -53,11 +53,11 @@ const BannerText = () => {
 
             </motion.h1>
 
-            <Link href={'/contact-us'}>
+            {/* <Link href={'/contact-us'}>
                 <button className="font-dmsans text-center font-[400] text-[#081D34] py-3 px-5  bg-white w-fit mt-4 rounded-lg hover:bg-transparent hover:text-white border-[1px] border-transparent hover:border-white" >
                     Send Message
                 </button>
-            </Link>
+            </Link> */}
 
         </div>
     )

@@ -1,3 +1,5 @@
+'use client'
+import { motion } from "framer-motion"
 const Section4 = () => {
   return (
     <section className="layout text-white mt-[150px] pb-[200px]">
@@ -5,14 +7,27 @@ const Section4 = () => {
       <div className="lg:w-6/6 mx-auto">
         <div className="flex flex-col sm:flex-row mt-10">
           <div className="sm:w-1/4 text-start sm:pr-8 sm:py-8">
-
+          <motion.div
+              whileInView={{x:[-200,0],opacity:[0,1],y:[0,0]}}
+              transition={{
+                duration:0.85,
+              }}
+            >
             <p className="font-syne text-4xl">TEAM</p>
-
+          </motion.div>
             
 
           </div>
+
+
+          <motion.div
+              whileInView={{x:[200,0],opacity:[0,1],y:[0,0]}}
+              transition={{
+                duration:0.85,
+              }}
+            >
           <div className="sm:w-3/4 sm:pl-8 sm:py-8">
-          <p className="font-syne text-sm text-[#00EBFF]">Our expert solutions with our expert teams</p>
+          <p className="font-syne text-[24px] text-[#00EBFF]">Our expert solutions with our expert teams</p>
             <div className="w-[full] h-0.5  mt-2 bg-[#00EBFF] mb-[100px]"></div>
 
 
@@ -62,7 +77,9 @@ const Section4 = () => {
             </div>
 
           </div>
+          </motion.div>
         </div>
+   
       </div>
     </section>
   )
