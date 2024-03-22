@@ -2,12 +2,13 @@
 import { motion } from "framer-motion"
 import Link from "next/link";
 
-const BannerText = () => {
+const BannerText = ({img}: {img?: string}) => {
     const text = "Let's chat with".split(" ");
     const text2 = "DMSolving".split(" ");
 
     return (
-        <div className="text-center py-[85px] bg-[url('/images/pbg.png')]">
+        <div className="text-center py-[85px] bg-[url('/images/pbg.png')]" 
+        style={{backgroundImage: !img ? `url('/images/pbg.png')` : `url('${img}')`}}>
             <h3 className=" font-syne text-[21px] mb-2 sm:text-[27px] text-[#ffffff]">
                 Tell us about your project
             </h3>
