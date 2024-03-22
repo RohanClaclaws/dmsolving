@@ -130,6 +130,8 @@ const PortfolioDetail = ({ detailObject,delivery, children }: props2) => {
                 </div>
             </div>
 
+            
+
             <BannerText />
 
 
