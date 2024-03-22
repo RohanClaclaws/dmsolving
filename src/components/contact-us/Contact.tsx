@@ -6,7 +6,7 @@ import Banner from "../resuable/Banner";
 const Contact = () => {
   return (
     <>
-        <Banner heading="Contact" subheading="Home"/>
+        <Banner heading="Contact" subheading="Home" image="/images/breadcrumbcontact.png"/>
 
       <div className="bg-[#07192d  bg-black">
         <div className="layout ">
