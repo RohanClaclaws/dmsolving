@@ -47,7 +47,7 @@ const Contact = () => {
               <div className="flex flex-col gap-y-4 pb-5">
                 <h1 className="font-syne font-[700] text-[#CFDDE8] sm:text-[42px]  text-[22px] sm:leading-[50px] pb-3">Fell Free to Message <br /> With Us </h1>
                 <p className="font-dmsans font-[400] text-[#8FA8BD] sm:text-[16px]">
-                Whether you have questions, feedback, or just want to say hello, we're here to chat and assist you. Your satisfaction is our priority, and we look forward to hearing from you!
+                Whether you have questions, feedback, or just want to say hello, we &apos; re here to chat and assist you. Your satisfaction is our priority, and we look forward to hearing from you!
                 </p>
               </div>
               <div className="flex mt-5 gap-x-[80px] flex-wrap gap-y-5 pb-3">
