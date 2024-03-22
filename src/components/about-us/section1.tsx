@@ -1,3 +1,5 @@
+'use client'
+import {motion } from "framer-motion"
 import Image from 'next/image'
 
 const Section1 = () => {
@@ -6,7 +8,12 @@ const Section1 = () => {
             <div className="lg:w-6/6 ">
 
                 <div className="flex flex-col justify-center lg:flex-row mt-10">
-
+                <motion.div
+              whileInView={{x:[-200,0],opacity:[0,1],y:[100,0]}}
+              transition={{
+                duration:0.85,
+              }}
+            >
                     <div className="sm:mr-12 sm:block hidden">
                         <Image
                             src="/about/about-back.png"
@@ -24,6 +31,7 @@ const Section1 = () => {
                             className=' max-w-[300px]  min-w-[300px] -mt-[260px] -ml-[40px] mb-[80px]'
                         />
                     </div>
+                    </motion.div>
                     <div className="flex flex-col max-w-[646px] w-full">
                         <h2 className="font-dmsans text-white text-2xl items-start mb-16">We’re 
                         
