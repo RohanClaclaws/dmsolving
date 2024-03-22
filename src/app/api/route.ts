@@ -4,19 +4,19 @@ export async function POST(req: Request) {
     const {name, email, subject, message } = await req.json()
 
     const transporter = nodemailer.createTransport({
-        host: 'mail.dmsolving.com',
-        port: 465,
+        host: process.env.SMTP_HOST,
+        port: process.env.SMTP_PORT,
         secure: true,
         auth: {
-          user: 'hello@dmsolving.com',
-          pass: 'Hello@123!@#'
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS
         }
       });
   
       try {
         await transporter.sendMail({
-          from: "hello@dmsolving.com",
-          to: 'info@dmsolving.com',
+          from: process.env.SMTP_USER,
+          to: process.env.SMTP_TO_EMAIL,
           subject: subject,
           text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
         });
