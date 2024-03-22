@@ -45,7 +45,7 @@ interface propMain {
 const ServicesDetail = ({ detailObject, mainHeading }: propMain) => {
     return (
         <>
-            <Banner heading="Services" subheading="Home" image={detailObject.bannerImage} mainHeading={mainHeading}  />
+            <Banner heading="Services" subheading="Home" image={detailObject.bannerImage} mainHeading={mainHeading} />
 
             <div className="bg-black  overflow-hidden">
                 <div className="layout  overflow-hidden">
@@ -62,20 +62,29 @@ const ServicesDetail = ({ detailObject, mainHeading }: propMain) => {
 
                             <div className="pt-[40px] ">
                                 <ul className=" flex justify-start">
-                                    <div className="flex flex-col gap-y-3 ">
-                                        <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                    <div className="flex gap-y-3 bg-redd-400 justify-evenly items-start gap-10">
+                                        {/* <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8]  ">
                                             <li className="flex items-center"> <GoDotFill className="text-white mr-2" /> {detailObject.bullet1}</li>
                                             <li className="flex items-center"><GoDotFill className="text-white mr-2" /> {detailObject.bullet2}</li>
                                         </div>
-                                        <div className="flex flex-wrap  gap-x-8 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <div className="flex flex-wrap  gap-x-8 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8]  ">
                                             <li className=" flex items-center"> <GoDotFill className="text-white mr-2" /> {detailObject.bullet3}</li>
                                             <li className=" flex items-center"><GoDotFill className="text-white mr-2" /> {detailObject.bullet4}</li>
                                         </div>
                                         <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
                                             <li className=" flex items-center"> <GoDotFill className="text-white mr-2" /> {detailObject.bullet5}</li>
                                             <li className=" flex items-center"><GoDotFill className="text-white mr-2" /> {detailObject.bullet6}</li>
+                                        </div> */}
+                                        <div className="flex flex-col font-dmsans font-[400] text-[20px] text-[#CFDDE8] gap-5">
+                                            <li className="flex items-center"> <GoDotFill className="text-white mr-2" /> {detailObject.bullet1}</li>
+                                            <li className="flex items-center"><GoDotFill className="text-white mr-2" /> {detailObject.bullet2}</li>
+                                            <li className=" flex items-center"> <GoDotFill className="text-white mr-2" /> {detailObject.bullet3}</li>
                                         </div>
-
+                                        <div className="flex flex-col font-dmsans font-[400] text-[20px] text-[#CFDDE8] gap-5">
+                                            <li className=" flex items-center"><GoDotFill className="text-white mr-2" /> {detailObject.bullet4}</li>
+                                            <li className=" flex items-center"> <GoDotFill className="text-white mr-2" /> {detailObject.bullet5}</li>
+                                            <li className=" flex items-center"><GoDotFill className="text-white mr-2" /> {detailObject.bullet6}</li>
+                                        </div>
                                     </div>
                                 </ul>
                             </div>

@@ -20,16 +20,17 @@ const PortfolioCard = ({ img, title, description, award_winning, link }: Portfol
       {
         award_winning &&
         (
-          <div className="absolute left-0 right-0 max-w-[368px] max-h-[410px] w-full h-full bg-[#00EBFF66] ml-auto mr-auto top-5 p-5 flex items-end justify-center">
+          <Link className="absolute left-0 right-0 max-w-[368px] max-h-[410px] w-full h-full bg-[#00EBFF66] ml-auto mr-auto top-5 p-5 flex items-end justify-center" 
+          href={link}>
             <div className="flex justify-between items-center">
-              <span className="max-w-[258px] w-full text-[#CFDDE8] font-[700] text-[26px] leading-[31.2px] font-syne underline">
+              {/* <span className="max-w-[258px] w-full text-[#CFDDE8] font-[700] text-[26px] leading-[31.2px] font-syne underline">
                 Award Winning Project
-              </span>
+              </span> */}
               <Link href={link}>
                 <Image src="/images/portfolio/BTN.png" width={50} height={50} alt="Big Blue Button" className="w-[50px] h-[50px] cursor-pointer" />
               </Link>
             </div>
-          </div>
+          </Link>
         )
       }
     </div>
