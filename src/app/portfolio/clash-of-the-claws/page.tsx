@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const claclaws={
   image1:'/images/Placeholder1.png',
   image2:'/images/Placeholder3.png',
-  image3:'/images/Placeholder2.png',
+  image3:'/images/styleGuide.png',
   heading1:{
     title:`Structuring the site`,
     description:`The website's architecture was meticulously designed to ensure seamless navigation and optimal user engagement. The homepage served as a gateway, featuring prominent displays of the game's key features and providing an overview of its immersive world. Sections such as 'About Us' delved into the background story of the game's development team, while 'Game Overview' categorically listed various aspects of gameplay, mechanics, and storyline. Additionally, the 'Media Center' showcased an array of screenshots, videos, and other media assets to offer users a comprehensive glimpse into the game's visual appeal. Finally, the 'Contact Us' section provided users with convenient channels to reach out and provide feedback.`
