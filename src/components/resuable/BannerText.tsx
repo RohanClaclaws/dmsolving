@@ -1,5 +1,6 @@
 'use client'
-import { motion} from "framer-motion"
+import { motion } from "framer-motion"
+import Link from "next/link";
 
 const BannerText = () => {
     const text = "Let's chat with".split(" ");
@@ -30,27 +31,33 @@ const BannerText = () => {
                     })
                 }
 
-                
-            <span className="text-[#00EbFF]">
-            {
-                    text2.map((el, i) => {
-                        return <motion.span
-                            whileInView={{
-                                opacity: [0, 1]
-                            }}
-                            transition={{
-                                duration: 1.25,
-                                delay: i / 1
-                            }}
-                            key={i}
-                        >
-                            {el}{" "}
-                        </motion.span>
-                    })
-                }
-            </span>
+
+                <span className="text-[#00EbFF]">
+                    {
+                        text2.map((el, i) => {
+                            return <motion.span
+                                whileInView={{
+                                    opacity: [0, 1]
+                                }}
+                                transition={{
+                                    duration: 1.25,
+                                    delay: i / 1
+                                }}
+                                key={i}
+                            >
+                                {el}{" "}
+                            </motion.span>
+                        })
+                    }
+                </span>
 
             </motion.h1>
+
+            <Link href={'/contact-us'}>
+                <button className="font-dmsans text-center font-[400] text-[#081D34] py-3 px-5  bg-white w-fit mt-4 rounded-lg hover:bg-transparent hover:text-white border-[1px] border-transparent hover:border-white" >
+                    Send Message
+                </button>
+            </Link>
 
         </div>
     )

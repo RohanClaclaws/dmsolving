@@ -225,7 +225,7 @@ const Pricing = () => {
       </div>
       {/** Web 2 */}
       <div className="layout py-20 pt-40">
-        <span className="font-syne text-white font-[700] sm:text-[42px] text-[32px] pricing-lg:text-start text-center w-full">02 / Web Design</span>
+        <span className="font-syne text-white font-[700] sm:text-[42px] text-[32px] pricing-lg:text-start text-center w-full">02 / Digital Marketing</span>
         <div className="flex justify-evenly items-center gap-5 py-10 pricing-lg:flex-row flex-col ">
           <PricingCard heading="Basic Plan" price={999} attributes={basicPlan2} />
           <PricingCard heading="Advanced Plan" price={1999} attributes={advancedPlan2} />

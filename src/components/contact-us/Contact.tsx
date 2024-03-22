@@ -46,28 +46,33 @@ const Contact = () => {
               </div>
             </div>
 
-            <motion.div className="bg-[#0D2238] w-full max-w-[616px] py-5 ">
+            <motion.div className=" bg-black w-full max-w-[616px] py-5 "
+              whileInView={{x:[200,0],opacity:[0,1],y:[100,0]}}
+              transition={{
+                duration:0.85,
+              }}
+            >
               <div className="px-5 py-3  ">
-                <form className="flex flex-col gap-y-4 ">
-                  <div className="input-collapse-contact:flex gap-x-2 space-y-3 input-collapse-contact:space-y-0">
-                    <div className=" flex flex-col gap-y-4 w-full">
+                <form className="flex flex-col gap-y-7 outline-none">
+                  <div className="input-collapse-contact:flex gap-x-2 space-y-5 input-collapse-contact:space-y-0">
+                    <div className=" flex flex-col gap-y-2 w-full">
                       <label className="text-[#cfdde8]">Name <sup className="text-[#8FA88D]">*</sup></label>
-                      <input type="text" className="py-3 px-2 bg-[#0e3041] text-[#8FA88D]" placeholder="Name" />
+                      <input type="text" className="py-3 px-2  bg-black border-[1px] border-gray-800 text-[#8FA88D] rounded-md" placeholder="Name" />
                     </div>
-                    <div className=" flex flex-col gap-y-4 w-full">
+                    <div className=" flex flex-col gap-y-2 w-full">
                       <label className="text-[#cfdde8]">Email <sup className="text-[#8FA88D]">*</sup></label>
-                      <input type="text" className="py-3 px-2 bg-[#0e3041] text-[#8FA88D]" placeholder="Email" />
+                      <input type="text" className="py-3 px-2  text-[#8FA88D] bg-black border-[1px] border-gray-800 rounded-md" placeholder="Email" />
                     </div>
                   </div>
-                  <div className="flex flex-col gap-y-4">
+                  <div className="flex flex-col gap-y-2">
                     <label className="text-[#cfdde8]">Subject <sup className="text-[#8FA88D]">*</sup></label>
-                    <input type="text" className="py-3 px-2 bg-[#0e3041] text-[#8FA88D]" placeholder="How can we help you ?" />
+                    <input type="text" className="py-3 px-2 text-[#8FA88D] bg-black border-[1px] border-gray-800 rounded-md" placeholder="How can we help you ?" />
                   </div>
-                  <div className="flex flex-col gap-y-4">
+                  <div className="flex flex-col gap-y-2">
                     <label className="text-[#cfdde8]">Comments / Questions <sup className="text-[#8FA88D]">*</sup></label>
-                    <textarea className="py-3 px-2 bg-[#0e3041] text-[#8FA88D] min-h-[150px] resize-none" placeholder="How can we help you ?" />
+                    <textarea className="py-3 px-2  text-[#8FA88D] min-h-[150px] resize-none bg-black border-[1px] border-gray-800 rounded-md" placeholder="How can we help you ?" />
                   </div>
-                  <button className="font-dmsans text-center font-[400] text-[#081D34] py-3 px-5 bg-[#00EBFF] w-fit mt-4" >
+                  <button className="font-dmsans text-center font-[400] text-[#081D34] py-3 px-5  bg-white w-fit mt-4 rounded-lg hover:bg-transparent hover:text-white border-[1px] border-transparent hover:border-white" >
                     Send Message
                   </button>
                 </form>
@@ -76,12 +81,12 @@ const Contact = () => {
 
           </div>
 
-          <div className="bg-[#0d2238] py-[70px] px-[30px] sm:px-[70px] mb-[80px]">
+          <div className="bg-[#0d2238] py-[70px] px-[30px] sm:px-[70px] mb-[80px">
 
             <div className=" flex flex-col justify-between pb-4 sm:flex-row gap-y-4">
               <h1 className="font-syne font-[700] text-[#CFDDE8] sm:text-[42px]  text-[24px] sm:leading-[50px]">Live Chat</h1>
               <div>
-                <div className="  w-[65px] sm:w-[80px] aspect-square bg-yellow-200 rounded-full " />
+                {/* <div className="  w-[65px] sm:w-[80px] aspect-square bg-yellow-200 rounded-full " /> */}
               </div>
             </div>
             <div className="flex justify-between flex-wrap gap-y-6  items-end">
@@ -94,7 +99,7 @@ const Contact = () => {
 
           </div>
 
-          <div className=" flex justify-evenly py-[50px]  flex-wrap gap-y-8 gap-x-3 bg-red-20 pb-[80px]">
+          {/* <div className=" flex justify-evenly py-[50px]  flex-wrap gap-y-8 gap-x-3 bg-red-20 pb-[80px]">
 
             <div className="w-[550px] ">
               <h1 className="text-[#00EBFF] text-[25px] sm:text-[32px] font-syne pb-4">FAQs</h1>
@@ -118,7 +123,7 @@ const Contact = () => {
               </div>
             </div>
 
-          </div>
+          </div> */}
 
         </div>
       </div>
