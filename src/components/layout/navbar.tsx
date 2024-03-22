@@ -74,8 +74,8 @@ const Navbar = () => {
         <li
             key={href}
             className={`${styles.link} ${href === pathname && styles.active}`}
-            onMouseEnter={() => { setTriggerSubmenu(true) }}
-            onMouseLeave={() => { setTriggerSubmenu(false) }}
+            onMouseEnter={() => { subMenu && setTriggerSubmenu(true) }}
+            onMouseLeave={() => { subMenu && setTriggerSubmenu(false) }}
         >
             <Link
                 href={href}
