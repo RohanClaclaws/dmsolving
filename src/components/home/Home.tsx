@@ -99,21 +99,21 @@ const Home = () => {
   const options = {
     productClarity: {
       header: "Are you at the idea stage?",
-      sub1: "product goal & vision",
-      sub2: "brand voice",
-      sub3: "product positioning"
+      sub1: "Product Goal & Vision",
+      sub2: "Intuitive Design",
+      sub3: "Product Positioning"
     },
     uiux: {
       header: "Sharp look, great experience and memorable brand as deliverables to launch.",
-      sub1: "brand identity",
-      sub2: "product design",
-      sub3: "user experience"
+      sub1: "Brand Identity",
+      sub2: "Product Design",
+      sub3: "User Experience"
     },
     maintain: {
-      header: "After launch cooperation. We will work closely to bring new features and guide product market fit.",
-      sub1: "user testing",
-      sub2: "analytics",
-      sub3: "product expansion"
+      header: "Building a Strong Digital Landscape",
+      sub1: "Innovated Engagement",
+      sub2: "Cohesive Identity",
+      sub3: "Digital Marketing"
     },
   }
 
@@ -432,7 +432,7 @@ const Home = () => {
                   <span className={`text-[36px] leading-[54px] ${current === 2 ? "text-white" : "text-[#FFFFFF99]"} cursor-pointer hover:text-white`} onClick={() => {
                     handleGrow("maintainProcess")
                     setCurrent(2);
-                  }}>{current === 2 && <span>&bull;</span>}Maintenance</span>
+                  }}>{current === 2 && <span>&bull;</span>}Digital Presence</span>
                 </motion.div>
                 <motion.span initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
                   <Image src="/images/home/help.png" width={317.88} height={221.5} alt="help me" className="md:w-[317.88px] md:h-[221.5px] w-[282.56px] h-[196.89px]" />
