@@ -133,7 +133,8 @@ const Navbar = () => {
                             <Image src={"/images/navbar/logo-with-name.png"} alt={"logo with name"} height={212} width={764} />
                         </Link>
                         <p className={styles.phoneNumber}>
-                            (+1)647-856-3919
+                            (+1)647-856-3919 &nbsp;&nbsp;&nbsp;
+                            (+1)647-617-1832
                         </p>
                     </div>
                     <div className={styles.linksArea}>
