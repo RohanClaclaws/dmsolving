@@ -38,13 +38,14 @@ interface MainObj {
 }
 
 interface propMain {
-    detailObject: MainObj
+    detailObject: MainObj,
+    mainHeading?: string
 }
 
-const ServicesDetail = ({ detailObject }: propMain) => {
+const ServicesDetail = ({ detailObject, mainHeading }: propMain) => {
     return (
         <>
-            <Banner heading="Services" subheading="Home" image={detailObject.bannerImage} />
+            <Banner heading="Services" subheading="Home" image={detailObject.bannerImage} mainHeading={mainHeading}  />
 
             <div className="bg-black  overflow-hidden">
                 <div className="layout  overflow-hidden">
@@ -226,7 +227,7 @@ const ServicesDetail = ({ detailObject }: propMain) => {
                     0</div>
             </div>
 
-            <BannerText />
+            <BannerText img="/images/digitalMarketing/dmBG.png" />
 
 
         </>

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: 'Atet-Auto | Dmsolving',
+  title: 'Atet-Auto - Portfolio | Dmsolving',
   description: 'Learn more about atet-auto and how we made it'
 }
 
@@ -57,7 +57,7 @@ const Page = () => {
   ]
   return (
     <div className="bg-black">
-      <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables} bannerImage="/images/atetbg.JPG">
+      <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables} bannerImage="/images/atetbg.JPG" prev="/portfolio/clash-of-the-claws" next="/portfolio/claclaws">
         <div className="flex flex-col items-center gap-20 py-20">
           {
             bottomPics.map((e, idx) => {

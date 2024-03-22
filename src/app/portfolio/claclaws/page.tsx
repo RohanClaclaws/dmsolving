@@ -1,5 +1,11 @@
 import PortfolioDetail from "@/components/portfoliodetail/PortfolioDetail";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Claclaws - Portfolio | Dmsolving',
+  description: 'Learn more about Claclaws and how we process in Dmsolving'
+}
 
 const Page = () => {
   const claclaws = {
@@ -51,7 +57,7 @@ const Page = () => {
   ]
   return (
     <div className="bg-black">
-      <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables} bannerImage="/images/coc.png">
+      <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables} bannerImage="/images/coc.png" prev="/portfolio/atet-auto" next="/portfolio/clash-of-the-claws">
         <div className="flex flex-col items-center gap-20 py-20">
           {
             bottomPics.map((e, idx) => {

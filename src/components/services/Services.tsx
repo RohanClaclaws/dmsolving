@@ -32,7 +32,7 @@ const Services = () => {
                     <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
                   </g>
                   <defs>
-                    <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                       <feFlood flood-opacity="0" result="BackgroundImageFix" />
                       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                       <feOffset />
@@ -74,7 +74,7 @@ const Services = () => {
                     <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
                   </g>
                   <defs>
-                    <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                       <feFlood flood-opacity="0" result="BackgroundImageFix" />
                       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                       <feOffset />
@@ -116,7 +116,7 @@ const Services = () => {
                     <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
                   </g>
                   <defs>
-                    <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                       <feFlood flood-opacity="0" result="BackgroundImageFix" />
                       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                       <feOffset />
@@ -158,7 +158,7 @@ const Services = () => {
                     <path d="M67.4395 7L100.936 35.3515L67.4395 63.703H93.6959L127.196 35.3515L93.6959 7H67.4395Z" fill="#081D34" />
                   </g>
                   <defs>
-                    <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <filter id="filter0_ddd_338_1600" x="0" y="0" width="140.195" height="76.7031" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                       <feFlood flood-opacity="0" result="BackgroundImageFix" />
                       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                       <feOffset />

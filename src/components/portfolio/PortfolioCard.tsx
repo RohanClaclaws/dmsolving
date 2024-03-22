@@ -6,9 +6,10 @@ interface PortfolioCardProps {
   title: string,
   description: string,
   award_winning?: boolean
+  link: string
 }
 
-const PortfolioCard = ({ img, title, description, award_winning }: PortfolioCardProps) => {
+const PortfolioCard = ({ img, title, description, award_winning, link }: PortfolioCardProps) => {
   return (
     <div className="flex flex-col max-w-[407.98px] w-full md:gap-8 relative gap-3">
       <Image src={img} width={407.98} height={450} alt={title} className="w-[407.98px] h-[450px] object-cover" />
@@ -24,7 +25,7 @@ const PortfolioCard = ({ img, title, description, award_winning }: PortfolioCard
               <span className="max-w-[258px] w-full text-[#CFDDE8] font-[700] text-[26px] leading-[31.2px] font-syne underline">
                 Award Winning Project
               </span>
-              <Link href="/portfolio/clash-of-the-claws">
+              <Link href={link}>
                 <Image src="/images/portfolio/BTN.png" width={50} height={50} alt="Big Blue Button" className="w-[50px] h-[50px] cursor-pointer" />
               </Link>
             </div>

@@ -1,6 +1,7 @@
+"use client"
 import Banner from "../resuable/Banner";
-import Image from "next/image";
 import BannerText from "../resuable/BannerText";
+import { useRouter } from "next/navigation";
 
 interface HeadObj {
     title: string,
@@ -34,13 +35,18 @@ interface props2 {
     detailObject: props,
     delivery:Deliverables,
     children?: React.ReactNode,
-    bannerImage: string
+    bannerImage: string,
+    mainHeading?: string
+    next: string,
+    prev: string
 }
 
-const PortfolioDetail = ({ detailObject,delivery, children, bannerImage }: props2) => {
+const PortfolioDetail = ({ detailObject,delivery, children, bannerImage, mainHeading, next, prev }: props2) => {
+    const router = useRouter();
+
     return (
         <>
-            <Banner subheading="Home" heading="Portfolio" image={bannerImage} />
+            <Banner subheading="Home" heading="Portfolio" image={bannerImage} mainHeading={mainHeading} />
 
             <div className="bg-black">
                 <div className="layout">
@@ -114,12 +120,14 @@ const PortfolioDetail = ({ detailObject,delivery, children, bannerImage }: props
                     {children}
                     <div className=" pt-[30px] pb-[80px]">
                         <div className="flex gap-x-4 gap-y-4 justify-center flex-wrap">
-                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] ">
+                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] cursor-pointer" 
+                            onClick={() => router.push(prev)}>
                                 <h1 className="font-[600] font-syne text-[18px] text-[#CFDDE8]">
-                                    ⬅ Previos
+                                    ⬅ Previous
                                 </h1>
                             </div>
-                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] ">
+                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] cursor-pointer" 
+                            onClick={() => router.push(next)}>
                                 <h1 className="font-[600] font-syne text-[18px] text-[#CFDDE8]">
                                     Next ➡
                                 </h1>

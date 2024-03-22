@@ -2,8 +2,8 @@ import PortfolioDetail from "@/components/portfoliodetail/PortfolioDetail";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Clash of the Claws | Dmsolving',
-  description: 'Learn more about Clash of th Claws and how we process in Dmsolving'
+  title: 'Clash of the Claws - Portfolio | Dmsolving',
+  description: 'Learn more about Clash of the Claws and how we process in Dmsolving'
 }
 
 const claclaws={
@@ -51,5 +51,5 @@ const projectDelivarables={
 
 
 export default function Page() {
-  return <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables} bannerImage="/images/clashclaw.png" />
+  return <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables} bannerImage="/images/clashclaw.png" prev="/portfolio" next="/portfolio/atet-auto" />
 }
