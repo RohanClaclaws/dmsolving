@@ -206,7 +206,7 @@ const Pricing = () => {
 
   return (
     <div className="bg-black">
-      <Banner heading="Pricing" subheading="Home" />
+      <Banner heading="Pricing" subheading="Home" image="/images/pricing.png" />
       <div className="layout">
         <h2 className="font-syne font-[700] sm:text-[42px] text-[32px] text-center text-white py-20">
           Find the Right Solution for your business
