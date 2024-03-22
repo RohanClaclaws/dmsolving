@@ -26,7 +26,7 @@ const Section4 = () => {
                 duration:0.85,
               }}
             >
-          <div className="sm:w-3/4 sm:pl-8 sm:py-8">
+          <div className="sm:w-3/4 sm:pl-8 sm:py-8 ">
           <p className="font-syne text-[24px] text-[#00EBFF]">Our expert solutions with our expert teams</p>
             <div className="w-[full] h-0.5  mt-2 bg-[#00EBFF] mb-[100px]"></div>
 
@@ -63,14 +63,22 @@ const Section4 = () => {
                   value and practical benefits to our clients and their target audience.
                 </p>
               </div>
-              <div className="sm:flex-row flex-col">
+              <div className="flex sm:flex-row flex-col">
                 <div className="flex flex-col min-w-[250px]">
                   <p className="font-syne text-[16px] text-[#00EBFF]">03</p>
                   <p className="font-syne text-[42px] text-[#CFDDE8]">Development</p>
                 </div>
                 <p className="font-sans text-[20px] text-[#8FA8BD]">
-                  We are dedicated to pursuing excellence in all aspects of our work,
-                  constantly striving to innovate and improve to exceed expectations and achieve success.
+                  We are dedicated to pursuing excellence in all 
+              
+                  aspects of our work,
+               
+            constantly striving to 
+         
+            innovate and improve to 
+            exceed expectations 
+            
+                  and achieve success.
                 </p>
               </div>
 
