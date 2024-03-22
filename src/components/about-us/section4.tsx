@@ -6,7 +6,7 @@ const Section4 = () => {
           <div className="flex flex-col sm:flex-row mt-10">
             <div className="sm:w-1/4 text-start sm:pr-8 sm:py-8">
 
-              <p className="font-syne text-4xl">VALUE</p>
+              <p className="font-syne text-4xl">TEAM</p>
 
               <p className="font-syne text-sm text-[#00EBFF]">Strength  Feature</p>
 
@@ -27,32 +27,33 @@ const Section4 = () => {
                 <div className="flex flex-row">
                   <div className="flex flex-col min-w-[250px]">
                     <p className="font-syne text-[16px] text-[#00EBFF]">01</p>
-                    <p className="font-syne text-[42px] text-[#CFDDE8]">Cooperation</p>
+                    <p className="font-syne text-[42px] text-[#CFDDE8]">Design</p>
                   </div>
-                  <p className="font-sans text-[20px] text-[#8FA8BD]">Design sweet lorem ipsum? You got it with Cupcake Ipsum,
-                     the only text generator that includes marsh mallows, 
-                    carrot cake, and perhaps e on top. Design sweet lorem ipsum? 
-                    You got it with Cupcake Ipsum, the only text generator</p>
+                  <p className="font-sans text-[20px] text-[#8FA8BD]">
+                  We prioritize collaboration, working closely with our clients to 
+                  ensure their vision is realized and goals are met through 
+                  mutual understanding and teamwork.
+                    </p>
                 </div>
                 <div className="flex flex-row">
                   <div className="flex flex-col min-w-[250px]">
                     <p className="font-syne text-[16px] text-[#00EBFF]">02</p>
-                    <p className="font-syne text-[42px] text-[#CFDDE8]">Useful</p>
+                    <p className="font-syne text-[42px] text-[#CFDDE8]">Digital Marketing</p>
                   </div>
-                  <p className="font-sans text-[20px] text-[#8FA8BD]">Design sweet lorem ipsum? You got it with Cupcake Ipsum,
-                     the only text generator that includes marsh mallows, 
-                    carrot cake, and perhaps e on top. Design sweet lorem ipsum? 
-                    You got it with Cupcake Ipsum, the only text generator</p>
+                  <p className="font-sans text-[20px] text-[#8FA8BD]">
+                  Our solutions are purpose-driven, focusing on delivering tangible
+                   value and practical benefits to our clients and their target audience.
+                    </p>
                 </div>
                 <div className="flex flex-row">
                   <div className="flex flex-col min-w-[250px]">
                     <p className="font-syne text-[16px] text-[#00EBFF]">03</p>
-                    <p className="font-syne text-[42px] text-[#CFDDE8]">Pursue</p>
+                    <p className="font-syne text-[42px] text-[#CFDDE8]">Development</p>
                   </div>
-                  <p className="font-sans text-[20px] text-[#8FA8BD]">Design sweet lorem ipsum? You got it with Cupcake Ipsum,
-                     the only text generator that includes marsh mallows, 
-                    carrot cake, and perhaps e on top. Design sweet lorem ipsum? 
-                    You got it with Cupcake Ipsum, the only text generator</p>
+                  <p className="font-sans text-[20px] text-[#8FA8BD]">
+                  We are dedicated to pursuing excellence in all aspects of our work,
+                   constantly striving to innovate and improve to exceed expectations and achieve success.
+                    </p>
                 </div>
 
                </div>

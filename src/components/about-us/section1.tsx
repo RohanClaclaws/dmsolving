@@ -25,22 +25,25 @@ const Section1 = () => {
                         />
                     </div>
                     <div className="flex flex-col max-w-[646px] w-full">
-                        <h2 className="font-dmsans text-white text-2xl items-start mb-16">We Are Complete Solution For Every Idea</h2>
+                        <h2 className="font-dmsans text-white text-2xl items-start mb-16">We’re 
+                        
+                         <span className='font-dmsans text-[#FFD526] text-2xl'> happy </span> 
+                        
+                         that you’re interested to learn more about us</h2>
 
 
                         <p className="font-syne text-white mb-10">
-                            Design sweet lorem ipsum? You got it with Cupcake Ipsum,
-                            the only text generator that includes marsh mallows, carrot cake, and perhaps
-                            e on top. Design sweet lorem ipsum? You got it with Cupcake Ipsum, the only text
-                            generator that includes marsh mallows, carrot cake.
+                        At DMSolving, our mission is to bring your business success through creative and innovative solutions.
                         </p>
 
                         <p className="font-syne text-white mb-10">
-                            Design sweet lorem ipsum? You got it with Cupcake Ipsum,
-                            the only text generator that includes marsh mallows,
-                            carrot cake, and perhaps e on top. Design sweet lorem ipsum
+                        We understand that in today’s fast-paced digital landscape,
+                         creativity is the driving force behind effective marketing strategies,
+                          web design, and app development. Our dedicated team of experts are committed
+                           to crafting solutions that not only captivate and engage your audience, 
+                           but also drive tangible profits to your company. 
                         </p>
-                        <div className="w-20 h-0.5 bg-[#FFD55B] mt-2 mb-4"></div>
+                        <div className="w-20 h-0.5 bg-[#FFFFFF] mt-2 mb-4"></div>
                     </div>
                 </div>
             </div>
