@@ -33,13 +33,14 @@ interface Deliverables{
 interface props2 {
     detailObject: props,
     delivery:Deliverables,
-    children?: React.ReactNode
+    children?: React.ReactNode,
+    bannerImage: string
 }
 
-const PortfolioDetail = ({ detailObject,delivery, children }: props2) => {
+const PortfolioDetail = ({ detailObject,delivery, children, bannerImage }: props2) => {
     return (
         <>
-            <Banner subheading="Home" heading="Portfolio" />
+            <Banner subheading="Home" heading="Portfolio" image={bannerImage} />
 
             <div className="bg-black">
                 <div className="layout">
