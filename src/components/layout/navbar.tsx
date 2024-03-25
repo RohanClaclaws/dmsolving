@@ -88,24 +88,24 @@ const Navbar = () => {
             >
                 {label}
                 {
-                    subMenu && <Image 
+                    subMenu && <Image
                         className={styles.icon}
-                        src={"/images/navbar/arrow-down.png"} 
-                        alt={"arrow"} 
-                        height={33} 
+                        src={"/images/navbar/arrow-down.png"}
+                        alt={"arrow"}
+                        height={33}
                         width={65}
-                        style={{transform: triggerSubmenu? "rotateX(0deg)" : "rotateX(-180deg)"}}
+                        style={{ transform: triggerSubmenu ? "rotateX(0deg)" : "rotateX(-180deg)" }}
                     />
                 }
             </Link>
             {
                 subMenu && <ul className={styles.dropdownMenu}
-                    style={{transform: triggerSubmenu? "scaleY(1)" : "scaleY(0)"}}
+                    style={{ transform: triggerSubmenu ? "scaleY(1)" : "scaleY(0)" }}
                 >
                     {
-                        subMenu.map(({label, href}) => (
+                        subMenu.map(({ label, href }) => (
                             <li key={href}>
-                                <Link href={href}>                                    
+                                <Link href={href}>
                                     {label}
                                 </Link>
                             </li>
@@ -133,8 +133,14 @@ const Navbar = () => {
                             <Image src={"/images/navbar/logo-with-name.png"} alt={"logo with name"} height={212} width={764} />
                         </Link>
                         <p className={styles.phoneNumber}>
-                            (+1)647-856-3919 &nbsp;&nbsp;&nbsp;
-                            (+1)647-617-1832
+                            <Link href={"tel:(+1)647-856-3919"}>
+                                (+1)647-856-3919
+                            </Link>
+                            &nbsp;&nbsp; |
+                            &nbsp;&nbsp;
+                            <Link href={"tel:(+1)647-617-1832"}>
+                                (+1)647-617-1832
+                            </Link>
                         </p>
                     </div>
                     <div className={styles.linksArea}>
