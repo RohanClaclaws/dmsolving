@@ -43,7 +43,7 @@ const Section4 = () => {
 
             <div className="flex flex-col gap-20 mt-[100px]">
               <div className="flex sm:flex-row flex-col">
-                <div className="flex flex-col min-w-[250px]">
+                <div className="flex flex-col min-w-[360px]">
                   <p className="font-syne text-[16px] text-[#00EBFF]">01</p>
                   <p className="font-syne text-[42px] text-[#CFDDE8]">Design</p>
                 </div>
@@ -54,7 +54,7 @@ const Section4 = () => {
                 </p>
               </div>
               <div className="flex sm:flex-row flex-col">
-                <div className="flex flex-col min-w-[250px]">
+                <div className="flex flex-col min-w-[360px]">
                   <p className="font-syne text-[16px] text-[#00EBFF]">02</p>
                   <p className="font-syne text-[42px] text-[#CFDDE8]">Digital Marketing</p>
                 </div>
@@ -64,7 +64,7 @@ const Section4 = () => {
                 </p>
               </div>
               <div className="flex sm:flex-row flex-col">
-                <div className="flex flex-col min-w-[250px]">
+                <div className="flex flex-col min-w-[360px]">
                   <p className="font-syne text-[16px] text-[#00EBFF]">03</p>
                   <p className="font-syne text-[42px] text-[#CFDDE8]">Development</p>
                 </div>
