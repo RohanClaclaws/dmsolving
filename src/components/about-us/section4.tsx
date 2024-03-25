@@ -67,8 +67,8 @@ const Section4 = () => {
                     duration: 2,
                     ease: "circInOut",
                     repeat: Infinity,
-                    repeatType: "mirror",
-                    repeatDelay: 0.5
+                    // repeatType: "mirror",
+                    repeatDelay: 6
                 }}
                 stroke={'#FFFFFF'}
                 strokeWidth={2}
@@ -83,11 +83,11 @@ const Section4 = () => {
                 animate="visible"
                 variants={svgVariant}
                 transition={{
-                    duration: 2,
+                    duration: 4,
                     ease: "circInOut",
                     repeat: Infinity,
-                    repeatType: "mirror",
-                    repeatDelay: 1
+                    // repeatType: "mirror",
+                    repeatDelay: 6
                 }}
                 stroke={'#FFFFFF'}
                 strokeWidth={2}
@@ -101,11 +101,11 @@ const Section4 = () => {
                 animate="visible"
                 variants={svgVariant}
                 transition={{
-                    duration: 2,
+                    duration: 6,
                     ease: "circInOut",
                     repeat: Infinity,
-                    repeatType: "mirror",
-                    repeatDelay: 0.5
+                    // repeatType: "mirror",
+                    repeatDelay: 6
                 }}
                 stroke={'#FFFFFF'}
                 strokeWidth={2}
