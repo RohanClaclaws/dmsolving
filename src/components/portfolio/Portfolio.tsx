@@ -16,19 +16,22 @@ const Portfolio = () => {
       title: "Clash of The Claws",
       description: "Game",
       award_winning: true,
-      link: "/portfolio/clash-of-the-claws"
+      link: "/portfolio/clash-of-the-claws",
+      comingSoon: false
     },
     {
       img: "/images/portfolio/p22.png",
       title: "Centure",
       description: "Website",
-      link: "/portfolio/clash-of-the-claws"
+      link: "/portfolio/clash-of-the-claws",
+      comingSoon: true
     },
     {
       img: "/images/portfolio/p3.png",
       title: "ATET AUTO",
       description: "Website",
-      link: "/portfolio/atet-auto"
+      link: "/portfolio/atet-auto",
+      comingSoon: false
     },
   ];
 
@@ -37,19 +40,22 @@ const Portfolio = () => {
       img: "/images/portfolio/p4.png",
       title: "inletsky",
       description: "Website",
-      link: "/portfolio/clash-of-the-claws"
+      link: "/portfolio/clash-of-the-claws",
+      comingSoon: true
     },
     {
       img: "/images/portfolio/p55.png",
       title: "Clawclaws",
       description: "Website",
-      link: "/portfolio/claclaws"
+      link: "/portfolio/claclaws",
+      comingSoon: false
     },
     {
       img: "/images/portfolio/p6.png",
       title: "AIFISH",
       description: "Website",
-      link: "/portfolio/clash-of-the-claws"
+      link: "/portfolio/clash-of-the-claws",
+      comingSoon: true
     },
   ];
 
@@ -58,19 +64,22 @@ const Portfolio = () => {
       img: "/images/portfolio/p7.png",
       title: "The Tasteat",
       description: "Website",
-      link: "/portfolio/clash-of-the-claws"
+      link: "/portfolio/clash-of-the-claws",
+      comingSoon: true
     },
     {
       img: "/images/portfolio/p8.png",
       title: "Londrino",
       description: "Digital Marketing",
-      link: "/portfolio/clash-of-the-claws"
+      link: "/portfolio/clash-of-the-claws",
+      comingSoon: true
     },
     {
       img: "/images/portfolio/p9.png",
       title: "NoQclinic",
       description: "Website & Mobile App",
-      link: "/portfolio/clash-of-the-claws"
+      link: "/portfolio/clash-of-the-claws",
+      comingSoon: true
     },
   ];
 
@@ -105,7 +114,7 @@ const Portfolio = () => {
               row1.map((e, idx) => {
                 return (
                   <motion.span key={idx} className={`${idx === 1 ? "md:mt-10" : "mt-0"}`} onMouseEnter={() => setAwardWinning({ status: true, index: idx + 1 })} onMouseLeave={() => setAwardWinning({ status: false, index: -1 })} initial={{ opacity: 0, x: -200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: .75 }}>
-                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={awardWinning.status && awardWinning.index === idx + 1} link={e.link} />
+                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={awardWinning.status && awardWinning.index === idx + 1} link={e.link} comingSoon={e.comingSoon} />
                   </motion.span>
                 )
               })
@@ -118,7 +127,7 @@ const Portfolio = () => {
               row2.map((e, idx) => {
                 return (
                   <motion.span key={idx} className={`${idx === 1 ? "md:mt-10" : "mt-0"}`} onMouseEnter={() => setAwardWinning({ status: true, index: idx + 100 })} onMouseLeave={() => setAwardWinning({ status: false, index: -1 })} initial={{ opacity: 0, x: 200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: .75 }}>
-                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={awardWinning.status && awardWinning.index === idx + 100} link={e.link} />
+                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={awardWinning.status && awardWinning.index === idx + 100} link={e.link} comingSoon={e.comingSoon} />
                   </motion.span>
                 )
               })
@@ -131,7 +140,7 @@ const Portfolio = () => {
               row3.map((e, idx) => {
                 return (
                   <motion.span key={idx} className={`${idx === 1 ? "md:mt-10" : "mt-0"}`} onMouseEnter={() => setAwardWinning({ status: true, index: idx + 200 })} onMouseLeave={() => setAwardWinning({ status: false, index: -1 })} initial={{ opacity: 0, x: -200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: .75 }}>
-                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={awardWinning.status && awardWinning.index === idx + 200} link={e.link} />
+                    <PortfolioCard img={e.img} description={e.description} title={e.title} award_winning={awardWinning.status && awardWinning.index === idx + 200} link={e.link} comingSoon={e.comingSoon} />
                   </motion.span>
                 )
               })

@@ -35,8 +35,8 @@ const PricingCard = ({ heading, price, attributes }: Props) => {
           </div>
         </div>
         <div className="flex flex-col flex-1 justify-end items-center">
-          <Link className="rounded-[40px] px-[30px] py-[12px] bg-white flex gap-3 items-center hover:scale-[1.05] cursor-pointer" href="/contact-us">
-            <span className="font-[700] text-[14px] text-black">Get Started</span>
+          <Link className="rounded-[40px] px-[30px] py-[12px] bg-white flex gap-3 items-center hover:scale-[1.05] cursor-pointer hover:bg-black hover:text-white text-black border-[1px] border-white" href="/contact-us">
+            <span className="font-[700] text-[14px]">Get Started</span>
             <Image src="/images/pricing/starling.png" width={35.13} height={35.13} alt="starling" className="w-[35.13px] h-[35.13px]" />
           </Link>
         </div>
