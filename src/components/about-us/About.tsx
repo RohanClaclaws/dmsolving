@@ -29,7 +29,7 @@ const About = () => {
 
         <Section6 />
 
-        <BannerText />
+        {/* <BannerText /> */}
 
 
       </div>
