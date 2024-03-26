@@ -136,15 +136,15 @@ const PortfolioDetail = ({ detailObject, delivery, children, bannerImage, mainHe
                     {children}
                     <div className=" pt-[30px] pb-[80px]">
                         <div className="flex gap-x-4 gap-y-4 justify-center flex-wrap">
-                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] cursor-pointer"
+                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E]  cursor-pointer text-[#CFDDE8] hover:bg-white hover:text-black duration-100"
                                 onClick={() => router.push(prev)}>
-                                <h1 className="font-[600] font-syne text-[18px] text-[#CFDDE8]">
+                                <h1 className="font-[600] font-syne text-[18px] ">
                                     ⬅ Previous
                                 </h1>
                             </div>
-                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] cursor-pointer"
+                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] cursor-pointer text-[#CFDDE8] hover:bg-white hover:text-black duration-100"
                                 onClick={() => router.push(next)}>
-                                <h1 className="font-[600] font-syne text-[18px] text-[#CFDDE8]">
+                                <h1 className="font-[600] font-syne text-[18px] ">
                                     Next ➡
                                 </h1>
                             </div>
