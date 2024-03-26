@@ -147,9 +147,9 @@ const Home = () => {
             <section className="h-[100dvh] justify-center flex flex-col relative py-10">
               <div className="flex justify-center flex-1 items-center">
                 <div className="flex flex-col items-center m-10 font-dmsans text-center md:gap-10 gap-0">
-                  <motion.span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeIn' }}>Grow{" "}your</motion.span>
-                  <motion.span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, ease: 'easeIn' }}>brand</motion.span>
-                  <motion.span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeIn' }}>with us</motion.span>
+                  <span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white">Grow{" "}your</span>
+                  <span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white">brand</span>
+                  <span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white">with us</span>
                 </div>
               </div>
               <div className="flex items-end">
