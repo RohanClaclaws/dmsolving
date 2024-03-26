@@ -153,7 +153,7 @@ const Home = () => {
             <div className="flex items-end">
               <div className="flex items-center gap-10">
                 <a href="#how-can-we-help-you-grow">
-                  <Image src="/images/home/a.png" width={40} height={40} alt="arrow down" className="w-[40px] h-[40px] animate-bounce border-[1px] bg-transparent rounded-[50%] p-1" />
+                  <Image src="/images/home/a.png" width={40} height={40} alt="arrow down" className="w-[40px] h-[40px] animate-bounce border-[1px] bg-transparent rounded-[50%] p-1" priority />
                 </a>
                 <div className="font-[400] md:text-[19px] text-[14px] leading-[30px] text-[#FFFFFF99] font-syne hover:text-white">
                   <span>Delivering tailored Digital Solutions</span><br />
@@ -274,11 +274,11 @@ const Home = () => {
                 {/** Left side */}
                 <div className="flex flex-col gap-3">
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv1(true)} onMouseLeave={() => setHv1(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
-                    <Image src="/images/home/h1.png" width={668} height={430} alt="home" className="w-[668px] h-[429.89px] object-cover" />
+                    <Image src="/images/home/h1.png" width={668} height={430} alt="home" className="w-[668px] h-[429.89px] object-cover" priority />
                     {hv1 && <Hoverable title="Clash of the Claws" path="/portfolio" />}
                   </motion.div>
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv2(true)} onMouseLeave={() => setHv2(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
-                    <Image src="/images/home/h2.png" width={668} height={430} alt="home" className="w-[668px] h-[409.31px] object-cover" />
+                    <Image src="/images/home/h2.png" width={668} height={430} alt="home" className="w-[668px] h-[409.31px] object-cover" priority />
                     {hv2 && <Hoverable title="Atet Auto" path="/portfolio" />}
                   </motion.div>
                   <motion.div className="max-w-[668px] w-full p-9 flex flex-col gap-3 bg-[#191919]" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
@@ -294,11 +294,11 @@ const Home = () => {
                 {/** Right side */}
                 <div className="flex flex-col gap-3">
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv3(true)} onMouseLeave={() => setHv3(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
-                    <Image src="/images/home/h3.png" width={668} height={677.55} alt="home" className="w-[668px] h-[677.55px] object-cover" />
+                    <Image src="/images/home/h3.png" width={668} height={677.55} alt="home" className="w-[668px] h-[677.55px] object-cover" priority />
                     {hv3 && <Hoverable title="Centure AI" path="/portfolio" />}
                   </motion.div>
                   <motion.div className="relative cursor-pointer" onMouseEnter={() => setHv4(true)} onMouseLeave={() => setHv4(false)} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .25, ease: 'easeIn' }}>
-                    <Image src="/images/home/h4.png" width={668} height={353} alt="home" className="w-[668px] h-[353px] object-cover" />
+                    <Image src="/images/home/h4.png" width={668} height={353} alt="home" className="w-[668px] h-[353px] object-cover" priority />
                     {hv4 && <Hoverable title="ClaClaws" path="/portfolio" />}
                   </motion.div>
                 </div>
@@ -341,7 +341,7 @@ const Home = () => {
                     <SwiperSlide key={idx}>
                       <motion.div className="hover:bg-[#62666F] bg-[#292929] w-[464px] h-[347px] flex flex-col justify-center items-center cursor-pointer overflow-hidden"
                         initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: idx < 4 ? idx * 0.1 : .25, ease: 'easeIn' }}>
-                        <Image src={e.img} width={e.width} height={e.height} alt="swipers" className="w-[399px] h-[299px] hover:scale-[1.1] object-cover transition-all ease-in-out duration-[.3s]" />
+                        <Image src={e.img} width={e.width} height={e.height} alt="swipers" className="w-[399px] h-[299px] hover:scale-[1.1] object-cover transition-all ease-in-out duration-[.3s]" priority />
                       </motion.div>
                     </SwiperSlide>
                   )
@@ -365,10 +365,10 @@ const Home = () => {
               {/** Arrows */}
               <div className="flex">
                 <span className="prev" onClick={() => { swiperIndex > 0 && setSwiperIndex(swiperIndex - 1) }}>
-                  <Image src="/images/home/prevArrow.png" width={38} height={40} alt="left arrow" className="w-[38px] h-[40px] cursor-pointer" />
+                  <Image src="/images/home/prevArrow.png" width={38} height={40} alt="left arrow" className="w-[38px] h-[40px] cursor-pointer" priority />
                 </span>
                 <span className="next" onClick={() => { swiperIndex < swiperImage.length - 1 && setSwiperIndex(swiperIndex + 1) }}>
-                  <Image src="/images/home/rAwrrow.png" width={38} height={40} alt="left arrow" className="w-[38px] h-[40px] cursor-pointer" />
+                  <Image src="/images/home/rAwrrow.png" width={38} height={40} alt="left arrow" className="w-[38px] h-[40px] cursor-pointer" priority />
                 </span>
               </div>
               {/** Arrows End */}
@@ -429,7 +429,7 @@ const Home = () => {
                 </motion.div>
                 <Link className="flex gap-3 items-end" href="/services">
                   <span className="text-white font-[400] text-[26px] leading-[39px] hover:text-[#999999]">{`Let's Get Started`}</span>
-                  <Image src="/images/home/arrow_right.png" width={39} height={40} alt="right arrow" className="w-[39px] h-[40px]" />
+                  <Image src="/images/home/arrow_right.png" width={39} height={40} alt="right arrow" className="w-[39px] h-[40px]" priority />
                 </Link>
               </div>
               <div className="flex home-lg:justify-evenly justify-center flex-row items-start gap-10 flex-wrap">
@@ -448,7 +448,7 @@ const Home = () => {
                   }}>{current === 2 && <span>&bull;</span>}Digital Presence</span>
                 </motion.div>
                 <motion.span initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
-                  <Image src="/images/home/help.png" width={317.88} height={221.5} alt="help me" className="md:w-[317.88px] md:h-[221.5px] w-[282.56px] h-[196.89px]" />
+                  <Image src="/images/home/help.png" width={317.88} height={221.5} alt="help me" className="md:w-[317.88px] md:h-[221.5px] w-[282.56px] h-[196.89px]" priority />
                 </motion.span>
                 <motion.div className="max-w-[397.88px] w-full" initial={{ opacity: 0, x: 200 }} whileInView={{ opacity: 1, x: 0 }} transition={{ ease: 'easeIn', duration: 0.5 }}>
                   <span className="md:text-[26px] text-[20px] leading-[32px] font-[400] text-white">
@@ -466,7 +466,7 @@ const Home = () => {
               <div className="flex gap-20 home-4k:justify-evenly justify-center relative">
                 {/** Left */}
                 <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ ease: 'easeIn', duration: 0.5 }} className="home-sm:hidden">
-                  <Image src="/images/home/a1.png" width={230.39} height={344.77} alt="About 1" className="lg:w-[230.39px] w-[122.875px] lg:h-[344.77px] h-[183.016px] home-3k:absolute left-0" />
+                  <Image src="/images/home/a1.png" width={230.39} height={344.77} alt="About 1" className="lg:w-[230.39px] w-[122.875px] lg:h-[344.77px] h-[183.016px] home-3k:absolute left-0" priority />
                 </motion.span>
                 {/** Left END */}
                 {/** Middle */}
@@ -481,10 +481,10 @@ const Home = () => {
                   </motion.span>
                   <Link className="flex gap-3 items-center" href="/about-us">
                     <span className="text-white font-[400] text-[26px] leading-[39px]">More about us</span>
-                    <Image src="/images/home/arrow_right.png" width={39} height={40} alt="right arrow" className="w-[39px] h-[40px]" />
+                    <Image src="/images/home/arrow_right.png" width={39} height={40} alt="right arrow" className="w-[39px] h-[40px]" priority />
                   </Link>
                   <div className="overflow-hidden">
-                    <Image src="/images/home/a2.png" width={288} height={191.56} alt="Lets go" className="md:w-[288px] md:h-[191.56px] w-[144px] h-[96px] hover:scale-[1.1] object-cover transition-all ease-in-out duration-[.3s]" />
+                    <Image src="/images/home/a2.png" width={288} height={191.56} alt="Lets go" className="md:w-[288px] md:h-[191.56px] w-[144px] h-[96px] hover:scale-[1.1] object-cover transition-all ease-in-out duration-[.3s]" priority />
                   </div>
                 </div>
                 {/** Middle end */}
@@ -493,7 +493,7 @@ const Home = () => {
                   <Image src="/images/home/about03.jpg.png" width={230.39} height={343.16} alt="hand in hand" className="w-[230.39px] h-[343.16px]" />
                 </div> */}
                 <motion.div className="flex items-end home-3k:absolute right-0 bottom-0 home-sm:hidden" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }}>
-                  <Image src="/images/home/a3.png" width={230.39} height={343.16} alt="hand in hand" className="md:w-[230.39px] w-[122.875px] md:h-[344.77px] h-[183.016px]" />
+                  <Image src="/images/home/a3.png" width={230.39} height={343.16} alt="hand in hand" className="md:w-[230.39px] w-[122.875px] md:h-[344.77px] h-[183.016px]" priority />
                 </motion.div>
                 {/** Right END */}
               </div>
