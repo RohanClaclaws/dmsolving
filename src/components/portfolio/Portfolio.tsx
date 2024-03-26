@@ -51,11 +51,11 @@ const Portfolio = () => {
       comingSoon: false
     },
     {
-      img: "/images/portfolio/p6.png",
-      title: "AIFISH",
+      img: "/images/portfolio/beauty1.png",
+      title: "UBeauty",
       description: "Website",
-      link: "/portfolio/clash-of-the-claws",
-      comingSoon: true
+      link: "/portfolio/ubeauty",
+      comingSoon: false
     },
   ];
 

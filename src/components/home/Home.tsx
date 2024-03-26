@@ -132,40 +132,44 @@ const Home = () => {
         break;
     }
   }
-//Damn
+  //Damn
   return (
     <>
       <div className="bg-no-repeat bg-cover bg-black bg-center">
-        <div className="relative">
-          <video autoPlay muted loop className="object-cover h-[100%] w-[100%]">
-            <source
-              src="/images/home/hero_2.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div className="layout absolute top-0 w-full bottom-0">
-            <section className="h-[100dvh] justify-center flex flex-col relative py-10">
-              <div className="flex justify-center flex-1 items-center">
-                <div className="flex flex-col items-center m-10 font-dmsans text-center md:gap-10 gap-0">
-                  <span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white">Grow{" "}your</span>
-                  <span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white">brand</span>
-                  <span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white">with us</span>
+        {/* <video autoPlay muted loop className="object-cover h-[100%] w-[100%] absolute">
+          <source
+            src="/images/home/hero_2.mp4"
+            type="video/mp4"
+          />
+        </video> */}
+        <div className="layoutt">
+          <section className="h-[100dvh] justify-center flex flex-col relative py-10">
+            <video autoPlay muted loop className="object-cover h-[100dvh] w-[100%] absolute">
+              <source
+                src="/images/home/hero_2.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="flex justify-center flex-1 items-center z-[100] layout">
+              <div className="flex flex-col items-center m-10 font-dmsans text-center md:gap-10 gap-0">
+                <motion.span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeIn' }}>Grow{" "}your</motion.span>
+                <motion.span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, ease: 'easeIn' }}>brand</motion.span>
+                <motion.span className="font-[500] md:text-[120px] text-[50px] md:leading-[90px] text-white" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeIn' }}>with us</motion.span>
+              </div>
+            </div>
+            <div className="flex items-end z-[100] layout">
+              <div className="flex items-center gap-10">
+                <a href="#how-can-we-help-you-grow">
+                  <Image src="/images/home/a.png" width={40} height={40} alt="arrow down" className="w-[40px] h-[40px] animate-bounce border-[1px] bg-transparent rounded-[50%] p-1" priority />
+                </a>
+                <div className="font-[400] md:text-[19px] text-[14px] leading-[30px] text-[#FFFFFF99] font-syne hover:text-white">
+                  <span>Delivering tailored Digital Solutions</span><br />
+                  <span>seamlessly To your Business to serve</span><br />
+                  <span>as the cornerstone of your success.</span>
                 </div>
               </div>
-              <div className="flex items-end">
-                <div className="flex items-center gap-10">
-                  <a href="#how-can-we-help-you-grow">
-                    <Image src="/images/home/a.png" width={40} height={40} alt="arrow down" className="w-[40px] h-[40px] animate-bounce border-[1px] bg-transparent rounded-[50%] p-1" priority />
-                  </a>
-                  <div className="font-[400] md:text-[19px] text-[14px] leading-[30px] text-[#FFFFFF99] font-syne hover:text-white">
-                    <span>Delivering tailored Digital Solutions</span><br />
-                    <span>seamlessly To your Business to serve</span><br />
-                    <span>as the cornerstone of your success.</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
+            </div>
+          </section>
         </div>
         <div className="vidWrapper">
         </div>
