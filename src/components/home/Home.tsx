@@ -137,7 +137,7 @@ const Home = () => {
     <>
       <div className="bg-no-repeat bg-cover bg-black bg-center">
         <video muted loop autoPlay className="absolute right-0 w-full object-cover h-full brightness-200">
-          <source src="https://res.cloudinary.com/doatqxr8d/video/upload/f_auto:video,q_auto/zdgp6rvmnvpt0neutlmt" type="video/mp4" />
+          <source src="/images/home/c.bin" type="video/mp4" />
         </video>
         <div className="vidWrapper">
         </div>
