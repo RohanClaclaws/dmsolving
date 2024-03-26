@@ -132,12 +132,15 @@ const Home = () => {
         break;
     }
   }
- 
+
   return (
     <>
       <div className="bg-no-repeat bg-cover bg-black bg-center">
-        <video muted loop autoPlay className="absolute right-0 w-full object-cover h-full brightness-200">
-          <source src="/images/home/c.bin" type="video/mp4" />
+        <video autoPlay muted loop className="object-cover h-[100%] w-[100%]">
+          <source
+            src="/images/home/videobanner2.mp4"
+            type="video/mp4"
+          />
         </video>
         <div className="vidWrapper">
         </div>
