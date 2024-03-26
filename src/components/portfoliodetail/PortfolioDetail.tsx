@@ -1,4 +1,5 @@
 "use client"
+import { motion } from "framer-motion"
 import Banner from "../resuable/Banner";
 import BannerText from "../resuable/BannerText";
 import { useRouter } from "next/navigation";
@@ -19,21 +20,21 @@ interface props {
     maindescription: string
 }
 
-interface DeliveryObj{
-    title:string
-    para1:string,
-    para2:string
+interface DeliveryObj {
+    title: string
+    para1: string,
+    para2: string
 }
 
-interface Deliverables{
- section1:DeliveryObj,
- section2:DeliveryObj,
- section3:DeliveryObj
+interface Deliverables {
+    section1: DeliveryObj,
+    section2: DeliveryObj,
+    section3: DeliveryObj
 }
 
 interface props2 {
     detailObject: props,
-    delivery:Deliverables,
+    delivery: Deliverables,
     children?: React.ReactNode,
     bannerImage: string,
     mainHeading?: string
@@ -41,7 +42,7 @@ interface props2 {
     prev: string
 }
 
-const PortfolioDetail = ({ detailObject,delivery, children, bannerImage, mainHeading, next, prev }: props2) => {
+const PortfolioDetail = ({ detailObject, delivery, children, bannerImage, mainHeading, next, prev }: props2) => {
     const router = useRouter();
 
     return (
@@ -77,7 +78,12 @@ const PortfolioDetail = ({ detailObject,delivery, children, bannerImage, mainHea
 
                     <div className="bg-red pb-[90px]">
                         <div className=" max-w-[1004px] min-h-[400px mx-auto  ">
-                            <img src={detailObject.image1} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[62px]" alt="image-1" />
+                            <motion.img src={detailObject.image1} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[62px]" alt="image-1"
+                                whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+                                transition={{
+                                    duration: 1, ease: 'easeInOut'
+                                }}
+                            />
 
                             <p className="px-3 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[18px] sm:text-[20px]">
                                 {detailObject.maindescription}
@@ -85,14 +91,19 @@ const PortfolioDetail = ({ detailObject,delivery, children, bannerImage, mainHea
                         </div>
                     </div>
 
-                    <div className="bg-red pb-[90px]">
+                    <div className=" pb-[90px]">
                         <div className=" max-w-[1004px] min-h-[400px mx-auto  ">
                             <h1 className="font-syne font-[600] text-[21px] 2xs:text-[26px] text-[#ffffff] pb-[30px] pl-[10px]">{detailObject.heading1.title}</h1>
                             <p className="px-4 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[17px] sm:text-[20px] pb-[80px]">
                                 {detailObject.heading1.description}
                             </p>
 
-                            <img src={detailObject.image2} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" alt="image-2" />
+                            <motion.img src={detailObject.image2} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" alt="image-2"
+                                whileInView={{ x: [200, 0], opacity: [0, 1] }}
+                                transition={{
+                                    duration: 1, ease: 'easeInOut'
+                                }}
+                            />
                             <h1 className="font-syne font-[600] text-[21px] 2xs:text-[26px] text-[#ffffff] pb-[30px] pl-[10px]">{detailObject.heading2.title}</h1>
                             <p className="px-4 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[17px] sm:text-[20px] pb-[70px]">
                                 {
@@ -108,9 +119,14 @@ const PortfolioDetail = ({ detailObject,delivery, children, bannerImage, mainHea
                         </div>
                     </div>
 
-                    <div className="bg-red pb-[90px]">
+                    <div className=" pb-[90px]">
                         <div className=" max-w-[1004px] min-h-[400px mx-auto  ">
-                            <img src={detailObject.image3} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" alt="image3" />
+                            <motion.img src={detailObject.image3} className="h-[400px]   sm:w-full sm:h-full  object-cover object-left pb-[82px]" alt="image3"
+                                whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+                                transition={{
+                                    duration: 1, ease: 'easeInOut'
+                                }}
+                            />
                             <h1 className="font-syne font-[600] text-[21px] 2xs:text-[26px] text-[#ffffff] pb-[30px] pl-[10px]">{detailObject.heading4.title}</h1>
                             <p className="px-3 text-[#8fA8Bd] font-[400]  font-dmsans xs:text-[17px] sm:text-[20px]">
                                 {detailObject.heading4.description}
@@ -120,14 +136,14 @@ const PortfolioDetail = ({ detailObject,delivery, children, bannerImage, mainHea
                     {children}
                     <div className=" pt-[30px] pb-[80px]">
                         <div className="flex gap-x-4 gap-y-4 justify-center flex-wrap">
-                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] cursor-pointer" 
-                            onClick={() => router.push(prev)}>
+                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] cursor-pointer"
+                                onClick={() => router.push(prev)}>
                                 <h1 className="font-[600] font-syne text-[18px] text-[#CFDDE8]">
                                     ⬅ Previous
                                 </h1>
                             </div>
-                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] cursor-pointer" 
-                            onClick={() => router.push(next)}>
+                            <div className="flex justify-center items-center w-[165px] aspect-square rounded-full  border-[1px] border-[#0C464E] cursor-pointer"
+                                onClick={() => router.push(next)}>
                                 <h1 className="font-[600] font-syne text-[18px] text-[#CFDDE8]">
                                     Next ➡
                                 </h1>
@@ -139,7 +155,7 @@ const PortfolioDetail = ({ detailObject,delivery, children, bannerImage, mainHea
                 </div>
             </div>
 
-            
+
 
             <BannerText />
 
