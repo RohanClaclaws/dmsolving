@@ -21,7 +21,7 @@ interface props {
 const Beauty = ({ beautyData }: BeautyData) => {
     return (
         <>
-            <div className="flex flex-col items-center gap-20 py-20 bg-red-40">
+            <div className="flex flex-col items-center gap-20 py-20 bg-red-40 overflow-hidden">
                 {/* Row 1 */}
                 <motion.div className=""
                     whileInView={{ x: [-200, 0], opacity: [0, 1] }}
