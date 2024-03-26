@@ -45,15 +45,11 @@ const Pricing = () => {
     },
     {
       isIncluded: true,
-      name: "Content Creation"
+      name: "Basic Theme Design"
     },
     {
       isIncluded: true,
       name: "Social Media Analytics Integration"
-    },
-    {
-      isIncluded: true,
-      name: "On Page SEO"
     },
   ];
 
@@ -73,6 +69,18 @@ const Pricing = () => {
     {
       isIncluded: true,
       name: "Chat Function"
+    },
+    {
+      isIncluded: true,
+      name: "OnPage SEO"
+    },
+    {
+      isIncluded: true,
+      name: "Content Creation"
+    },
+    {
+      isIncluded: true,
+      name: "Intermediate Theme Design"
     },
   ];
 
@@ -213,7 +221,7 @@ const Pricing = () => {
         </h2>
         <span className="font-syne text-white font-[700] sm:text-[42px] text-[32px] pricing-lg:text-start text-center w-full">01 / Web Design</span>
         <div className="flex justify-evenly items-center gap-5 py-10 pricing-lg:flex-row flex-col ">
-          <PricingCard heading="Basic Plan" price={699} attributes={basicPlan} />
+          <PricingCard heading="Basic Plan" price={999} attributes={basicPlan} />
           <PricingCard heading="Advanced Plan" price={1999} attributes={advancedPlan} />
           <PricingCard heading="PRO Plan" price={6999} attributes={proPlan} />
         </div>
