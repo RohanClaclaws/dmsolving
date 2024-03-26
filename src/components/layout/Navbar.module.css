@@ -29,6 +29,11 @@
     color: white;
 }
 
+.navbar .logoArea .phoneNumber span {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 .navbar .linksArea {
     display: flex;
     align-items: center;
@@ -116,13 +121,18 @@
 }
 
 @media (max-width: 1400px) {
-    .phoneNumber {
+    .navbar .linksArea {
         display: none;
     }
+
 }
 
-@media (max-width: 1000px) {
-    .navbar .linksArea {
+@media (max-width: 600px) {
+    .phoneNumber {
+        display: flex;
+        flex-direction: column;
+    }
+    .phoneNumber span {
         display: none;
     }
 }
