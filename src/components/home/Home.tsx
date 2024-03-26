@@ -138,7 +138,7 @@ const Home = () => {
       <div className="bg-no-repeat bg-cover bg-black bg-center">
         <video autoPlay muted loop className="object-cover h-[100%] w-[100%] absolute">
           <source
-            src="/images/home/hero_2.mp4"
+            src="/images/home/videobanner2.mp4"
             type="video/mp4"
           />
         </video>
