@@ -132,7 +132,7 @@ const Home = () => {
         break;
     }
   }
-
+ 
   return (
     <>
       <div className="bg-no-repeat bg-cover bg-black bg-center">
