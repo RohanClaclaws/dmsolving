@@ -75,7 +75,7 @@ const Page = () => {
 
   return (
     <div className="bg-black">
-      <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables} bannerImage="/images/beautyBanner.png" prev="/portfolio/claclaws" next="/portfolio/tasteeat">
+      <PortfolioDetail detailObject={claclaws} delivery={projectDelivarables} bannerImage="/images/beautyBanner.png" prev="/portfolio/claclaws" next="/portfolio/tasteat">
         <Beauty beautyData={beautyData}/>
       </PortfolioDetail>
     </div>

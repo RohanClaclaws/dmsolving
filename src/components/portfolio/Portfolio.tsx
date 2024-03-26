@@ -64,7 +64,7 @@ const Portfolio = () => {
       img: "/images/portfolio/p7.png",
       title: "The Tasteat",
       description: "Website",
-      link: "/portfolio/clash-of-the-claws",
+      link: "/portfolio/tasteat",
       comingSoon: true
     },
     {
