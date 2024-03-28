@@ -66,7 +66,7 @@ const Page = () => {
     image4:`/images/beauty7.png`,
     image5:`/images/beauty8.png`,
     image6:`/images/beauty9.png`,
-    image7:`/images/beauty10.png`,
+    image7:`/images/beauty100.png`,
     image8:`/images/beauty11.png`,
     headingTitle:`Project Deliverables`,
     description:`We collaborated closely with the client to design a modern and responsive website that beautifully showcases UBeauty's extensive product line and premium beauty services. Our focus was on optimizing the user experience, achieved through intuitive navigation menus, clear product display pages, and seamless purchasing options. Every element was meticulously crafted to enhance usability and ensure a smooth journey for visitors. Furthermore, we emphasized the professional image of the UBeauty brand by presenting content with exquisite design and attention to detail. This meticulous approach not only captivated users but also instilled trust in the brand, reinforcing its reputation for excellence in the beauty industry.`
