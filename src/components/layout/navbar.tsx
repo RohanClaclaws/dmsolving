@@ -55,8 +55,11 @@ const Navbar = () => {
                 {
                     label: "App Development",
                     href: "/services/appdevelopment"
+                },
+                {
+                    label: "Graphic Design",
+                    href: "/services/graphicdesign"
                 }
-
             ]
         },
         {
