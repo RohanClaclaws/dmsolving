@@ -18,6 +18,7 @@ interface SectionObj {
     bullet2: string,
     bullet3: string,
     bullet4: string
+    bullet5?:string
 }
 
 interface MainObj {
@@ -84,7 +85,7 @@ const ServicesDetail = ({ detailObject, mainHeading }: propMain) => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.4, ease: 'easeInOut' }}
                         >
-                            <Image alt="servicedetail-1" src={detailObject.mainImage} className="w-full h-full object-cover" width={1000} height={1000} />
+                            <Image alt="servicedetail-1" src={detailObject.mainImage} className="w-full h-full object-contain" width={1000} height={1000} />
                         </motion.div>
                     </div>
                 </div>
@@ -107,19 +108,19 @@ const ServicesDetail = ({ detailObject, mainHeading }: propMain) => {
 
             <div className="bg-black ">
                 <div className="layout py-[70px] overflow-hidden">
-                    <div className="flex justify-evenly flex-wrap gap-y-[50px] py-[40px] ">
+                    <div className="flex justify-evenly flex-wrap gap-y-[50px] py-[40px]  ">
 
                         <motion.div className="w-[600px] flex flex-wrap  gap-x-2 "
                             whileInView={{ x: [-200, 0] }}
                             transition={{ duration: 1 }}
                         >
                             <div className="max-w-[304px] min-h-[400px] mx-auto">
-                                <Image src={detailObject.section1.image} width={1000} height={1000} className="w-full h-full object-contain home-sm:rotate-0 rotate-[0deg] duration-100 cursor-pointer " alt="detail-1" />
+                                <Image src={detailObject.section1.image} width={1000} height={1000} className="w-full h-full object-cover home-sm:rotate-0 rotate-[0deg] duration-100 cursor-pointer " alt="detail-1" />
                             </div>
                             <ul className=" flex justify-center  self-start pt-[40px] service-detail:w-full ">
                                 <div className="flex flex-col flex-wrap gap-y-3 ">
                                     <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
-                                        <li className="flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section1.bullet1}</li>
+                                        <li className="flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section1.bullet1} & Req </li>
                                     </div>
                                     <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
                                         <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section1.bullet2}</li>
@@ -134,13 +135,14 @@ const ServicesDetail = ({ detailObject, mainHeading }: propMain) => {
                                 </div>
                             </ul>
                         </motion.div>
+                        
                         <motion.div className="flex flex-col max-w-[486px] "
                             whileInView={{ y: [200, 0], opacity: [0.3, 1] }}
                             transition={{ duration: 0.6 }}
                         >
                             <div className="flex flex-col gap-y-5">
                                 <h1 className="font-syne font-[700] text-[42px] text-white">{detailObject.section1.title}</h1>
-                                <p className="font-400 font-dmsans text-[16px] text-[#8FA8BD] pb-[50px]">
+                                <p className="font-400 font-dmsans text-[16px] text-[#8FA8BD] pb-[50px] ">
                                     {detailObject.section1.para}
                                 </p>
                             </div>
@@ -148,7 +150,8 @@ const ServicesDetail = ({ detailObject, mainHeading }: propMain) => {
                         </motion.div>
                     </div>
 
-                    <div className="flex justify-evenly flex-wrap gap-y-[50px] py-[80px]">
+                    <div className="flex justify-evenly flex-wrap gap-y-[50px] py-[40px]  ">
+
                         <motion.div className="w-[600px] flex flex-wrap  gap-x-2 "
                             whileInView={{ x: [-200, 0] }}
                             transition={{ duration: 1 }}
@@ -157,7 +160,7 @@ const ServicesDetail = ({ detailObject, mainHeading }: propMain) => {
                                 <Image src={detailObject.section2.image} width={1000} height={1000} className="w-full h-full object-contain home-sm:rotate-0 rotate-[0deg] duration-100 cursor-pointer " alt="detail-1" />
                             </div>
                             <ul className=" flex justify-center  self-start pt-[40px] service-detail:w-full ">
-                                <div className="flex flex-col flex-wrap gap-y-3 ">
+                                <div className="flex flex-col flex-wrap gap-y-3  ">
                                     <div className="flex flex-wrap  gap-x-10 gap-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
                                         <li className="flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section2.bullet1}</li>
                                     </div>
@@ -167,17 +170,27 @@ const ServicesDetail = ({ detailObject, mainHeading }: propMain) => {
                                     <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
                                         <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section2.bullet3}</li>
                                     </div>
+                                    <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section2.bullet4}</li>
+                                    </div>
+                                    {
+                                        detailObject.section2?.bullet5 &&  <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section2.bullet5}</li>
+                                    </div>
+                                    }
+                                    
 
                                 </div>
                             </ul>
                         </motion.div>
-                        <motion.div className="flex flex-col max-w-[486px]  "
+                        
+                        <motion.div className="flex flex-col max-w-[486px] "
                             whileInView={{ y: [200, 0], opacity: [0.3, 1] }}
                             transition={{ duration: 0.6 }}
                         >
                             <div className="flex flex-col gap-y-5">
                                 <h1 className="font-syne font-[700] text-[42px] text-white">{detailObject.section2.title}</h1>
-                                <p className="font-400 font-dmsans text-[16px] text-[#8FA8BD] pb-[50px]">
+                                <p className="font-400 font-dmsans text-[16px] text-[#8FA8BD] pb-[50px] ">
                                     {detailObject.section2.para}
                                 </p>
                             </div>
@@ -203,6 +216,9 @@ const ServicesDetail = ({ detailObject, mainHeading }: propMain) => {
                                     </div>
                                     <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
                                         <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section3.bullet3}</li>
+                                    </div>
+                                    <div className="flex flex-col list-r-calc:flex-row   justify-start  gap-x-8 list-r-calc:space-y-0 space-y-3  font-dmsans font-[400] text-[20px] text-[#CFDDE8] ">
+                                        <li className=" flex items-center"><GoDotFill className="text-[#00EBFF] mr-2" /> {detailObject.section3.bullet4}</li>
                                     </div>
 
                                 </div>
