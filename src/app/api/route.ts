@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer")
 
-export async function POST(req: Request) {
+export async function POST(req: Request,res:Response) {
   
     const {name, email, subject, message } = await req.json()
 
@@ -23,9 +23,10 @@ export async function POST(req: Request) {
           text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
         });
   
-        return Response.json({ success: true });
+        return Response.json({ success: true },{status:200});
       } catch (error) {
         console.error('Error sending email:', error);
-        return Response.json({ success: false, error: 'Failed to send email' });
+        return Response.json({ success: false, error: 'Failed to send email' },{status:502});
+        
       }
 }

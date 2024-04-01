@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import Banner from "../resuable/Banner";
 import { useRef } from "react";
 import Link from "next/link";
+import toast, { Toaster } from "react-hot-toast"
 
 
 const Contact = () => {
@@ -16,10 +17,21 @@ const Contact = () => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    await fetch("/api", {
+    const result = await fetch("/api", {
       method: 'POST',
       body: JSON.stringify({ name: name.current?.value, email: email.current?.value, subject: subject.current?.value, message: comments.current?.value })
     })
+
+    console.log(result)
+  if(result.status ===200 && result.ok===true){
+    toast.success('Email sent successfully',{
+      id:'success-toast-1'
+    })
+  }  else{
+    toast.error('Please try again or call Us',{
+      id:'error-toast-2'
+    })
+  }
 
     reset(name, email, subject, comments)
   }
@@ -37,6 +49,7 @@ const Contact = () => {
 
   return (
     <>
+      <Toaster />
       <Banner heading="Contact" subheading="Home" image="/images/breadcrumbcontact.png" />
 
       <div className="bg-[#07192d  bg-black">
@@ -122,50 +135,6 @@ const Contact = () => {
             </motion.div>
 
           </div>
-
-          {/* <div className="bg-[#0d2238] py-[70px] px-[30px] sm:px-[70px] mb-[80px">
-
-            <div className=" flex flex-col justify-between pb-4 sm:flex-row gap-y-4">
-              <h1 className="font-syne font-[700] text-[#CFDDE8] sm:text-[42px]  text-[24px] sm:leading-[50px]">Live Chat</h1>
-              <div>
-                <div className="  w-[65px] sm:w-[80px] aspect-square bg-yellow-200 rounded-full " />
-              </div>
-            </div>
-            <div className="flex justify-between flex-wrap gap-y-6  items-end">
-              <div className="flex flex-col gap-y-3">
-                <h2 className="font-syne font-[700] text-[#CFDDE8]   text-[20px] sm:leading-[50px] ">Urgently want to reach us ?</h2>
-                <p className="font-dmsans font-[400] text-[17px]  text-[#CFDDE8]">We are available 24H, seven days a week. (And I respond within 5 mins!)</p>
-              </div>
-              <button className=" px-1 py-2 cursor-pointer text-[#00EBFF] text-[15px]">Start a conversation <span className="ml-2">➡</span></button>
-            </div>
-
-          </div> */}
-
-          {/* <div className=" flex justify-evenly py-[50px]  flex-wrap gap-y-8 gap-x-3 bg-red-20 pb-[80px]">
-
-            <div className="w-[550px] ">
-              <h1 className="text-[#00EBFF] text-[25px] sm:text-[32px] font-syne pb-4">FAQs</h1>
-              <div className="flex flex-col gap-y-4">
-                <p className=" cursor-pointer font-syne font-[600] text-[16px] layout-sm:text-[18px] py-4 px-4 text-[#00EBff]  bg-[#0c464e]">The Role of Prototyping in UX Design ?</p>
-                <p className=" cursor-pointer font-syne font-[600] text-[16px] layout-sm:text-[18px] py-4 px-4 border-[1px] border-[#0C464E] text-[#CFDDE8]">The Importance of User Testing in UX Design ?</p>
-                <p className="cursor-pointer font-syne font-[600] text-[16px] layout-sm:text-[18px] py-4 px-4 border-[1px] border-[#0C464E] text-[#CFDDE8]">Creating Personas for Targeted UX Design ?</p>
-                <p className=" cursor-pointer font-syne font-[600] text-[16px] layout-sm:text-[18px] py-4 px-4 border-[1px] border-[#0C464E] text-[#CFDDE8]">The Evolution of UI/UX Design A Brief History ?</p>
-              </div>
-            </div>
-            <div className="w-[550px] ">
-              <h1 className="text-[#00EBFF] text-[25px] sm:text-[32px] font-syne pb-4">Ans.</h1>
-              <div className="">
-                <p className="font-[400] text-[18px] font-dmsans text-[#8FA8BD]">
-                  Design sweet lorem ipsum? You got it with Cupcake Ipsum, the only text generator that includes marsh mallows, carrot cake, and perhaps e on top. Design sweet lorem ipsum? You got it with Cupcake Ipsum, the only text generator that includes marsh mallows, carrot cake.
-                  <br />
-                  <br />
-                  Design sweet lorem ipsum? You got it with Cupcake Ipsum, the only text generator that includes marsh mallows, carrot cake, and perhaps e on top.
-                  Design sweet lorem ipsum? You got it with Cupcake Ipsum, the only text generator that includes marsh mallows, carrot cake.
-                </p>
-              </div>
-            </div>
-
-          </div> */}
 
         </div>
       </div >
