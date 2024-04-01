@@ -22,7 +22,6 @@ const Contact = () => {
       body: JSON.stringify({ name: name.current?.value, email: email.current?.value, subject: subject.current?.value, message: comments.current?.value })
     })
 
-    console.log(result)
   if(result.status ===200 && result.ok===true){
     toast.success('Email sent successfully',{
       id:'success-toast-1'
