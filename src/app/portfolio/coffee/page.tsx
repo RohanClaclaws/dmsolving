@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: 'Coffe - Portfolio | Dmsolving',
+    title: 'Coffee - Portfolio | Dmsolving',
     description: 'Learn more about Coffee and how we process in Dmsolving'
 }
 

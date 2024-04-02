@@ -4,8 +4,8 @@ import Image from "next/image";
 // import { motion } from 'framer-motion';
 
 export const metadata: Metadata = {
-  title: 'The Buyers Plave - Portfolio | Dmsolving',
-  description: 'Learn more about TasteEat and how we process in Dmsolving'
+  title: 'The Buyers Place - Portfolio | Dmsolving',
+  description: 'Learn more about The Buyers Place and how we process in Dmsolving'
 }
 
 const Page = () => {

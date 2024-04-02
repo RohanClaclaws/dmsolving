@@ -40,8 +40,8 @@ const Portfolio = () => {
       img: "/images/portfolio/p4.png",
       title: "inletsky",
       description: "Website",
-      link: "/portfolio/clash-of-the-claws",
-      comingSoon: true
+      link: "/portfolio/coffee",
+      comingSoon: false
     },
     {
       img: "/images/portfolio/p55.png",
