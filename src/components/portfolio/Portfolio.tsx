@@ -65,14 +65,14 @@ const Portfolio = () => {
       title: "The Tasteat",
       description: "Website",
       link: "/portfolio/tasteat",
-      comingSoon: true
+      comingSoon: false
     },
     {
       img: "/images/portfolio/p8.png",
-      title: "Londrino",
+      title: "Thebuyersplace",
       description: "Digital Marketing",
-      link: "/portfolio/clash-of-the-claws",
-      comingSoon: true
+      link: "/portfolio/the-buyers-place",
+      comingSoon: false
     },
     {
       img: "/images/portfolio/p9.png",
