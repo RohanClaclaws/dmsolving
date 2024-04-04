@@ -5,7 +5,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: 'Dmsolving',
-  description: 'Dmsolving is a digital marketing company who can do websites for you depending on your needs'
+  description: 'Dmsolving is a digital marketing company who can do websites for you depending on your needs',
+  icons: {
+    icon: '/images/favicon/facicon.ico',
+  },
 }
 
 export default function HomePage() {
