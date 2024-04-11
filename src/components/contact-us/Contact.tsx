@@ -85,7 +85,7 @@ const Contact = () => {
                 <div className="flex flex-col gap-y-3 pb-6">
                   <h3 className="font-syne font-[500] text-[#8FA8BD]">Location</h3>
                   <div className="flex-col">
-                    <p className="font-syne font-[500] text-[#CFDDE8]">2255 Sheppard Avenue East,</p>
+                    <p className="font-syne font-[500] text-[#CFDDE8]">2 Lansing Square,</p>
                     <p className="font-syne font-[500] text-[#CFDDE8]">North York, ON M2J 4Y1</p>
                   </div>
                 </div>
