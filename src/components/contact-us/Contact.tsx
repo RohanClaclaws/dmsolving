@@ -69,10 +69,10 @@ const Contact = () => {
                   <div className="flex flex-col mb-4">
                     <p className="font-syne font-[500] text-[#CFDDE8]">info@dmsolving.com
                     </p>
-                    <p className="font-syne font-[500] text-[#CFDDE8]"><Link href={'tel:+16478563919'}>
+                    {/* <p className="font-syne font-[500] text-[#CFDDE8]"><Link href={'tel:+16478563919'}>
                       (+1) 647-856-3919
                     </Link>
-                    </p>
+                    </p> */}
 
                     <p className="font-syne font-[500] text-[#CFDDE8]">
                       <Link href={'tel:+16476171832'}>
@@ -85,8 +85,8 @@ const Contact = () => {
                 <div className="flex flex-col gap-y-3 pb-6">
                   <h3 className="font-syne font-[500] text-[#8FA8BD]">Location</h3>
                   <div className="flex-col">
-                    <p className="font-syne font-[500] text-[#CFDDE8]">2 Lansing Square,</p>
-                    <p className="font-syne font-[500] text-[#CFDDE8]">North York, ON M2J 4Y1</p>
+                    <p className="font-syne font-[500] text-[#CFDDE8]">7030 Woodbine Ave,</p>
+                    <p className="font-syne font-[500] text-[#CFDDE8]">Markham, ON L3R 6G2</p>
                   </div>
                 </div>
               </div>
