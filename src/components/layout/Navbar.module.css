@@ -66,6 +66,8 @@
 
 .navbar .linksArea .links .dropdownMenu {
     position: absolute;
+    top: 3rem;
+    height: 13.5rem;
     transform-origin: top;
     padding-left: 1.5rem;
     padding-top: 0.5rem;

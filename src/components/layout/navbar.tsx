@@ -59,6 +59,10 @@ const Navbar = () => {
                 {
                     label: "Graphic Design",
                     href: "/services/graphicdesign"
+                },
+                {
+                    label: "AI",
+                    href: "/services/AI"
                 }
             ]
         },
@@ -136,10 +140,10 @@ const Navbar = () => {
                             <Image src={"/images/navbar/logo-with-name.png"} alt={"logo with name"} height={212} width={764} />
                         </Link>
                         <p className={styles.phoneNumber}>
-                            <Link href={"tel:+16478563919"}>
+                            {/* <Link href={"tel:+16478563919"}>
                                 (+1)647-856-3919
                             </Link>
-                            <span>|</span>
+                            <span>|</span> */}
                             <Link href={"tel:+16476171832"}>
                                 (+1)647-617-1832
                             </Link>
