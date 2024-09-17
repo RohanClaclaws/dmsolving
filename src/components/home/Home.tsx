@@ -4,6 +4,8 @@ import { Variants, motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from 'swiper';
 
+import useWindowWidth from "../../hooks/useWindowWidth"
+
 // requirement:
 // pass image to the parameter
 // pass text through parameter
@@ -18,6 +20,7 @@ import Hoverable from "./Hoverable";
 import Modal from "./Modal";
 import Link from "next/link";
 import Blur from "../resuable/Blur";
+
 
 type PathProps = {
   stroke: string
@@ -132,6 +135,8 @@ const Home = () => {
         break;
     }
   }
+
+  const width = useWindowWidth();
   //Damn
   return (
     <>
@@ -195,11 +200,11 @@ const Home = () => {
               </motion.span>
             </div>
 
-            <div className="layout mt-[200px] mb-[100px]">
+            <div className="layout mt-[200px] mb-[150px]">
               <h1 className="font-syne font-[700] home-sm:text-[44px] text-[56px] text-white text-center pb-[30px] justify-center">
                 Embracing the Future with AI
               </h1>
-              <div className="flex align-center justify-center">
+              <div className="flex align-center justify-center mt-[60px]">
                 <p className="font-dmsans font-[400] home-sm:text-[20px] text-[20px] md:text-[20px] text-white text-center w-[600px]">
                   AI and Data play a critical role in enabling digital transformation at unprecedented speed by automating manual tasks, providing predictive insights, personalizing experiences, and optimizing operations. Learn more about how we help businesses embrace AI and accelerate their digital transformation, improve decision-making, and enhance customer experiences.
                 </p>
@@ -207,77 +212,94 @@ const Home = () => {
 
             </div>
 
-            <div className="flex gap-10 justify-center p-md:flex-row flex-col py-20">
 
-              <div className="flex flex-col justify-between">
 
-                <div className="flex flex-col gap-5">
-                  <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left">Enterprise AI Capability</span>
-                  <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans p-md:max-w-[400px]">
-                    {`We create fine-tuned and highly customized models to fit the specific needs of any business. Our approach prioritizes data accuracy and efficient analysis that provides an insightful view of business operations, customer behaviors, market trends, and more. By optimizing models to your unique needs, AI will help you make more informed decisions, leading to operational efficiency, cost savings, fewer errors, increased revenue, and unmatched scalability.`}
-                  </span>
 
-                </div>
+            {
+              width > 1190 ?
+
+              <div className="grid grid-cols-1 p-md:grid-cols-2 gap-4  justify-center justify-items-center justify-self-center place-content-around m-16 space-y-16 ">
+
+              <div className="flex flex-col gap-5 justify-center">
+                <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left p-md:max-w-[400px]">Enterprise AI Capability</span>
+                <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans p-md:max-w-[400px]">
+                  {`We create fine-tuned and highly customized models to fit the specific needs of any business. Our approach prioritizes data accuracy and efficient analysis that provides an insightful view of business operations, customer behaviors, market trends, and more. By optimizing models to your unique needs, AI will help you make more informed decisions, leading to operational efficiency, cost savings, fewer errors, increased revenue, and unmatched scalability.`}
+                </span>
+              </div>
+              <Image src="/images/home/ai/float.png" width={440} height={310} alt="Portfolio" className="-w-[440px] minh-[310px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer" />
+
+
+              <Image src="/images/home/ai/window.png" width={550} height={410} alt="Portfolio" className="-w-[550px] min-h-[410px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer" />
+              <div className="flex flex-col gap-5 justify-center">
+                <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left  p-md:max-w-[400px]">Data Ingestion</span>
+                <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans p-md:max-w-[400px]">
+                  {`Data ingestion is the critical process of collecting, preparing, and preprocessing foundational data sets for analysis and machine learning. We work with our customers to identify, collect, clean, and translate relevant data sets into formats that are compatible with generative AI and large language models (LLMs).`}
+                </span>
               </div>
 
-              <Image src="/images/home/ai/float.png" width={660} height={490} alt="Portfolio" className="-w-[660px] h-[490px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer" />
+              <div className="flex flex-col gap-5 justify-center">
+                <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left p-md:max-w-[400px]">AI & Data Infrastructure</span>
+                <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans p-md:max-w-[400px]">
+                  {`We collaborate to identify and implement the data infrastructure required to unlock your data’s full potential. We work with clients to develop custom strategies that improve data collection, storage, processing, and analysis to ensure speed, stability, and reliability.`}
+                </span>
+              </div>
+              <Image src="/images/home/ai/ball.png" width={440} height={330} alt="Portfolio" className="-w-[440px] min-h-[330px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer" />
+
+              <Image src="/images/home/ai/map.png" width={550} height={410} alt="Portfolio" className="-w-[550px] min-h-[410px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer " />
+              <div className="flex flex-col gap-5 justify-center">
+                <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left p-md:max-w-[400px]">Model Training</span>
+                <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans p-md:max-w-[400px] ">
+                  {`Our model training process leverages state-of-the-art generative AI techniques to create bespoke solutions tailored to your business needs. Our team of experienced data scientists employs advanced techniques, such as fine-tuning and transfer learning, to efficiently adapt pre-trained models to your specific use case. We validate the outcomes and deploy the model in an easy-to-use interface that will unlock the power of data, and accelerate internal teams.`}
+                </span>
+              </div>
+
 
 
             </div>
-
-            <div className="flex gap-10 justify-between p-md:flex-row flex-col py-20">
-                 <Image src="/images/home/ai/window.png" width={660} height={490} alt="Portfolio" className="-w-[660px] h-[490px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer" />
-              <div className="flex flex-col justify-between mr-[200px] mt-[100px]">
-
-                <div className="flex flex-col gap-5">
-                  <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left  w-[850px]">Data Ingestion</span>
-                  <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans w-[850px]">
-                    {`Data ingestion is the critical process of collecting, preparing, and preprocessing foundational data sets for analysis and machine learning. We work with our customers to identify, collect, clean, and translate relevant data sets into formats that are compatible with generative AI and large language models (LLMs).`}
-                  </span>
-
-                </div>
-              </div>
-
             
+            :
 
+            <div className="grid grid-cols-1 p-md:grid-cols-2 gap-4  justify-center justify-items-center justify-self-center place-content-around m-16 space-y-16 ">
 
+            <div className="flex flex-col gap-5 justify-center">
+              <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left p-md:max-w-[400px]">Enterprise AI Capability</span>
+              <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans p-md:max-w-[400px]">
+                {`We create fine-tuned and highly customized models to fit the specific needs of any business. Our approach prioritizes data accuracy and efficient analysis that provides an insightful view of business operations, customer behaviors, market trends, and more. By optimizing models to your unique needs, AI will help you make more informed decisions, leading to operational efficiency, cost savings, fewer errors, increased revenue, and unmatched scalability.`}
+              </span>
             </div>
-
-            <div className="flex gap-10 justify-center p-md:flex-row flex-col py-20">
-
-              <div className="flex flex-col justify-between">
-
-                <div className="flex flex-col gap-5">
-                  <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left">AI & Data Infrastructure</span>
-                  <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans p-md:max-w-[400px]">
-                    {`We collaborate to identify and implement the data infrastructure required to unlock your data’s full potential. We work with clients to develop custom strategies that improve data collection, storage, processing, and analysis to ensure speed, stability, and reliability.`}
-                  </span>
-
-                </div>
-              </div>
-
-              <Image src="/images/home/ai/ball.png" width={660} height={490} alt="Portfolio" className="-w-[660px] h-[490px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer" />
+            <Image src="/images/home/ai/float.png" width={440} height={310} alt="Portfolio" className="-w-[440px] min-h-[310px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer" />
 
 
+       
+            <div className="flex flex-col gap-5 justify-center">
+              <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left  p-md:max-w-[400px]">Data Ingestion</span>
+              <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans p-md:max-w-[400px]">
+                {`Data ingestion is the critical process of collecting, preparing, and preprocessing foundational data sets for analysis and machine learning. We work with our customers to identify, collect, clean, and translate relevant data sets into formats that are compatible with generative AI and large language models (LLMs).`}
+              </span>
             </div>
-
-            <div className="flex gap-10 justify-between p-md:flex-row flex-col py-20">
-             <Image src="/images/home/ai/float.png" width={660} height={490} alt="Portfolio" className="-w-[660px] h-[490px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer " />
-              <div className="flex flex-col justify-between mr-[200px] mt-[100px]">
-
-                <div className="flex flex-col gap-5">
-                  <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left  w-[850px]">Model Training</span>
-                  <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans w-[850px] ">
-                    {`Our model training process leverages state-of-the-art generative AI techniques to create bespoke solutions tailored to your business needs. Our team of experienced data scientists employs advanced techniques, such as fine-tuning and transfer learning, to efficiently adapt pre-trained models to your specific use case. We validate the outcomes and deploy the model in an easy-to-use interface that will unlock the power of data, and accelerate internal teams.`}
-                  </span>
-
-                </div>
-              </div>
+     <Image src="/images/home/ai/window.png" width={550} height={410} alt="Portfolio" className="-w-[550px] min-h-[410px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer" />
+            <div className="flex flex-col gap-5 justify-center">
+              <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left p-md:max-w-[400px]">AI & Data Infrastructure</span>
+              <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans p-md:max-w-[400px]">
+                {`We collaborate to identify and implement the data infrastructure required to unlock your data’s full potential. We work with clients to develop custom strategies that improve data collection, storage, processing, and analysis to ensure speed, stability, and reliability.`}
+              </span>
+            </div>
+            <Image src="/images/home/ai/ball.png" width={440} height={330} alt="Portfolio" className="-w-[440px] min-h-[330px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer" />
 
            
-
-
+            <div className="flex flex-col gap-5 justify-center">
+              <span className="text-white font-[700] text-[42px] leading-[50.4px] font-syne text-center p-md:text-left p-md:max-w-[400px]">Model Training</span>
+              <span className="text-center p-md:text-left text-[#8FA8BD] font-[400] text-[16px] leading-[25.6px] font-dmsans p-md:max-w-[400px] ">
+                {`Our model training process leverages state-of-the-art generative AI techniques to create bespoke solutions tailored to your business needs. Our team of experienced data scientists employs advanced techniques, such as fine-tuning and transfer learning, to efficiently adapt pre-trained models to your specific use case. We validate the outcomes and deploy the model in an easy-to-use interface that will unlock the power of data, and accelerate internal teams.`}
+              </span>
             </div>
+ <Image src="/images/home/ai/map.png" width={550} height={410} alt="Portfolio" className="-w-[550px] min-h-[410px] hover:scale-[1.05] active:scale-[.9] transition-all ease-in-out cursor-pointer " />
+
+
+          </div>
+            
+            }
+
 
 
             <div className="flex flex-col mt-40 px-[16px] md:gap-28 gap-10" id="projects">
