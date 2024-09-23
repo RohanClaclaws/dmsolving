@@ -1,17 +1,18 @@
-export default function AIPage () {
-    return(
-        <div
-            className="h-screen bg-black"
-        >
-            <div
-                className="flex items-center justify-center h-full"
-            >
-                <h1
-                    className="text-white text-9xl font-bold"
-                >
-                    Comming Soon
-                </h1>
-            </div>
-        </div>
-    )
+
+import Hero from "@/components/ai/Hero";
+import SecondSection from "@/components/ai/SecondSection";
+import ThirdSection from "@/components/ai/ThirdSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'AI | Dmsolving',
+  description: 'AI at Dmsolving'
+}
+
+export default function Page() {
+  return <>
+      <Hero/>
+      <SecondSection/>
+      <ThirdSection/>
+  </>
 }

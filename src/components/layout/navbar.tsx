@@ -62,7 +62,7 @@ const Navbar = () => {
                 },
                 {
                     label: "AI",
-                    href: "/services/AI"
+                    href: "/services/ai"
                 }
             ]
         },
