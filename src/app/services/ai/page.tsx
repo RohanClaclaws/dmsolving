@@ -1,4 +1,3 @@
-
 import Hero from "@/components/ai/Hero";
 import SecondSection from "@/components/ai/SecondSection";
 import ThirdSection from "@/components/ai/ThirdSection";
@@ -10,9 +9,12 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <>
-      {/* <Hero/> */}
+  return <div className="bg-no-repeat bg-cover bg-black bg-center">
+     <div className="layoutt">
+      <Hero/>
       <SecondSection/>
       <ThirdSection/>
-  </>
+      {/* comment */}
+  </div>
+  </div>
 }
