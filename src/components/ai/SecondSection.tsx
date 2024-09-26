@@ -34,49 +34,54 @@ const SecondSection = () => {
                             We Known how to connect you with high-quality AI leads.
                         </p>
                     </div>
-                    {/* s */}
 
                     <section className="mt-[140px] flex flex-col gap-y-[140px]  layout px-0 ">
-                        <div className=" font-syne xl:pl-[100px] text-white py-[50px] ">
-                            <h1 className="text-[35px] sm:text-[42px] font-[400]  bg-gradient-to-r from-[#FACC69] from-[-5%] to-[50%]  to-[#FA75F8]  bg-clip-text text-transparent">
-                                Reach consumers
-                                <br />
-                                with relevance.
-                            </h1>
-                            <p className="mt-6 text-[19px] sm:text-[21px] font-[400] max-w-[528px]">
-                                dmsolving designs frictionless, data-driven conversion journeys, guiding users through the funnel and retaining high-quality leads across all channels.
-                            </p>
-                        </div>
-
-                        <div className="  font-syne  text-white bg-radia py-[50px flex justify-between bg-red-40 relative overflow" >
-                            <div className="xl:pl-[100px] ">
-                                <h1 className="text-[35px] sm:text-[42px] font-[400] bg-gradient-to-r from-[#FACC69]  from-[-25%] to-[30%]  to-[#FA75F8]  bg-clip-text text-transparent">
-                                    Acquire Users
+                        
+                        <div className="relative">
+                            <div className=" font-syne xl:pl-[100px] text-white py-[50px]  pb-[80px]">
+                                <h1 className="text-[35px] sm:text-[42px] font-[400]  bg-gradient-to-r from-[#FACC69] from-[-5%] to-[50%]  to-[#FA75F8]  bg-clip-text text-transparent">
+                                    Reach consumers
                                     <br />
-                                    for Less.
+                                    with relevance.
                                 </h1>
-                                <p className="mt-6 text-[19px] sm:text-[21px] font-[400] max-w-[528px] py-[50px]">
-                                    Automate common phrases, emails, and
-                                    attachments with your keyboard. You can even
-                                    include hyperlinks, add people to CC, or BCC
-                                    internal systems.
+                                <p className="mt-6 text-[19px] sm:text-[21px] font-[400] max-w-[528px]">
+                                    dmsolving designs frictionless, data-driven conversion journeys, guiding users through the funnel and retaining high-quality leads across all channels.
                                 </p>
                             </div>
-                            <div className="h-[1230px] min-w-[1845px]  bg-radial bg-opacity-5 absolute right-[-800px] top-[-400px]">
+
+                            <div className="  font-syne  text-white bg-radia py-[50px flex justify-between bg-red-40 relative overflow  pt-[100px]" >
+                                <div className="xl:pl-[100px] ">
+                                    <h1 className="text-[35px] sm:text-[42px] font-[400] bg-gradient-to-r from-[#FACC69]  from-[-25%] to-[30%]  to-[#FA75F8]  bg-clip-text text-transparent">
+                                        Acquire Users
+                                        <br />
+                                        for Less.
+                                    </h1>
+                                    <p className="mt-6 text-[19px] sm:text-[21px] font-[400] max-w-[528px] py-[50px]">
+                                        Automate common phrases, emails, and
+                                        attachments with your keyboard. You can even
+                                        include hyperlinks, add people to CC, or BCC
+                                        internal systems.
+                                    </p>
+                                </div>
+                                <div className="h-[1230px] min-w-[1845px]  bg-radial bg-opacity-5 absolute right-[-800px] top-[-400px]">
+                                </div>
                             </div>
+                            <div className="absolute top-[20%] right-0  w-[515px] h-[500px]  items-center hidden 950:flex">
+                                <Image src={'/images/S.png'} alt="/image" width={1000} height={1000} className="w-[515px h-[600px" />
+                            </div> 
                         </div>
 
-                        
+
 
                         <div className="  font-syne  text-white bg-radia py-[50px flex justify-between bg-red-40 relative overflow" >
                             <div className="xl:pl-[100px] ">
                                 <h1 className="text-[35px] sm:text-[42px] font-[400] bg-gradient-to-r from-[#FA75F8] from-[-5%] to-[50%]  to-[#5CC3FA]  bg-clip-text text-transparent">
-                                <span className=" bg-gradient-to-r from-[#FA75F8] from-[1%] to-[95%]  to-[#9E6EE6]  bg-clip-text text-transparent">Follw up</span> on
+                                    <span className=" bg-gradient-to-r from-[#FA75F8] from-[1%] to-[95%]  to-[#9E6EE6]  bg-clip-text text-transparent">Follw up</span> on
                                     <br />
                                     time,every time
                                 </h1>
                                 <p className="mt-6 text-[19px] sm:text-[21px] font-[400] max-w-[528px] py-[50px]">
-                                We execute high-impact, cost-effective marketing strategies using AI and automation to drive lead generation and customer retention, achieving rapid growth for top AI startups and enterprises.
+                                    We execute high-impact, cost-effective marketing strategies using AI and automation to drive lead generation and customer retention, achieving rapid growth for top AI startups and enterprises.
                                 </p>
                             </div>
                             <div className="h-[1230px] min-w-[1845px]  bg-radial3 bg-opacity-5 absolute left-[-1130px] top-[-400px]">

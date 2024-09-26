@@ -26,6 +26,7 @@ const config: Config = {
         'arrows-services': '780px',
         'service-image-left-right-calc': '1447px',
         'md': '768px',
+        '950':'1108px',
         'lg': '1024px',
         'xl': '1280px',
         '2xs': '340px',
