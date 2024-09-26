@@ -34,6 +34,7 @@ const SecondSection = () => {
                             We Known how to connect you with high-quality AI leads.
                         </p>
                     </div>
+                    {/* s */}
 
                     <section className="mt-[140px] flex flex-col gap-y-[140px]  layout px-0 ">
                         <div className=" font-syne xl:pl-[100px] text-white py-[50px] ">
