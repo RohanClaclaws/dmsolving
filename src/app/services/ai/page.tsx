@@ -14,6 +14,7 @@ export default function Page() {
       <Hero/>
       <SecondSection/>
       <ThirdSection/>
+      {/* comment */}
   </div>
   </div>
 }
