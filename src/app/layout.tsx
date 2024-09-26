@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter,Adamina,Syne } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/navbar";
+import  {syne,inter, dmsans} from "@/app/font"
 
-const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      <body className={inter.className}>
+      <body className={`${inter.className} ${syne.variable} ${dmsans.variable}` }>
         <Navbar/>
         {children}
         <Footer/>
