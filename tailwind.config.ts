@@ -16,6 +16,7 @@ const config: Config = {
         "radial":" radial-gradient(ellipse at 50% 50%, rgba(158, 110, 230, 0.28) -10%, rgba(158, 110, 230, 0) 70%)",
         "radial2":" radial-gradient(ellipse at 50% 50%, #FA75F847 -10%, #FA75F800 70%)",
         "radial3":" radial-gradient(ellipse at 50% 50%, #FACC6947 -10%, #FACC6900 70%)",
+        "radial4":" radial-gradient(ellipse at 50% 50%, #5CC3FA47 -10%, #5CC3FA00 70%)",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))"
       },
