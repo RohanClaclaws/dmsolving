@@ -31,9 +31,12 @@ const ThirdSection = () => {
     ];
 
     return (
-        <section className="layout mt-[130px] bg-black pt-[100px]">
+        <section className=" bg-black pt-[100px] overflow-x-hidden">
+            <div className="layout">
             {/* Part 1 */}
-            <div className=" w-full ">
+            <div className=" w-full relative">
+                <div className="h-[1230px] min-w-[1845px]  bg-radial bg-opacity-5 absolute left-[-800px] top-[200px]"></div>
+                <div className="h-[1230px] min-w-[1945px]  bg-radial bg-opacity-5 absolute right-[-400px] top-[-500px]"></div>
                 <h2 className="w-full font-syne font-normal lg:text-[48px] md:text-[34px] text-[30px] leading-[64px]  text-center bg-clip-text text-transparent bg-gradient-to-r from-[#5CC3FA] to-[#9E6EE6]">
                     You&apos;ve got the questions,<br/>we&apos;ve got the answers.
                 </h2>
@@ -57,8 +60,9 @@ const ThirdSection = () => {
             </div>
 
             {/* Part 2 */}
-            <div className="w-full mt-[300px]">
-                <h2 className="text-[48px] leading-[64px] font-syne text-center w-full ">What customers are saying...</h2>
+            <div className="w-full mt-[300px] relative">
+            <div className="h-[1230px] min-w-[1945px]  bg-radial4 bg-opacity-5 absolute right-[-800px] top-[-300px]"></div>
+                <h2 className="text-[48px] leading-[64px] font-syne text-center w-full text-white">What customers are saying...</h2>
                 <div className="flex justify-between gap-y-[30px] flex-col lg:flex-row w-full mt-[64px]">
                     <div className="lg:w-[47%] w-full flex flex-col bg-gradient-to-r from-[#FFFFFF26] to-[#FFFFFF1A] rounded-[12px] p-[32px]">
                         <Image src="/images/popl.png" alt="" width={62} height={31} className="w-[62px] h-[31px] mb-[48px]"/>
@@ -86,7 +90,8 @@ const ThirdSection = () => {
             </div>
 
             {/* part 3 */}
-            <div className="mt-[70px]  w-full py-[64px] rounded-[12px] bg-gradient-to-r from-[#FFFFFF26] to-[#FFFFFF1A]">
+            <div className="mt-[70px]  w-full pt-[64px] pb-[272px] lg:pb-[192px] rounded-[12px] bg-gradient-to-r from-[#FFFFFF26] to-[#FFFFFF1A] relative overflow-hidden">
+            <div className="h-[656px] min-w-[1312px]  bg-radial2 bg-opacity-5 absolute inset-0 z-[1]"></div>
                 <h2 className="font-syne lg:text-[48px] lg:leading-[64px] text-[24px] leading-[32px] text-center w-full lg:w-[30%] mx-auto text-white">Bring Dmsolving to your team today</h2>
                 <div className="mt-[64px]  w-[50%] mx-auto flex flex-row flex-wrap justify-between gap-y-[24px]">
                     {
@@ -98,13 +103,14 @@ const ThirdSection = () => {
                         ))
                     }
                 </div>
-                <div className="mt-[64px] flex flex-col lg:flex-row mx-auto w-fit gap-x-[16px] gap-y-[16px] ">
+                <div className="mt-[64px] flex flex-col lg:flex-row mx-auto w-fit gap-x-[16px] gap-y-[16px] absolute z-[2] bottom-[64px] left-1/2 -translate-x-1/2">
                     <Link href="/contact-us" className="rounded-[6px] w-[189px] h-[64px]  font-syne justify-center flex items-center text-[24px]
                      text-white bg-gradient-to-r from-[#9E6EE5] to-[#FA75F8]">Get Started</Link>
                      <Link href="/contact-us" className="rounded-[6px] w-[189px] h-[64px]  font-syne justify-center flex items-center text-[24px]
                      text-white bg-gradient-to-b from-[#FA75F8] to-[#9E6EE5]">Talk To Sales</Link>
                 </div>
             </div> 
+            </div>
         </section>
     )
 }
