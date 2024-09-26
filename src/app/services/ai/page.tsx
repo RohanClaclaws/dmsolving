@@ -10,9 +10,11 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <>
-      {/* <Hero/> */}
+  return <div className="bg-no-repeat bg-cover bg-black bg-center">
+     <div className="layoutt">
+      <Hero/>
       <SecondSection/>
       <ThirdSection/>
-  </>
+  </div>
+  </div>
 }
