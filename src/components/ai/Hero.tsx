@@ -7,10 +7,11 @@ const Hero = () => {
             <div className="pt-[200px] grid grid-cols-1 p-md:grid-cols-2 gap-4 layout  justify-items-center justify-self-center ">
                 <div className="grid grid-cols-1 gap-6">
                     <div className="flex flex-col">
-                        <text className="font-normal text-[48px]  text-white">The Leading AI</text>
-                        <text className="font-normal text-[48px]  text-white">Marketing Agency for</text>
-                        <text className="font-normal text-[48px]  text-white">Startups and</text>
-                        <text className="font-normal text-[48px]  text-white">Enterprises</text>
+                    {/* className="text-[35px] sm:text-[42px] font-[400]  bg-gradient-to-r from-[#FACC69] from-[-5%] to-[50%]  to-[#FA75F8]  bg-clip-text text-transparent" */}
+                        <text className="font-normal text-[48px]   bg-gradient-to-r from-[rgba(255,255,255,1)] from-[-5%] to-[50%]  to-[rgba(255,255,255,0.6)]  bg-clip-text text-transparent">The Leading AI</text>
+                        <text className="font-normal text-[48px]   bg-gradient-to-r from-[rgba(255,255,255,1)] from-[-5%] to-[50%]  to-[rgba(255,255,255,0.6)]  bg-clip-text text-transparent">Marketing Agency for</text>
+                        <text className="font-normal text-[48px]   bg-gradient-to-r from-[rgba(255,255,255,1)] from-[-5%] to-[50%]  to-[rgba(255,255,255,0.6)]  bg-clip-text text-transparent">Startups and</text>
+                        <text className="font-normal text-[48px]   bg-gradient-to-r from-[rgba(255,255,255,1)] from-[-5%] to-[50%]  to-[rgba(255,255,255,0.6)]  bg-clip-text text-transparent">Enterprises</text>
                     </div>
                     <div className="grid grid-cols-1">
                         <text className="font-normal text-[24px] text-white">Rapidly grow users for AI subscriptions with  </text>
@@ -28,7 +29,7 @@ const Hero = () => {
                     <div className="flex flex-col gap-y-4 absolute ml-[-100px] z-10">
                         <div className="max-w-sm p-6  rounded-lg bg-gradient-to-r from-[#3c4953] to-[#103949]">
                           
-                            <h5 className="mb-0  font-semibold tracking-tight text-white dark:text-white text-[48px]">
+                            <h5 className="mb-0  font-semibold tracking-tight bg-gradient-to-r from-[#FACC69] from-[-5%] to-[50%]  to-[#FA75F8]  bg-clip-text text-transparent text-[48px]">
                                 95%
                             </h5>
                        
@@ -39,7 +40,7 @@ const Hero = () => {
 
                         <div className="max-w-sm p-6  rounded-lg bg-gradient-to-r from-[#3c4953] to-[#103949]">
                          
-                            <h5 className="mb-0  font-semibold tracking-tight text-white dark:text-white text-[48px]">
+                            <h5 className="mb-0  font-semibold tracking-tight bg-gradient-to-r from-[#FACC69] from-[-5%] to-[50%]  to-[#FA75F8]  bg-clip-text text-transparent text-[48px]">
                                 93%
                             </h5>
                           
@@ -50,7 +51,7 @@ const Hero = () => {
 
                         <div className="max-w-sm p-6  rounded-lg bg-gradient-to-r from-[#3c4953] to-[#103949]">
                           
-                            <h5 className="mb-0  font-semibold tracking-tight text-white dark:text-white text-[48px]">
+                            <h5 className="mb-0  font-semibold tracking-tight bg-gradient-to-r from-[#FACC69] from-[-5%] to-[50%]  to-[#FA75F8]  bg-clip-text text-transparent text-[48px]">
                                 4+ hours
                             </h5>
                            
