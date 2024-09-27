@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Hero = () => {
     return (
-        <div className="h-screen">
+        <div className="p-md:h-screen h-[1500px]">
 
             <div className="pt-[200px] grid grid-cols-1 p-md:grid-cols-2 gap-4 layout  justify-items-center justify-self-center ">
                 <div className="grid grid-cols-1 gap-6">
